@@ -63,8 +63,8 @@ csl: https://www.zotero.org/styles/apa
 format:
   html:
     theme:
-      light: litera
-      dark: cyborg
+      light: lux
+      dark: slate
     toc: true
     toc-depth: 3
     toc-title: "On this page"
