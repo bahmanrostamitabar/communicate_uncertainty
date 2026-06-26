@@ -4,10 +4,9 @@ project:
 
 book:
   title: "Communicating Uncertainty"
-  subtitle: "A Comprehensive Guide Across Disciplines"
   author:
     - name: Bahman Rostami-Tabar
-      url: https://bahmanrostamitabar.com/
+      url: https://bahmanrostamitabar.github.io/
   date: today
   date-format: long
 
@@ -64,8 +63,8 @@ csl: https://www.zotero.org/styles/apa
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
+      light: litera
+      dark: cyborg
     toc: true
     toc-depth: 3
     toc-title: "On this page"
