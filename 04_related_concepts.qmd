@@ -1,0 +1,236 @@
+# Uncertainty and Related Concepts {#sec-related}
+
+The term "uncertainty" is frequently used as if it were interchangeable with
+a cluster of related concepts — risk, variability, randomness, and volatility —
+that in fact carry distinct technical meanings. This conflation is not merely
+an academic inconvenience; it has direct practical consequences for how
+information is communicated, how audiences interpret it, and how decisions are
+made. A communicator who presents variability data as if it were epistemic
+uncertainty, or who treats genuine uncertainty as if it were calculable risk,
+produces systematic distortions in audience understanding that no amount of
+presentational skill can fully correct. Conceptual clarity about the
+distinctions between these terms is therefore a prerequisite for effective
+communication.
+
+As @makridakis2016 observe, "uncertainty" lacks a unique definition and is
+frequently treated as a linguistic catch-all, leading to theoretical confusion
+and flawed communication across disciplines. This section examines how
+uncertainty relates to and differs from four closely related concepts —
+risk, variability, randomness, and volatility — and concludes with a
+comparative summary table.
+
+## Uncertainty and Risk {#sec-uncertainty-risk}
+
+The distinction between uncertainty and risk is foundational to the field and
+originates in the classic economic framework established by Frank Knight in
+1921. In the Knightian paradigm, *risk* denotes a state where all potential
+outcomes are known and their precise probabilities can be mathematically
+calculated [@scoones2019]. The probability that a fair die shows a six is
+exactly one in six; the probability that a bridge collapses under a specified
+load can be estimated from engineering models and empirical data. Risk, in this
+strict sense, is measurable, and the tools of classical probability theory
+are fully appropriate.
+
+*Uncertainty*, by contrast, defines a state where probabilities cannot be
+reliably assigned because the underlying mechanisms are unknown, the
+environment is genuinely novel, or the outcomes themselves are contested
+[@scoones2019]. Frank Knight's original argument was that profit in a market
+economy arises precisely from this kind of genuine uncertainty — from
+situations where no competitor can calculate the odds. @stirling_nd_uncertainty
+formalises this distinction within the incertitude matrix discussed in
+@sec-stirling: risk occupies the quadrant where both outcomes and likelihoods
+are unproblematic, while uncertainty in the strict sense describes conditions
+where likelihoods cannot be confidently estimated even though the space of
+outcomes may be known.
+
+Despite the clarity of this theoretical distinction, it is routinely violated
+in practice. @stirling_nd_risk documents a troubling institutional pattern in
+which regulatory and environmental bodies, facing political pressure to produce
+clear and actionable numbers, use the word "uncertainty" to describe situations
+where they have in fact asserted a specific probability — treating deep
+uncertainty as if it were calculable risk. This conflation is characterised as
+an irresponsible "pretence of knowledge" that forecloses deliberation about
+alternative possibilities and concentrates decision-making authority in
+technical hands. For communicators, the implication is that the choice of
+framing — presenting something as a quantified risk versus an unquantifiable
+uncertainty — carries substantial political and epistemic weight and should not
+be made carelessly.
+
+## Uncertainty and Variability {#sec-uncertainty-variability}
+
+Variability refers to the natural, objective heterogeneity that exists within a
+population or a system — the genuine differences between individuals, locations,
+or time points that reflect real physical, biological, or social diversity
+[@efsa2019]. Human body weights vary; regional rainfall varies; the time it
+takes different people to respond to a drug varies. Variability is a property
+of the world, not of our knowledge of it.
+
+Epistemic uncertainty, by contrast, refers to the subjective limits of a
+forecaster's or analyst's knowledge regarding a specific, single true value.
+As @vanderbles2019 put it, epistemic uncertainty concerns "the past and present
+state of the world that arises because of what we do not know but could know
+in theory." When a scientist reports uncertainty about the average global
+temperature in a given year, they are reporting epistemic uncertainty about a
+single quantity, not variability in that quantity.
+
+The practical importance of this distinction lies in how audiences interpret
+graphical displays of uncertainty. The literature consistently documents that
+non-expert audiences routinely conflate the two, misinterpreting statistical
+distributions or error bars designed to show a forecaster's lack of knowledge
+— epistemic uncertainty — as maps of physical population variation — variability
+[@efsa2019]. A patient shown a probability distribution over possible treatment
+outcomes may interpret it as showing how different patients respond, rather than
+how uncertain the physician is about this specific patient's likely response.
+This misinterpretation can lead to systematically distorted risk perceptions and
+poorly calibrated decisions.
+
+The communication implication is direct: whenever a display is intended to
+convey epistemic uncertainty about a single quantity, the accompanying text
+must explicitly clarify that the distribution represents a state of knowledge,
+not a description of population heterogeneity. As @efsa2019 recommend,
+communicators should "explain clearly that the distribution represents
+uncertainty about the quantity of interest, for which there is a single true
+value."
+
+## Uncertainty and Randomness {#sec-uncertainty-randomness}
+
+Randomness — what statisticians and machine learning researchers call aleatory
+uncertainty — describes the stochastic behaviour of a system that generates
+different outcomes even when initial conditions appear identical [@spiegelhalter2017].
+It is the irreducible variability of a chaotic or probabilistic process:
+the unpredictable fluctuations of a Brownian particle, the decay time of a
+radioactive atom, the outcome of a fair coin toss. Randomness is characterised
+by the fact that collecting more data or building a better model cannot, in
+principle, eliminate it — it reflects an inherent property of the system, not
+a limitation of the observer [@gruber2023].
+
+Epistemic uncertainty, in contrast, represents a reducible gap in human
+knowledge: the uncertainty that arises because we do not know what the true
+value of a parameter is, which of several competing models is correct, or how
+a system will respond under novel conditions. In principle, additional
+information could resolve epistemic uncertainty; no additional information can
+resolve randomness.
+
+This distinction has important practical implications. Communicating a source
+of uncertainty as "random" implies that it is irreducible and that further
+investment in data or modelling will not help. Communicating the same source
+as epistemic implies that it could, in principle, be reduced with more
+resources or better methods. As @gruber2023 point out, however, the boundary
+between randomness and epistemic uncertainty is not always as clear as
+textbook presentations suggest. A dice roll is conventionally treated as
+purely random; yet if one possessed a sufficiently detailed physical model of
+the dice, the throw, and the surface, the outcome would become perfectly
+predictable. The classification of uncertainty as aleatory or epistemic is
+therefore always relative to the current state of knowledge and the available
+models — not an absolute property of the phenomenon.
+
+## Uncertainty and Volatility {#sec-uncertainty-volatility}
+
+Volatility is the specific manifestation of aleatory uncertainty — randomness
+— within financial and economic time series. It refers to the degree of
+variance and the rapidity of fluctuations in market prices, exchange rates,
+or economic indicators over time [@eggen2025]. Volatility is, in this sense,
+measurable: statistical models such as GARCH (Generalised Autoregressive
+Conditional Heteroskedasticity) exist precisely to estimate and forecast the
+conditional variance of financial returns, and market-implied volatility
+indices such as the VIX provide real-time quantitative measures of expected
+price variability [@makridakis2016].
+
+Volatility is therefore distinct from uncertainty in the strict Knightian sense.
+A highly volatile financial asset — one whose price fluctuates dramatically
+from day to day — may nonetheless operate within a risk framework if the
+statistical distribution of those fluctuations is well characterised and
+stable. The uncertainty that cannot be captured by standard volatility models
+is of a different character: it arises during structural breaks, crises, and
+Black Swan events, where the distributional assumptions that underpin the
+model are violated and the parameters of the volatility process itself
+change in ways that were not anticipated [@scoones2019]. In such conditions,
+volatility modelling breaks down and the system moves from the domain of
+measurable risk into the domain of genuine uncertainty or ignorance.
+
+@scoones2019's discussion of the 2007–08 financial crisis illustrates this
+distinction vividly. Pre-crisis, the banking system operated in a world of
+apparent risk: volatility was being measured, hedged, and traded. The crisis
+revealed that beneath this veneer of quantified risk lay deep uncertainty
+about the structure of network dependencies, the reliability of rating agency
+assessments, and the behaviour of interconnected institutions under stress
+— uncertainties that no volatility model had captured or could have captured.
+
+## Summary: How These Concepts Relate {#sec-concepts-summary}
+
+@tbl-concepts summarises the key distinctions between uncertainty and the four
+related concepts discussed in this section, across five dimensions relevant
+to communication practice.
+
+| Concept | Definition | Knowability | Reducibility | Graphical representation | Communication challenge |
+|---------|-----------|-------------|--------------|--------------------------|------------------------|
+| **Uncertainty** | Unknown probabilities of outcomes | Probabilities unknown | Partially, through better models | Scenarios, ranges, qualitative scales | Avoiding false precision |
+| **Risk** | Known probabilities of known outcomes | Fully quantifiable | Already quantified | Distributions, intervals, point estimates | Ensuring calibration |
+| **Variability** | Real differences in a population | Measurable | Not reducible (it is real) | Distributions, box plots | Distinguishing from epistemic uncertainty |
+| **Randomness** | Irreducible stochastic variation | Characterisable statistically | Not reducible | Probability distributions | Avoiding deterministic misinterpretation |
+| **Volatility** | Measurable fluctuation in time series | Estimable (e.g. via GARCH) | Model-dependent | Fan charts, volatility indices | Distinguishing from deep uncertainty |
+
+: Key distinctions between uncertainty and related concepts {#tbl-concepts}
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Incertitude Matrix as Disambiguation Tool**
+
+Suggested figure: Figure 1 in @scoones2019 or Figure 3 in
+@stirling_nd_uncertainty — the four-dimensional incertitude matrix showing
+how Risk, Uncertainty, Ambiguity, and Ignorance relate to one another. This
+figure serves double duty: introduced in @sec-stirling for the conceptual
+framework, it can be referenced here to show where variability, randomness,
+and volatility fall within the overall taxonomy.
+
+Action needed: Cross-reference the figure already used in Section 2.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Forms of Unpredictability**
+
+Suggested figure: Table 5.1 in @scoones2020, "Forms of unpredictability:
+definitions and outcomes," which cleanly contrasts Risk against Uncertainty
+and Unknown Unknowns across dimensions including operational approach
+(Control, Manage, Cope).
+
+Action needed: Reproduce with permission or recreate as a table.
+:::
+
+## Disagreements in the Literature
+
+Two disagreements are worth noting. The first concerns the institutional
+conflation of risk and uncertainty described above: @stirling_nd_risk argues
+this is an active political choice with serious governance implications, while
+mainstream policy and regulatory practice treats it as a pragmatic necessity.
+The second concerns the status of the aleatory-epistemic boundary: @gruber2023
+challenge the assumption that randomness and epistemic uncertainty are cleanly
+separable categories, arguing that the boundary is model-dependent and
+therefore always provisional. Both disagreements have practical consequences
+for communication: if the boundary between uncertainty and risk is political
+rather than technical, then choosing how to frame a situation has ethical
+dimensions that communicators should acknowledge; and if the boundary between
+randomness and epistemic uncertainty is provisional, then claiming that a
+source of uncertainty is irreducible should be treated with appropriate caution.
+
+## Good Practice
+
+- **Explicitly distinguish uncertainty from variability in text:** Because
+  audiences routinely interpret distributional graphics as showing population
+  variability rather than epistemic uncertainty, communicators must always
+  provide explicit textual clarification that the display represents a state
+  of knowledge about a single quantity [@efsa2019].
+- **Use subjective terminology for epistemic uncertainty:** To prevent
+  audiences from confusing expert epistemic judgements with population
+  frequencies, use the term "percentage certainty" (e.g., "experts are 90%
+  certain") rather than "percentage probability" when describing subjective
+  assessments, since laypeople associate "probability" with the physical
+  frequency of random events [@efsa2019].
+- **Do not present deep uncertainty as risk:** When probabilities cannot be
+  reliably assigned, communicators should resist the institutional pressure to
+  produce a number. Presenting deep uncertainty as if it were calculable risk
+  is misleading and can be "irrational, unscientific and potentially
+  misleading" [@stirling_nd_risk].
+- **Acknowledge when volatility modelling reaches its limits:** In financial
+  and economic communication, be explicit about the conditions under which
+  standard volatility models remain valid and the conditions — structural
+  breaks, crises, genuinely novel events — under which they do not.

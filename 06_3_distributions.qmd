@@ -1,0 +1,230 @@
+## Distributions {#sec-distributions}
+
+Probability distributions are the most informationally complete way to
+represent uncertainty about a quantity. Rather than summarising the range of
+possible outcomes through a single number, an interval, or a set of shaded
+bands, a distributional display represents the full probability assigned to
+every possible value of the uncertain quantity — showing not just the range but
+the shape, the central tendency, the skewness, and the weight of the tails.
+As @efsa2019 define them, distributions are graphical representations of
+"probabilities for different values of an uncertain quantity that has a single
+true value," most commonly presented as a Probability Density Function (PDF),
+a Cumulative Distribution Function (CDF), or a Complementary Cumulative
+Distribution Function (CCDF). Additional visual formats include density strips
+— narrow rectangles in which colour intensity encodes probability density —
+and violin plots, which combine a mirrored density display with summary
+statistics. As @vanderbles2019 note, "density strips are the most accurate
+representation of the underlying probability distribution around the point
+estimate," making them valuable when fidelity to the full distributional shape
+is a priority.
+
+The distinguishing feature of all these formats is that they communicate the
+*shape* of uncertainty, not just its extent. Two forecasts might share the
+same 90% prediction interval yet have very different distributional shapes —
+one symmetrical, one heavily right-skewed; one unimodal, one bimodal. Only a
+distributional display can convey this distinction, and only a distributional
+display allows the audience to read off any quantile of interest without
+additional calculation. This completeness makes distributional formats the
+most powerful tool in the uncertainty communicator's repertoire — and the most
+demanding to use responsibly.
+
+### Practical Example
+
+Distributional displays have been applied in several high-stakes scientific
+and policy contexts. In climate science, the UK Climate Projections use paired
+distributions — a probability density function above a cumulative distribution
+function, sharing the same horizontal axis — to represent forecast uncertainty
+for change in maximum temperature over a specific region and time horizon
+[@spiegelhalter2011]. This pairing of PDF and CDF allows the viewer to read
+both the relative likelihood of different outcomes (from the PDF) and the
+cumulative probability up to any threshold (from the CDF) from a single
+composite figure.
+
+In food safety and agriculture, the European Food Safety Authority uses PDF
+graphs to communicate uncertainty derived from expert knowledge elicitation,
+such as the distribution "quantifying uncertainty about how many dairy cows
+out of a hundred on average are pregnant when slaughtered in the EU"
+[@efsa2019]. These applications are notable because they involve genuine
+epistemic uncertainty — the product of imperfect data and expert judgement
+— rather than population variability, and the distributional format is used
+precisely to represent the full range of what is not known.
+
+In experimental risk communication research, @edwards2012 tested the ability
+of lay and expert users to extract probability information from five graphical
+formats — PDF, CDF, CCDF, a modified CDF, and a three-dimensional PDF — using
+hypothetical scenarios including *E. coli* outbreaks, radiation treatments,
+airport screening, and flood depth predictions. The results of these
+experiments provide some of the most direct evidence available on which
+distributional formats best serve which communication tasks, and are drawn
+on extensively in the good practice recommendations below.
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Paired PDF and CDF for Climate Uncertainty**
+
+Suggested figure: Figure 5F in @spiegelhalter2011, showing a probability
+distribution aligned directly above a cumulative distribution for temperature
+changes in a specific UK region, with the mean explicitly marked on both
+curves and the same horizontal scale used throughout.
+
+Action needed: Reproduce with permission from @spiegelhalter2011 or from
+the UK Climate Projections archive.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — EFSA PDF for Agricultural Uncertainty**
+
+Suggested figure: Figure 3 in @efsa2019, an EFSA-designed PDF graph
+explicitly annotating the median estimate, the 50% certainty interval, and
+the 98% certainty interval for the distribution of pregnant dairy cows
+slaughtered in the EU.
+
+Action needed: Reproduce with permission from @efsa2019.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Catalogue of Distributional Display Formats**
+
+Suggested figure: Figure 1 in @edwards2012, which provides a visual catalogue
+illustrating ten distinct formats for displaying uncertainty including the PDF,
+CDF, CCDF, modified CDF, and 3-D PDF, allowing direct comparison of the
+visual properties of each format.
+
+Action needed: Reproduce with permission from @edwards2012.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Density Strips and Violin Plots**
+
+Suggested figure: Figure 5 in @vanderbles2019, comparing simplified density
+visualisations — density strips and violin plots — against simpler displays
+such as error bars, providing a visual reference for how full distributional
+information can be encoded in compact graphical forms.
+
+Action needed: Reproduce with permission from @vanderbles2019.
+:::
+
+### Strengths and Limitations
+
+**Strengths.** The primary strength of distributional displays is their
+informational completeness. Unlike intervals, which communicate only the
+extent of uncertainty, distributions provide exhaustive detail about its
+shape — enabling audiences to "read off approximate estimates for quantiles
+other than those reported explicitly" and to assess whether the distribution
+is symmetric, skewed, bimodal, or heavy-tailed [@efsa2019]. This is
+particularly important when the shape of the distribution carries decision-
+relevant information that an interval would suppress: for example, when the
+risk of an adverse outcome is concentrated in a heavy lower tail rather than
+distributed symmetrically around the central estimate.
+
+A second strength is the capacity of distributional displays to correct
+motivated or uninformed misinterpretation of simpler formats. When numerical
+ranges are presented without distributional context, audiences frequently
+infer a uniform distribution — assuming that all values within the interval
+are equally probable. A simple density graphic accompanying an uncertainty
+range corrects this assumption and decreases the inter-individual variance
+in distributional perceptions, producing more consistent and better-calibrated
+interpretations across different audience members [@efsa2019].
+
+A third advantage concerns the accuracy of specific probability extraction
+tasks. @edwards2012 found that Complementary Cumulative Distribution Functions
+— which plot the probability that the outcome exceeds a given value — "led to
+the highest probability estimation accuracy" among the formats tested, when
+the task required users to estimate the probability that a quantity exceeded
+a specified threshold.
+
+**Limitations.** Against these strengths must be set several well-documented
+and serious limitations. The most fundamental is cognitive complexity.
+"Graphical representations of distributions are difficult to interpret for
+non-technical audiences" [@efsa2019], and even technically trained users are
+not immune to characteristic errors. The most consistently documented is the
+confusion between the mean and the mode: when asked to identify the mean of a
+displayed PDF, audiences systematically select the mode — the peak of the
+distribution — "unless the mean was explicitly marked" [@efsa2019]. Because
+the mean and mode coincide only for symmetric distributions, this error can
+produce substantially biased interpretations of skewed uncertainty
+distributions.
+
+A second and more serious error concerns the use of CDFs alone. @ibrekk1987
+found that when users were presented with a CDF without additional guidance,
+some were "severely misled in estimating the mean," frequently choosing the
+maximum value of the distribution rather than the central estimate. The CDF's
+characteristic rising shape, with its upper asymptote, appears to draw the
+eye to the maximum rather than the midpoint.
+
+A third limitation is the confusion of uncertainty with variability. Because
+distributions are frequently used in statistics to map population variance,
+audiences routinely mistake epistemic uncertainty distributions — which
+represent a forecaster's knowledge about a single unknown value — for
+descriptions of population heterogeneity [@efsa2019]. This misinterpretation
+is both common and consequential, and is difficult to eliminate through
+graphical means alone.
+
+Finally, more exotic distributional formats actively harm decision-making.
+@edwards2012 found that three-dimensional PDFs — which add a superfluous
+third visual dimension to a two-dimensional quantity — "led to poor accuracy"
+across all measured outcomes, the worst performance of any format tested.
+
+**Disagreement in the literature.** A direct empirical disagreement exists
+between @ibrekk1987 and @edwards2012 regarding the utility of CDFs for
+probability estimation. @ibrekk1987 found that CDFs allowed for "very good
+estimations of the probability that a value exceeds a threshold," while
+@edwards2012 found that "CDFs led to poor accuracy" in similar tasks — a
+direct contradiction noted explicitly in @efsa2019. This disagreement is
+unresolved in the literature and may reflect differences in the specific tasks
+tested, the populations studied, or the visual presentation of the CDFs used
+in each experiment. It underscores the importance of empirical testing in
+specific communication contexts rather than relying on general recommendations.
+
+### When to Use This Method
+
+Full distributional displays — PDFs, CDFs, and related formats — should be
+restricted to technical-level audiences who require precise information about
+distributional shape, tail probabilities, or quantiles not explicitly reported
+in simpler summaries [@efsa2019; @spiegelhalter2011]. Two-dimensional
+distributions, in particular, "should be used only at the technical level, and
+then with great care and explanation" [@efsa2019].
+
+The CCDF format should be preferred when the specific communication task
+involves helping users estimate the probability that a quantity exceeds a
+particular threshold — for example, the probability that a flood exceeds a
+specified depth, or that an emission level exceeds a regulatory limit
+[@efsa2019].
+
+For non-technical audiences, full distributional displays should be avoided.
+Instead, communicators should provide the central estimate alongside a
+simplified prediction interval or a box plot, with explicit textual
+accompaniment [@efsa2019]. Density strips may provide a useful middle ground
+for informed audiences who need more than a simple interval but cannot
+interpret a full PDF without guidance [@vanderbles2019].
+
+### Good Practice
+
+- **Pair PDFs and CDFs:** To mitigate the limitations of either format alone,
+  plot a CDF directly above a PDF with the same horizontal axis scale, allowing
+  users to cross-reference between the two representations [@efsa2019]. This
+  pairing is specifically recommended as best practice by @efsa2019 for
+  technical-level communications.
+- **Explicitly mark the central estimate:** Never require the audience to
+  visually estimate the mean or median from the shape of the distribution.
+  Always clearly mark the location of the central estimate — and optionally
+  the 5th, 25th, 75th, and 95th percentiles — on both curves in a paired
+  display [@efsa2019].
+- **Accompany with textual explanation:** Distributional displays must not
+  stand alone. They should always be accompanied by sufficient textual
+  explanation, in the simplest terms possible, that explicitly defines what
+  the height and area of the curves represent and what the viewer should
+  take away from the graphic [@efsa2019].
+- **Clarify uncertainty versus variability:** Because audiences routinely
+  misinterpret epistemic uncertainty distributions as descriptions of
+  population variability, the accompanying text must explicitly state that
+  "the distribution represents uncertainty about the quantity of interest,
+  for which there is a single true value" [@efsa2019].
+- **Avoid three-dimensional formats:** Three-dimensional PDF displays add
+  visual complexity without informational benefit and actively impair
+  decision-making accuracy. They should not be used in any communication
+  context [@edwards2012].
+- **Use density strips for compact density communication:** When the full
+  distributional display is too complex for the target audience but simple
+  intervals are too sparse, density strips provide an effective intermediate
+  format that conveys distributional shape in a compact, visually accessible
+  form [@vanderbles2019].

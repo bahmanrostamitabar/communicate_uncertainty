@@ -1,0 +1,313 @@
+# Why Communicate Uncertainty, and to Whom? {#sec-why}
+
+The question of why uncertainty should be communicated at all might seem to
+answer itself: honesty demands it, and good decision-making requires it. Yet
+in practice, the communication of uncertainty is far from routine. Forecasters
+suppress ranges to appear authoritative. Institutions present contested
+estimates as settled facts. Scientists avoid probabilistic language for fear
+of being misunderstood. Physicians project confidence they do not fully
+possess. Understanding why these tendencies are so pervasive — and why
+resisting them matters — requires engaging with both the positive case for
+uncertainty communication and the documented consequences of its absence.
+This section makes that case, then turns to the equally important question
+of *to whom* uncertainty should be communicated, and how the needs of
+different audiences shape the appropriate approach.
+
+## The Case for Communicating Uncertainty Honestly {#sec-case-for}
+
+The fundamental argument for communicating uncertainty rests on the premise
+that "all prediction is inherently uncertain and effective communication of
+uncertainty information benefits users' decisions" [@nrc2006]. Because
+uncertainty is an inescapable reality of complex systems, no forecast is
+complete without a description of its uncertainty [@nrc2006]. To present a
+forecast, projection, or scientific estimate without an honest account of its
+uncertainty is to misrepresent the state of knowledge — and to deprive
+decision-makers of information they need to act wisely.
+
+Honest uncertainty communication serves several distinct and mutually
+reinforcing purposes. The first is calibration: if scientists fail to
+articulate the boundaries of their knowledge, audiences cannot appropriately
+weigh the evidence. As @fischhoff2014 argue, "unless that uncertainty is
+communicated effectively, decision makers may put too much or too little faith
+in it." Over-reliance on a deterministic forecast that subsequently fails
+can be more damaging than the underlying event itself, because it destroys
+the institutional credibility that is necessary for future communications to
+be trusted. Conversely, communicating genuine uncertainty allows users to
+make plans that are robust across a range of possible outcomes, rather than
+brittle strategies optimised for a single predicted scenario.
+
+The second purpose is institutional transparency. Qualitative research with
+natural hazard scientists reveals that audiences respond positively to honest
+acknowledgement of limits: "it always helps if they're open and honest, just
+share that they don't quite know" [@doyle2023]. This transparency builds
+rather than erodes trust — a finding that directly contradicts the common
+assumption among communicators that expressing uncertainty will undermine their
+credibility. When institutional actors suppress uncertainty to appear
+authoritative, they may achieve short-term confidence at the cost of long-term
+trust, particularly when events reveal that the suppressed uncertainty was
+real.
+
+The third purpose concerns decision quality. Effective risk management "depends
+on information about the full range of possible consequences and associated
+probabilities rather than brittle, deterministic planning" [@ipcc2015]. A
+decision-maker who knows only the most likely outcome of an intervention is
+poorly equipped to plan for the possibility that the outcome falls elsewhere.
+A decision-maker who also knows the range of plausible outcomes and their
+relative probabilities can build contingency plans, hedge against adverse
+possibilities, and calibrate the level of precaution to the actual level of
+uncertainty. Uncertainty communication, in this light, is not an admission of
+weakness but a prerequisite for sophisticated and adaptive decision-making.
+
+The fourth purpose is scientific progress. @doyle2023 note that openly
+admitting data limitations and analytical uncertainties "encourages other
+scientists to say 'oh well, let's have a look at it' — and that actually
+improves the science." Scientific knowledge advances through the identification
+and investigation of gaps; suppressing uncertainty conceals those gaps and
+removes the incentive to fill them.
+
+## Consequences of Failing to Communicate Uncertainty {#sec-consequences}
+
+The consequences of failing to communicate uncertainty honestly are well
+documented across multiple domains. In medicine, overconfident diagnostic
+communication — where physicians present diagnoses with greater certainty than
+the evidence warrants — leads to reduced uptake of second opinions, delays in
+identifying errors, and unnecessary harm to patients. Studies show that
+physicians rated their confidence as only marginally lower for difficult
+diagnostic cases than for easy ones, even when their accuracy dropped from
+55% to below 6% [@makridakis2016]. A physician who is 64% confident in a
+diagnosis that is correct less than 6% of the time is unlikely to seek
+confirmatory evidence or disclose uncertainty to the patient — yet both
+actions are precisely what would be appropriate.
+
+In finance, the suppression of genuine uncertainty beneath a veneer of
+quantified risk contributed directly to the 2007–08 financial crisis.
+The belief that complex derivative instruments had been fully de-risked
+through mathematical modelling created systemic overconfidence that left
+institutions unprepared for the structural failure that followed [@scoones2019].
+In climate policy, the failure to communicate the full range of uncertainty
+in long-term projections has contributed to both underreaction — when people
+treat the lower bound of a range as the likely outcome — and overreaction
+— when single extreme scenarios dominate public discourse without appropriate
+probabilistic context.
+
+Failing to communicate uncertainty also removes agency from those who would
+benefit from it most. @doyle2023 argue that honest communication of
+uncertainty "gives the public more agency to make decisions" in relation to
+natural hazards and risks. When institutional communicators withhold
+uncertainty — even with protective intent — they implicitly decide that the
+public cannot handle complex information. The evidence reviewed in this paper
+suggests that this assumption is empirically unwarranted: ordinary people
+can understand and use probabilistic information, and they make better
+decisions when they have it [@raftery2016].
+
+## Audiences and Their Needs {#sec-audiences}
+
+Not all users of uncertain information need the same thing. One of the most
+important and consistently supported findings in the uncertainty communication
+literature is that different audiences have fundamentally different goals,
+different levels of statistical literacy, and different tolerances for
+complexity when engaging with uncertain information [@nrc2006]. A format that
+serves an expert statistician may actively mislead a general practitioner;
+a simplification appropriate for a newspaper headline may be insufficient
+for a policy analyst who needs to set regulatory thresholds. Designing
+uncertainty communication without first identifying the audience and their
+specific decision context is a recipe for poor outcomes regardless of the
+technical quality of the underlying analysis.
+
+The most structured audience taxonomy in the reviewed literature is that
+developed by @efsa2019, which divides audiences into three tiers based on
+their familiarity with scientific assessment, their knowledge of institutional
+processes, and the nature of the decision they need to make. This taxonomy
+provides a practical organising framework for matching communication methods
+to audiences, and its three levels — Entry, Informed, and Technical — are
+used throughout @sec-methods to guide the "When to Use" recommendations for
+each communication approach.
+
+### Entry Level: General Public, Patients, and General Media {#sec-audience-entry}
+
+The entry-level audience encompasses individuals with "little or no familiarity
+with scientific assessment" and "little or no knowledge of institutional
+processes and relationships" [@efsa2019]. This group includes members of the
+general public engaging with public health communications, patients making
+decisions about medical treatments, and consumers of mainstream news media
+covering scientific topics. Their engagement with uncertain information is
+typically brief, emotionally charged, and embedded in a specific decision
+context — whether to evacuate before a storm, whether to accept a medical
+intervention, whether to change behaviour in response to a public health
+recommendation.
+
+For this audience, the communication goal is often simple behavioural
+signalling rather than full probabilistic comprehension. @spiegelhalter2017
+recommends providing a "top gist" — a clear, memorable summary of the most
+decision-relevant aspect of the uncertain information — before layering any
+additional detail. The evidence reviewed by @vanderbles2020 suggests that
+communicating uncertainty to this audience using simple numerical ranges
+alongside a central estimate is the most robust approach: it does not
+substantially decrease trust in the source, and it avoids the ambiguity
+problems associated with verbal expressions. Complex distributional displays,
+fan charts, and full probability density functions are generally inappropriate
+for this audience and should be avoided.
+
+### Informed Level: Policymakers, Non-Governmental Organisations, and Specialist Journalists {#sec-audience-informed}
+
+The informed-level audience has "thorough knowledge of institutional processes
+and relationships" and "some or good understanding of scientific assessment
+but not advanced" [@efsa2019]. This group includes policymakers and civil
+servants who use scientific evidence to inform regulatory decisions, NGO
+representatives engaged in evidence-based advocacy, and specialist journalists
+covering science, health, or economics beats. They engage with uncertain
+information more systematically than entry-level audiences, but they typically
+lack the statistical training to interpret complex distributional displays
+without guidance.
+
+For this audience, plain-language summaries of uncertainty ranges, clearly
+defined categorical labels with explicit quantitative translations, and
+narrative accounts of the main sources and implications of uncertainty are
+most effective. @efsa2019 recommend providing FAQs that directly address the
+most common misunderstandings, and explicitly defining any technical terms
+that appear in the communication. The fundamental tension between sender and
+receiver preferences documented by @dhami2022 is particularly acute for this
+audience: policymakers consistently prefer precise numerical uncertainty
+information when making consequential decisions, even though the scientists
+who advise them frequently default to vague verbal expressions that offer
+face-saving flexibility.
+
+### Technical Level: Domain Experts, Statisticians, and Risk Managers {#sec-audience-technical}
+
+The technical-level audience possesses "advanced understanding of scientific
+assessment, use of data, tools and methodologies" [@efsa2019]. This group
+includes domain scientists, statisticians, quantitative risk analysts, and
+professional risk managers who use uncertainty information as an input to
+further modelling, regulatory analysis, or portfolio management. They are
+equipped to interpret complex probabilistic displays, to interrogate the
+assumptions underlying uncertainty estimates, and to propagate uncertainty
+through subsequent analyses.
+
+For this audience, full probability distributions, fan charts, prediction
+intervals at multiple levels, and detailed documentation of model assumptions
+are not only appropriate but necessary. @raftery2016 identifies a specific
+sub-type of technical user — the "decision theorist" — who possesses an
+explicit loss function and needs the full predictive distribution to formally
+minimise expected loss. This is the only user type for whom the full
+distributional complexity of a probabilistic forecast is genuinely required,
+and even here, the practical challenges of eliciting and applying a formal
+loss function mean that simpler quantile-based summaries often suffice
+[@raftery2016].
+
+It is worth noting, as @galvao2019 observe in the context of fan charts for
+economic forecasting, that even expert users are not immune to the
+deterministic construal error — the tendency to ignore uncertainty bands and
+focus on the central estimate. Technical communication should therefore still
+include explicit prompts to engage with the full range of uncertainty, not
+merely present it and assume it will be used.
+
+@tbl-audiences provides a summary of the three audience tiers, their
+characteristic information needs, and the communication formats most
+appropriate for each.
+
+| Audience level | Examples | Statistical literacy | Primary need | Recommended formats |
+|----------------|----------|---------------------|--------------|---------------------|
+| **Entry** | General public, patients, general media | Low | Simple behavioural signal | Numerical ranges, point estimates, simple icons |
+| **Informed** | Policymakers, NGOs, specialist journalists | Moderate | Policy-relevant summary with context | Plain-language summaries, categorical scales with numeric translations, FAQs |
+| **Technical** | Domain experts, statisticians, risk managers | High | Full probabilistic detail | Distributions, fan charts, prediction intervals, model documentation |
+
+: Audience tiers and appropriate communication formats, adapted from @efsa2019 {#tbl-audiences}
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — EFSA Audience Mapping Grid**
+
+Suggested figure: Figure A.2 in @efsa2019, "Mapping of EFSA's target
+audiences for external communications," which plots different societal groups
+(e.g., NGOs, general media, risk assessors) on a two-dimensional grid based
+on their level of technicality and the nature of their relationship with
+institutional communications (short-term vs long-term).
+
+Action needed: Reproduce with permission or recreate as a diagram.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Audience Categories and Communication Products**
+
+Suggested figure: The audience categories and communication products table
+in @efsa2019, which directly links Entry, Informed, and Technical level
+audiences to specific communication products (e.g., plain-language summaries,
+scientific publications) and the assumptions made about each group's literacy
+and engagement.
+
+Action needed: Reproduce with permission or recreate as a table.
+:::
+
+## Disagreements in the Literature {#sec-why-disagreements}
+
+Two significant tensions run through the literature on why and to whom
+uncertainty should be communicated, and both have direct implications for
+practice.
+
+The first is what might be called the *uncertainty paradox*. On one hand,
+robust experimental evidence from @vanderbles2020 demonstrates that the
+provision of numerical uncertainty — particularly as a numeric range — does
+not substantially decrease public trust in either the numbers or the source.
+This is reassuring for communicators who worry that expressing uncertainty
+will undermine their credibility. On the other hand, @leffrang2025 find
+that highly effective uncertainty visualisations — specifically ensemble
+spaghetti plots that accurately depict extreme volatility — can cause
+individuals to become "alienated and less likely to take the advice,"
+actively reducing their trust in algorithmic guidance. The apparent
+contradiction between these findings suggests that the relationship between
+uncertainty communication and trust is not linear: modest, well-calibrated
+uncertainty communication preserves or even enhances trust, while
+overwhelming visualisations of volatility and extreme scenarios may
+cross a threshold beyond which the audience disengages. The implication
+for practice is that communicators should aim for appropriate honesty about
+uncertainty, not maximal transparency at any cost.
+
+The second tension concerns the persistent conflict between sender and
+receiver preferences. @dhami2022 document that senders — the scientists,
+forecasters, and analysts who generate uncertain information — strongly
+prefer to express that uncertainty in vague, verbal terms, because doing
+so provides "face-saving" flexibility and reduces their accountability if
+a prediction turns out to be wrong. Receivers — the policymakers, public,
+and patients who must act on the information — strongly prefer precise,
+numerical formats, because they need concrete boundaries to make
+consequential decisions. This mismatch is not merely a matter of different
+tastes; it has direct consequences for decision quality. When communicators
+default to vague verbal expressions for self-protective reasons, they
+systematically deprive their audiences of the information those audiences
+need most. @dhami2022 conclude that "when it really matters, both senders
+and receivers prefer the precise numeric expression of uncertainty" — a
+finding that suggests the sender's preference for vagueness may itself
+reflect a form of motivated reasoning rather than a genuine assessment
+of what serves the audience.
+
+## Good Practice {#sec-why-good-practice}
+
+- **Determine decision relevance first:** Before designing an uncertainty
+  communication, identify the specific decision the audience is trying to
+  make. @fischhoff2014 recommend assessing whether the audience is "looking
+  for a signal, choosing among fixed options, or learning to create options,"
+  and tailoring the depth and format of the uncertainty information to that
+  specific decision context.
+- **Segment the audience:** Never assume a monolithic audience. Practitioners
+  must segment audiences into target groups and identify their needs, beliefs,
+  and statistical skills before developing communication materials
+  [@spiegelhalter2017]. Different groups within the same communication context
+  — for example, specialist journalists and general readers of the same news
+  outlet — may require fundamentally different treatments of the same
+  uncertainty information.
+- **Layer the information:** To satisfy multiple audiences simultaneously,
+  employ a tiered or layered communication approach. Provide a clear top-line
+  gist for entry-level audiences, followed by progressively more complex
+  layers — numerical intervals, source explanations, and technical appendices
+  — for informed and technical users [@spiegelhalter2017].
+- **Develop, test, and evaluate:** Communication products should not be
+  released on the assumption that they will be understood as intended.
+  @spiegelhalter2017 recommend developing materials with target groups,
+  testing them for comprehension, and evaluating their effects on
+  decision-making before wide deployment.
+- **Resist the face-saving temptation:** Communicators should resist the
+  institutional and personal incentives to suppress or vague-ify uncertainty
+  for reasons of self-protection. The evidence reviewed in this section
+  suggests that honest, calibrated uncertainty communication preserves
+  institutional trust over the long run, while suppression of uncertainty
+  creates fragility that is revealed when events diverge from deterministic
+  predictions.

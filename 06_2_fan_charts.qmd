@@ -1,0 +1,194 @@
+## Fan Charts {#sec-fan-charts}
+
+Fan charts are visual displays of probabilistic forecasts over time that
+represent the full range of uncertainty as a series of nested, shaded bands
+radiating outward from a central estimate — producing the characteristic
+widening shape from which the method takes its name. The defining visual
+feature of a fan chart is that "the range of uncertainty inherent in the
+forecasts broadens with the forecast horizon" [@bankofengland_nd], an insight
+that the graphic encodes directly and intuitively: the further into the future
+the forecast extends, the wider the fan becomes. Typically, the central band
+represents the modal — most likely — forecast, while surrounding regions of
+progressively lighter shading or different colours encode decreasing probability
+bands, representing "the range of possible outcomes and the subjective
+probabilities that the actual outcomes will fall within each range"
+[@bankofengland_nd]. As @vanderbles2019 describe them, fan charts display
+"the bounds of several different confidence intervals, often coloured to
+emphasise the changing probability density going further from the point
+estimate." Unlike spaghetti plots, which show individual trajectories, fan
+charts present a smoothed, continuous summary of the full probability
+distribution across all forecast horizons simultaneously, making the structure
+of uncertainty immediately visible without requiring the viewer to integrate
+over multiple individual lines.
+
+### Practical Example
+
+The most prominent and widely studied application of fan charts is in
+macroeconomic forecasting. The Bank of England's Monetary Policy Committee
+pioneered the use of fan charts in 1997 to communicate probabilistic
+projections of inflation and GDP growth to policymakers, financial markets, and
+the public [@spiegelhalter2011]. In these charts, the central interval
+represents 10% probability, and the largest interval 90% probability,
+calculated using a frequency interpretation of historical forecast errors
+[@spiegelhalter2011]. The Bank's fan charts have since become an international
+reference point for uncertainty communication in economic policy, and have been
+adapted by the UK Office for National Statistics to visualise both historical
+and forecasted uncertainties surrounding GDP growth [@galvao2019].
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Bank of England Fan Chart for GDP**
+
+Suggested figure: Figure 5E in @spiegelhalter2011, which shows the Bank of
+England's fan chart for projecting gross domestic product, with nested
+probability bands at 10%, 30%, 50%, 70%, and 90% confidence levels.
+
+Action needed: Reproduce with permission from the Bank of England or from
+@spiegelhalter2011. Publicly available versions can be downloaded from the
+Bank of England's Inflation Report archives.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Simplified Fan Chart for Survey Experiment**
+
+Suggested figure: The Option C graphic in @galvao2019, a stylised fan chart
+used in their survey experiments to test expert and public comprehension of
+economic GDP growth uncertainty. This figure is useful because it was
+specifically designed for comprehension testing and therefore represents a
+communication-optimised rather than production-oriented version of the method.
+
+Action needed: Reproduce with permission or recreate based on the description
+in @galvao2019.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Fan Chart in Context of Other Visual Uncertainty Displays**
+
+Suggested figure: Figure 5 (panel iv) in @vanderbles2019, which illustrates a
+simplified fan plot alongside other visual expressions of uncertainty including
+error bars, violin plots, and density strips, allowing direct visual comparison
+of the fan chart against alternative methods.
+
+Action needed: Reproduce with permission or recreate based on the original
+figure.
+:::
+
+### Strengths and Limitations
+
+**Strengths.** Fan charts offer a number of genuine communicative advantages.
+For audiences with statistical training, they are highly informative, providing
+"the most effective" means of conveying uncertainty to "statisticians and other
+expert users with familiarity of probability distribution functions"
+[@galvao2019]. The widening shape of the graphic acts as a powerful visual
+metaphor that communicates the structure of forecasting uncertainty intuitively
+and without requiring any statistical interpretation: the further out the
+forecast, the less certain it becomes. @bankofengland_nd argue that this
+makes fan charts an effective vehicle for conveying "the high degree of
+uncertainty in economic forecasts, especially at longer horizons, an important
+message for the public to hear."
+
+Fan charts also have a distinctive advantage in their ability to communicate
+the *balance of risks* around a central forecast. Because the shading can be
+applied asymmetrically, a "lopsided" fan chart visually communicates whether
+forecasters place more weight on outcomes falling above or below the central
+projection [@bankofengland_nd]. This depiction of distributional skewness —
+that the risks are tilted to the upside or the downside — is difficult to
+convey through intervals or point estimates alone, and is of direct relevance
+to policy makers and financial market participants who need to understand
+whether the risks around a forecast are symmetric or directional.
+
+**Limitations.** Against these strengths must be set several well-documented
+limitations. The most significant is that the information density of fan
+charts "may be too complicated for many users" [@galvao2019]. In expert
+surveys, professionals who were themselves comfortable with fan charts
+acknowledged concerns that "many journalists would not understand it and
+certainly would not pass it on to the public" [@galvao2019]. For entry-level
+audiences, the simultaneous presentation of multiple nested probability bands,
+each requiring the viewer to hold in mind a different probability level,
+imposes a cognitive load that substantially exceeds what non-specialist users
+can typically manage.
+
+A second limitation is the persistence of the *deterministic construal error*
+even in the presence of explicitly displayed uncertainty bands. Despite the
+visual prominence of the fan, end-users frequently ignore the uncertainty
+information entirely; as @galvao2019 observe, "much of the subsequent
+discussion" of Bank of England fan chart releases "lost sight of this and
+reverted to focus on the central estimate." The widening bands, however
+visually striking, do not automatically redirect audience attention away from
+the single central line.
+
+A third concern is the *illusion of precision*. When forecasters make
+subjective, ad hoc adjustments to the width or skew of the fan without
+grounding those adjustments in rigorous empirical modelling of historical
+forecast errors, the chart "conveys a false sense of precision" that may
+mislead users into believing the uncertainty bounds are more solidly founded
+than they actually are [@bankofengland_nd].
+
+**Disagreement in the literature.** There is a stark and unresolved division
+in the literature regarding the ultimate utility of fan charts. On one side,
+prominent practitioners and researchers praise them as an "innovative" and
+"pioneering approach" to communicating economic uncertainty that has advanced
+the field substantially [@galvao2019]. On the other, a recent rigorous review
+of the Bank of England's own practices reaches the blunt conclusion that fan
+charts "have outlived their usefulness" and "have weak conceptual foundations,
+convey little useful information over and above what could be communicated in
+other, more direct ways, and receive little attention from the public"
+[@bankofengland_nd]. The same review recommends that fan charts "should be
+eliminated" from institutional communications. A second source of tension
+concerns whether a numerical central estimate should accompany the fan chart.
+The Bank of England historically refused to include a specific central number
+alongside the graphic — precisely to prevent audiences from ignoring the bands
+and focusing solely on the point estimate — a practice that attracted sustained
+"criticism by journalists" who found the omission evasive [@spiegelhalter2011].
+
+### When to Use This Method
+
+Fan charts are best deployed when communicating with statisticians, economists,
+and other expert users who are mathematically equipped to interpret complex
+probability distribution functions and directional skewness [@galvao2019].
+They are conceptually most appropriate when the primary goal is to demonstrate
+how "the range of uncertainty inherent in the forecasts broadens with the
+forecast horizon" [@bankofengland_nd] — that is, when the time-varying
+structure of forecast uncertainty is itself the key message. In institutional
+contexts such as central bank communications, where the audience includes
+sophisticated financial market participants who trade on probabilistic
+assessments of policy paths, fan charts provide a level of information that
+simpler formats cannot match.
+
+Fan charts are not appropriate for entry-level audiences without extensive
+interpretive support, and should not be used as a stand-alone communication
+tool even for informed audiences. The documented failure of non-experts and
+journalists to engage with the uncertainty bands suggests that fan charts
+function best as a supplementary display accompanying plain-language
+uncertainty summaries, rather than as the primary mode of uncertainty
+communication.
+
+### Good Practice
+
+- **Ground the fan in empirical forecast errors:** To avoid conveying a false
+  sense of precision, ensure that the baseline widths of the fan are grounded
+  in the historical record of forecast errors for the quantity in question,
+  rather than in subjective, ad hoc committee adjustments [@bankofengland_nd].
+  Documenting and disclosing the methodological basis for the bands should be
+  standard practice.
+- **Complement with simpler formats:** Because fan charts frequently overwhelm
+  non-expert audiences, they should not be the sole mode of uncertainty
+  communication. For entry-level and informed audiences, supplement or replace
+  fan charts with plain-language risk statements, simple numerical ranges, or
+  explicit narrative accounts of the balance of risk [@bankofengland_nd;
+  @galvao2019].
+- **Consider providing a central estimate:** The institutional reluctance to
+  include a numerical central estimate alongside the fan — motivated by a
+  desire to prevent audiences from ignoring the bands — may be
+  counterproductive if it causes audiences to disengage from the graphic
+  entirely. Providing the central estimate explicitly, with strong textual
+  emphasis on the uncertainty bands, may better serve comprehension than
+  withholding it [@spiegelhalter2011].
+- **Label probability levels explicitly:** Every shaded band in the fan chart
+  should be clearly labelled with its associated probability level, either
+  directly on the graphic or in an immediately adjacent legend. Audiences
+  should not be required to consult a separate methodological document to
+  understand what each band represents.
+- **Test with the intended audience:** Given the evidence that even professional
+  users frequently revert to the central estimate, communication products using
+  fan charts should be tested with target audiences before deployment to verify
+  that the uncertainty information is actually being processed and used.

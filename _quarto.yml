@@ -1,0 +1,90 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Communicating Uncertainty"
+  subtitle: "A Comprehensive Guide Across Disciplines"
+  author:
+    - name: Bahman Rostami-Tabar
+      url: https://bahmanrostamitabar.com/
+  date: today
+  date-format: long
+
+  cover-image: cover.png
+  favicon: cover.png
+
+  site-url: https://bahmanrostamitabar.github.io/communicate_uncertainty/
+  repo-url: https://github.com/bahmanrostamitabar/communicate_uncertainty
+  repo-actions: [edit, issue]
+
+  search: true
+  sharing: [twitter, linkedin]
+  open-graph: true
+
+  navbar:
+    background: primary
+    search: true
+
+  sidebar:
+    style: docked
+    search: true
+
+  chapters:
+    - index.qmd
+
+    - part: "Part I: Foundations"
+      chapters:
+        - 01_introduction.qmd
+        - 02_conceptualising_uncertainty.qmd
+        - 03_sources_of_uncertainty.qmd
+        - 04_related_concepts.qmd
+
+    - part: "Part II: Why and To Whom"
+      chapters:
+        - 05_why_communicate.qmd
+
+    - part: "Part III: Methods"
+      chapters:
+        - 06_1_forecast_trajectories.qmd
+        - 06_2_fan_charts.qmd
+        - 06_3_distributions.qmd
+        - 06_4_prediction_intervals.qmd
+        - 06_5_categorical.qmd
+        - 06_6_scenarios.qmd
+        - 06_7_verbal.qmd
+        - 06_8_numerical.qmd
+
+    - 07_conclusion.qmd
+    - references.qmd
+
+bibliography: references.bib
+csl: apa.csl
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    toc-depth: 3
+    toc-title: "On this page"
+    number-sections: true
+    number-depth: 3
+    smooth-scroll: true
+    citations-hover: true
+    footnotes-hover: true
+    link-external-icon: true
+    link-external-newwindow: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    grid:
+      sidebar-width: 280px
+      body-width: 900px
+      margin-width: 200px
+
+execute:
+  freeze: auto
+  echo: false
+  warning: false
+  message: false

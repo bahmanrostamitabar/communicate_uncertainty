@@ -1,0 +1,105 @@
+# Introduction {#sec-introduction}
+
+Uncertainty is an inescapable feature of knowledge, decision-making, and
+communication across virtually every domain of human endeavour. A physician
+advising a patient on the likely progression of a disease, a meteorologist
+issuing a five-day forecast, an economist projecting next year's growth, a
+hydrologist modelling flood risk, an intelligence analyst assessing the
+likelihood of a geopolitical event — all are working with incomplete,
+imperfect, or inherently variable information. In each case, how that
+uncertainty is understood, framed, and communicated to those who must act on
+it can have consequences as significant as the underlying knowledge itself.
+
+Yet despite its ubiquity, uncertainty is frequently treated as an
+inconvenience to be minimised or hidden rather than a property of knowledge to
+be honestly represented. Point estimates are reported without ranges. Forecasts
+are presented as predictions. Probabilistic language is avoided for fear of
+appearing indecisive or undermining confidence. The result is a systematic
+mismatch between what is actually known and what is communicated — one that
+can mislead decision-makers, erode public trust, and contribute to poor
+outcomes. As @fischhoff2014 argue, unless uncertainty is communicated
+effectively, decision makers may place too much or too little faith in the
+information they receive, with potentially serious consequences. The principle
+is stated simply by @nrc2006: no forecast is complete without a description of
+its uncertainty.
+
+The challenge is compounded by a fundamental tension identified across the
+literature. Those who generate uncertain information — forecasters, scientists,
+analysts — frequently prefer to communicate it in vague, qualitative terms,
+partly because doing so reduces their accountability if a prediction turns out
+to be wrong [@dhami2022]. Those who consume uncertain information — the public,
+policymakers, patients, risk managers — typically prefer precise, numerical
+communication, because they need concrete boundaries to make high-stakes
+decisions [@dhami2022]. This sender-receiver mismatch is one of the most
+persistent and practically consequential problems in the field.
+
+Communicating uncertainty is also genuinely difficult. Audiences differ in
+their statistical literacy, their tolerance for ambiguity, and their
+preferences for how information is presented. Methods that work well for expert
+audiences — such as probability distributions or quantile intervals — may
+confuse or alienate non-specialist readers. Simpler formats, such as
+categorical ratings or verbal expressions, risk oversimplifying or introducing
+their own forms of misunderstanding. There is no universally best method; what
+works depends on the message, the medium, and the audience. Furthermore, as
+@vanderbles2019 demonstrate, uncertainty lacks a single agreed definition
+across disciplines, complicating both the production and reception of
+uncertainty communication at a fundamental level.
+
+This paper aims to serve as a practical, cross-disciplinary reference for
+anyone who needs to communicate uncertainty — whether in a scientific report, a
+policy document, a data visualisation, a public health bulletin, or a financial
+forecast. It is written to be accessible to readers from any discipline, and
+draws on literature spanning statistics, meteorology, climate science,
+economics, medicine, psychology, intelligence analysis, ecology, and risk
+communication. The paper does not attempt to survey the full literature on
+uncertainty quantification, probabilistic modelling, or decision theory — each
+of these is a vast field in its own right. The focus is squarely on
+*communication*: how uncertain information is represented and conveyed to an
+audience, and how different representational choices affect understanding, trust,
+and decision-making.
+
+## Structure of This Paper
+
+The paper is organised as follows. @sec-conceptualising introduces uncertainty
+as a concept, reviewing key definitions and frameworks from across the
+literature, including the distinction between epistemic and aleatory
+uncertainty, Stirling's four-dimensional matrix of incertitude, and the
+concepts of deep uncertainty and unknown unknowns. @sec-sources examines where
+uncertainty comes from, identifying five major categories of source: measurement
+and data uncertainty, model uncertainty, parameter uncertainty, structural and
+scenario uncertainty, and human and judgmental uncertainty. @sec-related
+situates uncertainty among four closely related concepts — variability,
+volatility, randomness, and risk — clarifying how these differ and why the
+distinctions matter for communication. @sec-why asks why uncertainty should be
+communicated at all, examines the consequences of failing to do so, and
+considers the range of audiences who may need to engage with uncertain
+information, from technical experts to the general public. The core of the
+paper is @sec-methods, which reviews eight distinct approaches to communicating
+uncertainty: forecast trajectories, fan charts, probability distributions,
+prediction intervals and quantiles, categorical approaches, scenario and what-if
+analysis, verbal expressions, and numerical expressions. For each method, the
+paper discusses what it is, provides a practical example with a figure
+placeholder, examines its strengths and limitations, identifies when it is most
+appropriate, and offers good practice recommendations. Finally, @sec-conclusion
+draws together cross-cutting principles, presents a summary table matching
+methods to audience types, and identifies open questions for future work.
+
+## How to Use This Paper
+
+This paper is designed to be read as a whole, but it can equally be used as a
+reference in which individual sections are consulted as needed. Readers who are
+new to the topic may wish to read Sections [-@sec-conceptualising] through
+[-@sec-why] before turning to the methods. Practitioners who already have a
+working understanding of uncertainty and are seeking guidance on communication
+methods may proceed directly to @sec-methods. Each method subsection in
+@sec-methods is self-contained, with cross-references to the conceptual
+sections where relevant.
+
+::: {.callout-note}
+**A note on scope:** This paper focuses on the communication of *quantitative*
+or *semi-quantitative* uncertainty — uncertainty that can be expressed, at least
+in part, through numbers, ranges, probabilities, or calibrated language. The
+communication of purely qualitative uncertainty, philosophical scepticism, and
+the sociological and political dimensions of uncertainty governance, while
+touched upon where relevant, are not the primary focus.
+:::

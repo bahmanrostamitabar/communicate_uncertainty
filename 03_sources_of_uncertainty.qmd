@@ -1,0 +1,252 @@
+# Sources of Uncertainty {#sec-sources}
+
+Understanding where uncertainty comes from is as important as understanding
+what it is. In practice, uncertainty does not emerge from a single point in
+the analytical process but cascades throughout the entire pipeline — from the
+initial collection of data, through the construction and calibration of models,
+to the interpretation and communication of results. As @vanderbles2019 note,
+no consensus has emerged as to a general framework for categorising these
+sources, perhaps because the wide variety of contexts and tasks being
+considered makes any single taxonomy difficult to apply universally. For the
+purposes of this review, sources of uncertainty are grouped into five broad
+categories: measurement and data uncertainty, model uncertainty, parameter
+uncertainty, structural and scenario uncertainty, and human and judgmental
+uncertainty. These categories are not mutually exclusive — in practice,
+multiple sources interact and compound one another — but distinguishing them
+is essential for designing appropriate communication strategies.
+
+Before choosing how to communicate uncertainty, communicators should ask a
+prior question: *why* does the uncertainty exist? Is it because of unavoidable
+natural variation, the difficulties of measurement, limited knowledge of
+underlying processes, or disagreement between experts? [@vanderbles2019]. The
+answer shapes both the appropriate method of communication and the degree of
+honesty required about the limits of what is known.
+
+## Measurement and Data Uncertainty {#sec-measurement-uncertainty}
+
+At the most foundational level, uncertainty is rooted in the physical and
+practical limits of observation, measurement, and data collection. No
+instrument is perfectly precise; no sampling procedure captures a population
+without error; no data set is complete. The Intergovernmental Panel on Climate
+Change identifies data uncertainty as arising from "missing, inaccurate or
+non-representative data, inappropriate spatial or temporal resolution"
+[@ipcc_ar4]. In algorithmic and statistical forecasting, the specific
+concerns include omitted variables, measurement errors, and data that violate
+the assumptions of independence and identical distribution that underpin most
+standard models [@gruber2023].
+
+Qualitative research with natural hazard scientists captures this source of
+uncertainty in vivid terms: a primary driver of uncertainty is simply "not
+having all the information or not having the ability to get the information,"
+leading to critical gaps in the empirical record that must either be filled
+with assumptions or acknowledged as unknowns [@doyle2023]. The consequences
+of data gaps are often underappreciated precisely because they are invisible:
+by the time a dataset is analysed, its origins, incompleteness, and
+imperfections have typically been forgotten or omitted from the report.
+
+Data uncertainty is also temporally dynamic rather than fixed. In
+macroeconomic statistics, for example, initial data estimates are subject to
+ongoing revision as statistical agencies succeed in incorporating additional
+information over subsequent months and years [@galvao2019]. This means that
+the uncertainty associated with a GDP figure, for instance, is not a static
+quantity at the time of release but changes as the data vintage evolves —
+a dimension of uncertainty that is rarely communicated to users of economic
+statistics.
+
+## Model Uncertainty {#sec-model-uncertainty}
+
+Even with perfect data, our models of the world are inevitably simplifications.
+Every model embeds assumptions about which variables matter, how they relate
+to one another, what functional forms govern those relationships, and how the
+system behaves under conditions that may differ from those in which the model
+was calibrated. As @mehta2020 observe, "models are simplified representations
+of complex systems, and as such are never the 'real' thing." Model uncertainty
+specifically encompasses the variation in outputs that occurs because "different
+models simulate different responses" to the same inputs — a phenomenon that is
+particularly well documented in climate science, where ensembles of competing
+models routinely produce divergent projections of future temperatures,
+precipitation, and sea levels [@mehta2020].
+
+Practitioners are often acutely aware of model limitations, asking how accurate
+models are, what they can and cannot produce, and recognising that missing data
+inputs render the models themselves less effective [@doyle2023]. Yet this
+awareness does not always translate into explicit communication to end users,
+who may receive model outputs presented as if they were direct observations
+of reality rather than outputs of a simplified and imperfect analytical
+apparatus.
+
+A striking finding from the empirical forecasting literature, documented at
+length by @makridakis2016, is that more complex models do not reliably produce
+better predictions. Across a wide range of empirical studies, simple
+forecasting methods have matched or outperformed sophisticated statistical
+models in genuine out-of-sample tests. The reason is instructive: complex
+models are flexible enough to capture noise as well as signal during the
+estimation phase, but this very flexibility becomes a liability when
+conditions change — as they inevitably do. In communication terms, this implies
+that model complexity should not be conflated with model reliability, and that
+presenting a complex model's output without acknowledging model uncertainty
+may convey a false sense of precision.
+
+## Parameter Uncertainty {#sec-parameter-uncertainty}
+
+Closely related to model uncertainty is parameter uncertainty, which concerns
+the specific numerical values assigned to the variables within a model. Even
+when the structural form of a model is well specified, its parameters must be
+estimated from finite and imperfect data. This estimation process introduces
+uncertainty that propagates through all subsequent outputs.
+
+Parameter uncertainty is perhaps the most commonly acknowledged form of
+uncertainty in quantitative science — it is the uncertainty captured by
+confidence intervals, standard errors, and credible intervals in Bayesian
+analyses. The @ipcc_ar4 identifies it as arising from "poorly known or
+changing model parameters" that govern the equations underpinning projections.
+In complex risk assessments, parameter uncertainty frequently manifests as
+"uncertainty about the values of parameters in scientific models," which must
+be estimated or calibrated using imperfect historical data [@vanderbles2019].
+
+However, even this relatively well-understood form of uncertainty is
+systematically underestimated in practice. @makridakis2016 document that the
+confidence intervals produced by many standard forecasting methods are
+systematically too narrow — larger sample sizes do not always reduce forecast
+uncertainty as much as statistical theory suggests. This underestimation of
+parameter uncertainty is a direct source of overconfidence in communicated
+forecasts.
+
+## Structural and Scenario Uncertainty {#sec-structural-uncertainty}
+
+Structural uncertainty operates at a higher conceptual level than parameter
+uncertainty. It represents flaws or limitations in the fundamental theoretical
+architecture of a model — not in the values assigned to its parameters, but
+in the assumptions about which variables to include, how to define the
+boundaries of the system, and which processes and relationships to represent.
+The @ipcc_ar4 characterises structural uncertainty as arising from "inadequate
+models, incomplete or competing conceptual frameworks, lack of agreement on
+model structure, ambiguous system boundaries or definitions, or significant
+processes or relationships wrongly specified or not considered."
+
+Structural uncertainty is particularly insidious because it is the hardest to
+detect from within the modelling framework itself. A model that is
+structurally wrong in an important respect may still fit historical data
+reasonably well, because the fitting process can compensate for structural
+errors by assigning incorrect values to the parameters that are included.
+Only when the model is applied in a genuinely novel situation — one that
+lies outside the envelope of conditions in which it was estimated — do
+structural errors typically become apparent. The @ipcc_ar4 notes explicitly
+that "experts tend to underestimate structural uncertainty arising from
+incomplete understanding of or competing conceptual frameworks for relevant
+systems and processes," leading to overconfident projections that fail to
+account for the possibility that the model is wrong in a fundamental way.
+
+Closely related to structural uncertainty is scenario uncertainty, which
+captures the inherent unpredictability of human behaviour and social evolution.
+Because human choices — about energy use, political organisation, technological
+adoption, and economic behaviour — cannot be modelled deterministically,
+forecasting over sufficiently long horizons must account for divergent possible
+futures driven by different human decisions. The @ipcc_ar4 describes this as
+"projections of human behaviour not easily amenable to prediction (e.g.
+evolution of political systems)." In climate modelling, scenario uncertainty
+encompasses the full range of possible future emission trajectories as a
+function of hypothetical socioeconomic choices about demographic change and
+energy policy [@mehta2020]. Unlike parameter or structural uncertainty,
+scenario uncertainty cannot in principle be reduced by collecting more data
+or building better models — it reflects the genuine openness of the future.
+
+## Human and Judgmental Uncertainty {#sec-human-uncertainty}
+
+A final and often underappreciated source of uncertainty is introduced by the
+humans who collect, interpret, and communicate information. This source
+operates at multiple levels.
+
+At the level of individual scientists, @doyle2023 document through qualitative
+interviews with natural hazard researchers that the "human element" is a
+profound driver of uncertainty. Scientists who prefer specific research designs
+or methodological approaches may inadvertently limit the scope of available
+evidence, "creating uncertainty" by the selectivity of what they choose to
+study. Beyond methodological preferences, uncertainty is generated by
+interpersonal dynamics: disagreements between researchers, ego-driven conflicts
+over interpretation, and varying standards of what constitutes rigorous
+evidence all introduce variability into the knowledge base that cannot be
+captured by formal uncertainty quantification [@doyle2023].
+
+At the level of interpretation, it matters deeply "how data are interpreted,
+when, and by whom" [@doyle2023]. The same dataset can yield different
+uncertainty assessments in the hands of different analysts, depending on their
+disciplinary training, their prior beliefs, and their institutional incentives.
+This interpretive layer of uncertainty is particularly consequential because
+it is rarely made transparent in published reports or public communications.
+
+At the level of the broader communication ecosystem, @doyle2023 highlight
+that the media environment itself functions as an uncertainty generator:
+"conflicting advice is readily available online," and the amplification of
+scientific disagreements through media coverage can produce a level of
+apparent uncertainty in the public mind that substantially exceeds the genuine
+epistemic uncertainty in the scientific community.
+
+Finally, human uncertainty includes the systematic cognitive biases that cause
+forecasters and analysts to misrepresent their own uncertainty. @makridakis2016
+document extensive evidence that judgmental forecasts are typically
+overconfident — that is, the stated confidence intervals are too narrow
+relative to the actual track record of the forecasts. The same overconfidence
+has been documented in medical diagnosis, where physicians rated their
+confidence only marginally lower for difficult cases than for easy ones, even
+when their diagnostic accuracy dropped from 55% to below 6% [@makridakis2009].
+This systematic miscalibration of human uncertainty is one of the strongest
+arguments for formal uncertainty quantification and explicit uncertainty
+communication, rather than relying on expert intuition alone.
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Sources of Uncertainty Typology**
+
+Suggested figure: Table 1 in @ipcc_ar4, "A simple typology of uncertainties,"
+which maps the type of uncertainty (e.g., unpredictability, structural, value)
+against its sources and typical analytical approaches.
+
+Action needed: Reproduce with permission or recreate as a table.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — The Human Element in Uncertainty**
+
+Suggested figure: Figure 1 in @doyle2023, "The collective concept map inferred
+from individual participant mental maps," which visually diagrams how sources
+of uncertainty including "The Data," "Limits of Science," and "The Human
+Element" interconnect and influence scientific outcomes.
+
+Action needed: Reproduce with permission or recreate as a diagram.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Data Quality and Uncertainty Cascade**
+
+Suggested figure: Figure 5 in @gruber2023, which provides a side-by-side
+visual comparison of the Total Survey Error Framework against the Total Data
+Quality Framework in machine learning, illustrating how uncertainty cascades
+through the entire data generation and modelling pipeline.
+
+Action needed: Reproduce with permission or recreate as a diagram.
+:::
+
+## Good Practice
+
+- **Use systematic typologies:** To prevent critical gaps in uncertainty
+  assessment, practitioners should actively "consider all plausible sources of
+  uncertainty using a systematic typology of uncertainty" rather than relying
+  on ad hoc identification of what seems most salient in a given context
+  [@ipcc_ar4].
+- **Audit model assumptions:** To address structural and parameter uncertainty,
+  forecasters should "specify assumptions and system definitions clearly,
+  compare models with observations for a range of conditions, and assess
+  maturity of the underlying science" [@ipcc_ar4]. Model complexity should
+  not be treated as a proxy for reliability.
+- **Interrogate the source before choosing the format:** Communicators should
+  explicitly diagnose the source of uncertainty before engaging audiences.
+  The question "why is there uncertainty?" — whether because of natural
+  variation, measurement difficulties, limited process knowledge, or expert
+  disagreement — should shape the choice of communication method and the
+  level of precision that is appropriate [@vanderbles2019].
+- **Acknowledge the human element:** Reports and communications should
+  distinguish, where possible, between uncertainty that arises from the
+  system being studied and uncertainty that arises from the choices and
+  limitations of the analysts who studied it. Transparency about the human
+  and institutional sources of uncertainty is itself a form of honest
+  communication.

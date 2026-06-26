@@ -1,0 +1,934 @@
+---
+title: "Figures for: Communicating Uncertainty Across Disciplines"
+author: "Bahman Rostami-Tabar"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    embed-resources: true
+    theme: cosmo
+  pdf:
+    toc: true
+    keep-tex: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+#| include: false
+# Install missing packages if needed:
+# install.packages(c("tidyverse", "gt", "scales", "patchwork", "ggtext"))
+library(tidyverse)
+library(gt)
+library(scales)
+library(patchwork)
+
+# Common theme for all ggplot figures
+theme_uncertainty <- function(base_size = 12) {
+  theme_minimal(base_size = base_size) +
+    theme(
+      panel.grid.minor   = element_blank(),
+      plot.title         = element_text(face = "bold", size = base_size + 1),
+      plot.subtitle      = element_text(color = "grey40", size = base_size - 1),
+      plot.caption       = element_text(color = "grey50", size = base_size - 2,
+                                        hjust = 0),
+      axis.title         = element_text(face = "bold"),
+      legend.position    = "bottom"
+    )
+}
+```
+
+# Section 2 Figures {#sec-fig-2}
+
+## Figure 2.1 — Stirling's Four Dimensions of Incertitude {#fig-stirling}
+
+```{r fig-stirling}
+#| label: fig-stirling
+#| fig-cap: "Stirling's four dimensions of incertitude, structured by whether
+#|   knowledge about outcomes and knowledge about likelihoods are problematic
+#|   or unproblematic. These are states of knowledge, not states of nature.
+#|   Adapted from Stirling (n.d.) and Scoones (2019)."
+#| fig-width: 7
+#| fig-height: 6
+
+quadrants <- tibble(
+  xmin  = c(0,   0.5, 0,   0.5),
+  xmax  = c(0.5, 1,   0.5, 1),
+  ymin  = c(0,   0,   0.5, 0.5),
+  ymax  = c(0.5, 0.5, 1,   1),
+  fill  = c("#2ecc71", "#e67e22", "#3498db", "#c0392b"),
+  label = c("RISK", "AMBIGUITY", "UNCERTAINTY", "IGNORANCE"),
+  desc  = c(
+    "Outcomes known\nLikelihoods estimable",
+    "Outcomes contested\nLikelihoods estimable",
+    "Outcomes known\nLikelihoods unknown",
+    "Outcomes unknown\nLikelihoods unknown"
+  ),
+  lx = c(0.25, 0.75, 0.25, 0.75),
+  ly = c(0.25, 0.25, 0.75, 0.75)
+)
+
+ggplot(quadrants) +
+  geom_rect(
+    aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = fill),
+    alpha = 0.22, colour = "grey50", linewidth = 0.6
+  ) +
+  scale_fill_identity() +
+  geom_text(
+    aes(x = lx, y = ly + 0.09, label = label),
+    fontface = "bold", size = 5.5
+  ) +
+  geom_text(
+    aes(x = lx, y = ly - 0.07, label = desc),
+    size = 3.3, colour = "grey30", lineheight = 1.3
+  ) +
+  # Axis tick labels
+  annotate("text", x = 0.25, y = -0.06, label = "Unproblematic",
+           size = 3.4, colour = "grey45", fontface = "italic") +
+  annotate("text", x = 0.75, y = -0.06, label = "Problematic",
+           size = 3.4, colour = "grey45", fontface = "italic") +
+  annotate("text", x = -0.07, y = 0.25, label = "Unproblematic",
+           size = 3.4, colour = "grey45", fontface = "italic", angle = 90) +
+  annotate("text", x = -0.07, y = 0.75, label = "Problematic",
+           size = 3.4, colour = "grey45", fontface = "italic", angle = 90) +
+  # Axis titles
+  annotate("text", x = 0.5, y = -0.13, label = "Knowledge about Outcomes",
+           size = 4.2, fontface = "bold") +
+  annotate("text", x = -0.15, y = 0.5, label = "Knowledge about Likelihoods",
+           size = 4.2, fontface = "bold", angle = 90) +
+  coord_fixed(xlim = c(-0.2, 1.05), ylim = c(-0.2, 1.05), clip = "off") +
+  theme_void() +
+  theme(plot.margin = margin(10, 10, 40, 50)) +
+  labs(
+    caption = "Source: Adapted from Stirling (n.d.) and Scoones (2019)"
+  )
+```
+
+## Figure 2.2 — Known and Unknown Unknowns {#fig-knowns}
+
+```{r fig-knowns}
+#| label: fig-knowns
+#| fig-cap: "The four-quadrant taxonomy of known and unknown unknowns, adapted
+#|   from Makridakis and Bakas (2016). Each quadrant implies a different
+#|   forecasting approach and level of associated risk."
+#| fig-width: 8
+#| fig-height: 6.5
+
+knowns <- tibble(
+  xmin  = c(0,   0.5, 0,   0.5),
+  xmax  = c(0.5, 1,   0.5, 1),
+  ymin  = c(0,   0,   0.5, 0.5),
+  ymax  = c(0.5, 0.5, 1,   1),
+  fill  = c("#27ae60", "#f39c12", "#2980b9", "#c0392b"),
+  label = c("Known / Knowns", "Unknown / Knowns",
+            "Known / Unknowns", "Unknown / Unknowns"),
+  desc  = c(
+    "Normal conditions\nRisk estimable\nThin-tailed errors",
+    "Knowns that are\nignored or denied\nRisk underestimated",
+    "Awareness of ignorance\nFat-tailed errors\nRisk: hard to estimate",
+    "Black Swans\nEntirely unpredictable\nRisk: infinite"
+  ),
+  lx = c(0.25, 0.75, 0.25, 0.75),
+  ly = c(0.25, 0.25, 0.75, 0.75)
+)
+
+ggplot(knowns) +
+  geom_rect(
+    aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = fill),
+    alpha = 0.22, colour = "grey50", linewidth = 0.6
+  ) +
+  scale_fill_identity() +
+  geom_text(
+    aes(x = lx, y = ly + 0.10, label = label),
+    fontface = "bold", size = 4.5
+  ) +
+  geom_text(
+    aes(x = lx, y = ly - 0.06, label = desc),
+    size = 3.1, colour = "grey30", lineheight = 1.3
+  ) +
+  # Axis tick labels
+  annotate("text", x = 0.25, y = -0.06, label = "Known",
+           size = 3.5, colour = "grey40", fontface = "italic") +
+  annotate("text", x = 0.75, y = -0.06, label = "Unknown",
+           size = 3.5, colour = "grey40", fontface = "italic") +
+  annotate("text", x = -0.07, y = 0.25, label = "Known",
+           size = 3.5, colour = "grey40", fontface = "italic", angle = 90) +
+  annotate("text", x = -0.07, y = 0.75, label = "Unknown",
+           size = 3.5, colour = "grey40", fontface = "italic", angle = 90) +
+  # Axis titles
+  annotate("text", x = 0.5, y = -0.13, label = "Outcomes",
+           size = 4.5, fontface = "bold") +
+  annotate("text", x = -0.15, y = 0.5, label = "Likelihoods / Mechanisms",
+           size = 4.5, fontface = "bold", angle = 90) +
+  coord_fixed(xlim = c(-0.22, 1.05), ylim = c(-0.22, 1.05), clip = "off") +
+  theme_void() +
+  theme(plot.margin = margin(10, 10, 40, 55)) +
+  labs(
+    caption = "Source: Adapted from Makridakis and Bakas (2016)"
+  )
+```
+
+# Section 4 Figures {#sec-fig-4}
+
+## Figure 4.1 — Concept Comparison Table {#tbl-concepts}
+
+```{r tbl-concepts}
+#| label: tbl-concepts
+#| tbl-cap: "Key distinctions between uncertainty and four related concepts,
+#|   across dimensions relevant to uncertainty communication practice."
+
+tibble(
+  Concept       = c("Uncertainty", "Risk", "Variability",
+                    "Randomness", "Volatility"),
+  Definition    = c(
+    "Unknown probabilities of outcomes",
+    "Known probabilities of known outcomes",
+    "Real differences within a population or system",
+    "Irreducible stochastic variation (aleatory)",
+    "Measurable fluctuation in financial/economic time series"
+  ),
+  Knowability   = c(
+    "Probabilities unknown",
+    "Fully quantifiable",
+    "Directly measurable",
+    "Statistically characterisable",
+    "Estimable (e.g., GARCH models)"
+  ),
+  Reducibility  = c(
+    "Partially, through better models or data",
+    "Already quantified",
+    "Not reducible — it is real",
+    "Irreducible — structural property",
+    "Model-dependent"
+  ),
+  `Primary\ncommunication challenge` = c(
+    "Avoiding false precision; resisting collapse into risk",
+    "Ensuring calibration",
+    "Distinguishing from epistemic uncertainty",
+    "Avoiding deterministic misinterpretation",
+    "Distinguishing from deep/structural uncertainty"
+  )
+) |>
+  gt() |>
+  tab_header(
+    title    = "Uncertainty and Related Concepts: Key Distinctions",
+    subtitle = "Synthesised from Scoones (2019), Stirling (n.d.), Eggen (2025), and EFSA (2019)"
+  ) |>
+  tab_style(
+    style     = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style     = cell_text(weight = "bold", color = "#1a5276"),
+    locations = cells_body(columns = Concept)
+  ) |>
+  tab_style(
+    style     = cell_fill(color = "#eaf4fb"),
+    locations = cells_body(rows = c(1, 3, 5))
+  ) |>
+  tab_style(
+    style     = cell_fill(color = "#fdfefe"),
+    locations = cells_body(rows = c(2, 4))
+  ) |>
+  cols_width(
+    Concept       ~ px(110),
+    Definition    ~ px(210),
+    Knowability   ~ px(145),
+    Reducibility  ~ px(175),
+    `Primary\ncommunication challenge` ~ px(200)
+  ) |>
+  tab_options(
+    table.font.size          = 12,
+    heading.title.font.size  = 13,
+    heading.subtitle.font.size = 11,
+    column_labels.background.color = "#2c3e50",
+    column_labels.font.color       = "white"
+  )
+```
+
+# Section 5 — Method Selection Flowchart {#sec-fig-5}
+
+## Figure 5.1 — How to Choose a Communication Method {#fig-flowchart}
+
+```{mermaid}
+%%| label: fig-flowchart
+%%| fig-cap: "Decision flowchart for selecting an uncertainty communication
+%%|   method, based on audience level, type of uncertainty, and decision
+%%|   context. Synthesised from the review in Section 6."
+
+flowchart TD
+    A([Start]) --> B{Is the uncertainty\nquantifiable with\nreliable probabilities?}
+
+    B -->|No| C{What is the\nprimary goal?}
+    B -->|Yes| D{What is the\naudience level?}
+
+    C -->|Express evidence\nquality / confidence| E[🟡 Categorical Approach\nor Verbal Expression]
+    C -->|Explore plausible\nfutures| F[🟠 Scenario /\nWhat-If Analysis]
+
+    D -->|Entry-level\nGeneral public| G[🟢 Numerical Expression\nor Simple Interval]
+    D -->|Informed\nPolicymakers / journalists| H{Does the decision\nneed a specific\nthreshold?}
+    D -->|Technical\nExperts / analysts| I{Does the decision\ndepend on cumulative\nor path outcomes?}
+
+    H -->|Yes| J[🟢 Quantile Forecast\nor Prediction Interval]
+    H -->|No| K[🟡 Verbal + Numeric\nor Categorical Scale]
+
+    I -->|Yes| L[🔵 Forecast Trajectories\nEnsemble / Spaghetti Plot]
+    I -->|No| M{How much\ndistributional\ndetail is needed?}
+
+    M -->|Full shape| N[🔵 Probability Distribution\nPDF / CDF / CCDF]
+    M -->|Time-varying\nwith horizon| O[🔵 Fan Chart]
+    M -->|Key quantiles\nonly| P[🟢 Prediction Intervals\nand Quantiles]
+
+    style A fill:#2c3e50,color:#fff,stroke:none
+    style E fill:#f39c12,color:#fff,stroke:none
+    style F fill:#e67e22,color:#fff,stroke:none
+    style G fill:#27ae60,color:#fff,stroke:none
+    style J fill:#27ae60,color:#fff,stroke:none
+    style K fill:#f39c12,color:#fff,stroke:none
+    style L fill:#2980b9,color:#fff,stroke:none
+    style N fill:#2980b9,color:#fff,stroke:none
+    style O fill:#2980b9,color:#fff,stroke:none
+    style P fill:#27ae60,color:#fff,stroke:none
+```
+
+# Section 6 Figures — Communication Method Illustrations {#sec-fig-6}
+
+## Figure 6.1 — Forecast Trajectories {#fig-trajectories}
+
+```{r fig-trajectories}
+#| label: fig-trajectories
+#| fig-cap: "Illustrative forecast trajectory (spaghetti) plot. Each coloured
+#|   line represents one possible future path from an ensemble model. The dashed
+#|   line shows the central (median) forecast. The vertical dotted line marks
+#|   the forecast origin."
+#| fig-width: 8
+#| fig-height: 5
+
+set.seed(123)
+n_obs  <- 24
+n_fore <- 20
+n_traj <- 10
+
+obs_data <- tibble(
+  time  = 1:n_obs,
+  value = 10 + cumsum(rnorm(n_obs, 0.25, 0.7))
+)
+
+last_val <- tail(obs_data$value, 1)
+
+traj_data <- map_dfr(seq_len(n_traj), function(i) {
+  tibble(
+    time       = n_obs:(n_obs + n_fore),
+    value      = c(last_val,
+                   last_val + cumsum(rnorm(n_fore, 0.2, 0.9))),
+    trajectory = factor(i)
+  )
+})
+
+central_fore <- tibble(
+  time  = n_obs:(n_obs + n_fore),
+  value = last_val + c(0, cumsum(rep(0.2, n_fore)))
+)
+
+ggplot() +
+  geom_line(
+    data = traj_data,
+    aes(x = time, y = value, group = trajectory),
+    colour = "#2980b9", alpha = 0.45, linewidth = 0.7
+  ) +
+  geom_line(
+    data = obs_data,
+    aes(x = time, y = value),
+    colour = "black", linewidth = 1.3
+  ) +
+  geom_line(
+    data = central_fore,
+    aes(x = time, y = value),
+    colour = "#c0392b", linewidth = 1.2, linetype = "dashed"
+  ) +
+  geom_vline(
+    xintercept = n_obs, linetype = "dotted", colour = "grey50", linewidth = 0.8
+  ) +
+  annotate("text", x = n_obs / 2, y = max(obs_data$value) + 0.6,
+           label = "Observed", size = 3.5, colour = "grey30") +
+  annotate("text", x = n_obs + n_fore / 2,
+           y = max(traj_data$value) + 0.7,
+           label = "Ensemble trajectories", size = 3.5, colour = "#2980b9") +
+  annotate("text", x = n_obs + 1,
+           y = tail(central_fore$value, 1) + 0.5,
+           label = "Median forecast", size = 3.2, colour = "#c0392b",
+           hjust = 0) +
+  scale_x_continuous(breaks = seq(0, n_obs + n_fore, by = 5)) +
+  theme_uncertainty() +
+  labs(
+    title    = "Forecast Trajectories",
+    subtitle = paste0("Multiple ensemble members (n = ", n_traj,
+                      ") showing the range of possible futures"),
+    x = "Time", y = "Value",
+    caption  = "Illustrative example. Each line represents one simulated future path."
+  )
+```
+
+## Figure 6.2 — Fan Chart {#fig-fan}
+
+```{r fig-fan}
+#| label: fig-fan
+#| fig-cap: "Illustrative fan chart showing a central forecast surrounded by
+#|   nested probability bands at 30%, 50%, 70%, and 90% confidence levels.
+#|   Darker shading indicates higher probability density near the central
+#|   forecast."
+#| fig-width: 8
+#| fig-height: 5
+
+set.seed(42)
+n_obs  <- 20
+n_fore <- 30
+
+obs_data <- tibble(
+  time  = 1:n_obs,
+  value = 10 + cumsum(rnorm(n_obs, 0.2, 0.6))
+)
+
+last_val <- tail(obs_data$value, 1)
+h        <- seq_len(n_fore)
+central  <- last_val + cumsum(rep(0.2, n_fore))
+spread   <- sqrt(h) * 0.55  # fan widens with horizon
+
+fore_data <- tibble(
+  time    = n_obs + h,
+  central = central,
+  lo90 = central - qnorm(0.95) * spread,
+  hi90 = central + qnorm(0.95) * spread,
+  lo70 = central - qnorm(0.85) * spread,
+  hi70 = central + qnorm(0.85) * spread,
+  lo50 = central - qnorm(0.75) * spread,
+  hi50 = central + qnorm(0.75) * spread,
+  lo30 = central - qnorm(0.65) * spread,
+  hi30 = central + qnorm(0.65) * spread
+)
+
+# Legend data
+band_legend <- tibble(
+  label = c("90%", "70%", "50%", "30%"),
+  alpha = c(0.12, 0.18, 0.25, 0.35),
+  fill  = rep("#2980b9", 4)
+)
+
+ggplot() +
+  geom_ribbon(data = fore_data, aes(x = time, ymin = lo90, ymax = hi90),
+              fill = "#2980b9", alpha = 0.12) +
+  geom_ribbon(data = fore_data, aes(x = time, ymin = lo70, ymax = hi70),
+              fill = "#2980b9", alpha = 0.18) +
+  geom_ribbon(data = fore_data, aes(x = time, ymin = lo50, ymax = hi50),
+              fill = "#2980b9", alpha = 0.25) +
+  geom_ribbon(data = fore_data, aes(x = time, ymin = lo30, ymax = hi30),
+              fill = "#2980b9", alpha = 0.35) +
+  geom_line(data = obs_data, aes(x = time, y = value),
+            colour = "black", linewidth = 1.3) +
+  geom_line(data = fore_data, aes(x = time, y = central),
+            colour = "#c0392b", linewidth = 1.1, linetype = "dashed") +
+  geom_vline(xintercept = n_obs, linetype = "dotted",
+             colour = "grey50", linewidth = 0.8) +
+  # Band labels at the end of the forecast
+  annotate("text",
+           x     = n_obs + n_fore + 0.5,
+           y     = c(tail(fore_data$hi90, 1), tail(fore_data$hi70, 1),
+                     tail(fore_data$hi50, 1), tail(fore_data$hi30, 1)),
+           label = c("90%", "70%", "50%", "30%"),
+           size  = 3.2, colour = "#1a5276", hjust = 0) +
+  scale_x_continuous(
+    limits = c(1, n_obs + n_fore + 4),
+    breaks = seq(0, n_obs + n_fore, by = 5)
+  ) +
+  theme_uncertainty() +
+  labs(
+    title    = "Fan Chart",
+    subtitle = "Central forecast (dashed) with probability bands at 30%, 50%, 70%, and 90%",
+    x = "Time", y = "Value",
+    caption  = "Illustrative example. Bands widen with the forecast horizon."
+  )
+```
+
+## Figure 6.3 — Probability Distribution {#fig-distribution}
+
+```{r fig-distribution}
+#| label: fig-distribution
+#| fig-cap: "Illustrative probability density function (PDF) showing the full
+#|   distribution of possible outcomes. The red shaded region highlights the
+#|   upper tail above a critical threshold — the region of primary concern for
+#|   risk management."
+#| fig-width: 8
+#| fig-height: 5
+
+x <- seq(-4, 5, length.out = 600)
+
+dist_data <- tibble(
+  x       = x,
+  density = dnorm(x, mean = 0.5, sd = 1.2)
+)
+
+threshold <- 2.5
+mean_val  <- 0.5
+
+ggplot(dist_data, aes(x = x, y = density)) +
+  geom_ribbon(
+    data = filter(dist_data, x < threshold),
+    aes(ymin = 0, ymax = density),
+    fill = "#2980b9", alpha = 0.18
+  ) +
+  geom_ribbon(
+    data = filter(dist_data, x >= threshold),
+    aes(ymin = 0, ymax = density),
+    fill = "#c0392b", alpha = 0.45
+  ) +
+  geom_line(linewidth = 1.3, colour = "#1a5276") +
+  geom_vline(xintercept = mean_val, linetype = "dashed",
+             colour = "grey40", linewidth = 0.9) +
+  geom_vline(xintercept = threshold, linetype = "dashed",
+             colour = "#c0392b", linewidth = 0.9) +
+  # Annotations
+  annotate("text", x = mean_val, y = max(dist_data$density) + 0.015,
+           label = "Mean", size = 3.5, colour = "grey40", hjust = 0.5) +
+  annotate("text", x = threshold + 0.1,
+           y = max(dist_data$density) + 0.015,
+           label = "Threshold", size = 3.5, colour = "#c0392b", hjust = 0) +
+  annotate("text", x = 3.5, y = 0.03,
+           label = "High-risk\nregion", size = 3.2, colour = "#c0392b",
+           lineheight = 1.2) +
+  annotate("text", x = -2, y = 0.06,
+           label = "Most probable\noutcomes", size = 3.2, colour = "#2980b9",
+           lineheight = 1.2) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.08))) +
+  theme_uncertainty() +
+  labs(
+    title    = "Probability Distribution (PDF)",
+    subtitle = "Full distribution of outcomes with critical threshold and risk region marked",
+    x = "Outcome", y = "Probability Density",
+    caption  = "Illustrative example. Area under the curve sums to 1."
+  )
+```
+
+## Figure 6.4 — Prediction Intervals {#fig-intervals}
+
+```{r fig-intervals}
+#| label: fig-intervals
+#| fig-cap: "Illustrative prediction intervals showing an observed time series
+#|   followed by a central forecast with 80% and 95% prediction intervals.
+#|   Wider intervals reflect greater uncertainty at longer forecast horizons."
+#| fig-width: 8
+#| fig-height: 5
+
+set.seed(99)
+n_obs  <- 20
+n_fore <- 25
+
+obs_data <- tibble(
+  time  = 1:n_obs,
+  value = 10 + cumsum(rnorm(n_obs, 0.25, 0.6))
+)
+
+last_val <- tail(obs_data$value, 1)
+h        <- seq_len(n_fore)
+central  <- last_val + cumsum(rep(0.22, n_fore))
+spread   <- sqrt(h) * 0.5
+
+fore_data <- tibble(
+  time    = n_obs + h,
+  central = central,
+  lo95    = central - qnorm(0.975) * spread,
+  hi95    = central + qnorm(0.975) * spread,
+  lo80    = central - qnorm(0.90)  * spread,
+  hi80    = central + qnorm(0.90)  * spread
+)
+
+ggplot() +
+  geom_ribbon(data = fore_data, aes(x = time, ymin = lo95, ymax = hi95),
+              fill = "#2980b9", alpha = 0.18) +
+  geom_ribbon(data = fore_data, aes(x = time, ymin = lo80, ymax = hi80),
+              fill = "#2980b9", alpha = 0.35) +
+  geom_line(data = obs_data, aes(x = time, y = value),
+            colour = "black", linewidth = 1.3) +
+  geom_line(data = fore_data, aes(x = time, y = central),
+            colour = "#c0392b", linewidth = 1.1, linetype = "dashed") +
+  geom_vline(xintercept = n_obs, linetype = "dotted",
+             colour = "grey50", linewidth = 0.8) +
+  # Interval labels
+  annotate("text",
+           x     = n_obs + n_fore - 1,
+           y     = c(tail(fore_data$hi95, 1) + 0.25,
+                     tail(fore_data$hi80, 1) + 0.25),
+           label = c("95% PI", "80% PI"),
+           size  = 3.2, colour = "#1a5276", hjust = 0.5) +
+  annotate("text",
+           x = n_obs / 2, y = max(obs_data$value) + 0.5,
+           label = "Observed", size = 3.5, colour = "grey30") +
+  scale_x_continuous(breaks = seq(0, n_obs + n_fore, by = 5)) +
+  theme_uncertainty() +
+  labs(
+    title    = "Prediction Intervals",
+    subtitle = "Central forecast (dashed) with 80% and 95% prediction intervals (PI)",
+    x = "Time", y = "Value",
+    caption  = paste0("Illustrative example. Intervals widen with forecast ",
+                      "horizon, reflecting accumulating uncertainty.")
+  )
+```
+
+## Figure 6.5 — Categorical (RAG) Approach {#fig-rag}
+
+```{r fig-rag}
+#| label: fig-rag
+#| fig-cap: "Illustrative Red-Amber-Green (RAG) categorical uncertainty
+#|   display for five indicators. Each indicator is assigned a category
+#|   (Low, Moderate, High) based on the underlying uncertainty assessment."
+#| fig-width: 7
+#| fig-height: 4
+
+rag_data <- tibble(
+  Indicator   = c("Indicator A", "Indicator B", "Indicator C",
+                  "Indicator D", "Indicator E"),
+  Category    = c("Low", "Low", "Moderate", "High", "High"),
+  Probability = c("< 10%", "5–15%", "25–45%", "55–70%", "> 75%"),
+  Confidence  = c("High", "High", "Moderate", "Low", "Low")
+) |>
+  mutate(
+    Category  = factor(Category, levels = c("Low", "Moderate", "High")),
+    Indicator = fct_rev(factor(Indicator))
+  )
+
+rag_colors <- c("Low" = "#27ae60", "Moderate" = "#f39c12", "High" = "#c0392b")
+
+ggplot(rag_data, aes(x = 1, y = Indicator, fill = Category)) +
+  geom_tile(colour = "white", linewidth = 2, width = 0.6, height = 0.7) +
+  geom_text(aes(label = paste0(Category, "\n(", Probability, ")")),
+            size = 3.2, colour = "white", fontface = "bold") +
+  scale_fill_manual(values = rag_colors) +
+  theme_uncertainty() +
+  theme(
+    axis.text.x  = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.title.x = element_blank(),
+    panel.grid   = element_blank(),
+    legend.position = "right"
+  ) +
+  labs(
+    title    = "Categorical (RAG) Uncertainty Display",
+    subtitle = "Five indicators classified by uncertainty level with indicative probability ranges",
+    y        = NULL,
+    fill     = "Uncertainty\nLevel",
+    caption  = "Illustrative example. Cut-offs should be explicitly defined in practice."
+  )
+```
+
+## Figure 6.6 — Scenario Analysis {#fig-scenarios}
+
+```{r fig-scenarios}
+#| label: fig-scenarios
+#| fig-cap: "Illustrative scenario analysis showing four distinct plausible
+#|   futures without explicit probabilities. An even number of scenarios
+#|   prevents audiences from defaulting to a middle option as a deterministic
+#|   prediction."
+#| fig-width: 8
+#| fig-height: 5
+
+set.seed(55)
+n_obs  <- 15
+n_fore <- 25
+
+obs_data <- tibble(
+  time  = 1:n_obs,
+  value = 10 + cumsum(rnorm(n_obs, 0.2, 0.5))
+)
+
+last_val <- tail(obs_data$value, 1)
+t_fore   <- (n_obs + 1):(n_obs + n_fore)
+
+scenarios <- tibble(
+  time = rep(t_fore, 4),
+  value = c(
+    last_val + cumsum(rnorm(n_fore, 0.55, 0.25)),   # High growth
+    last_val + cumsum(rnorm(n_fore, 0.25, 0.20)),   # Moderate growth
+    last_val + cumsum(rnorm(n_fore, -0.05, 0.25)),  # Stagnation
+    last_val + cumsum(rnorm(n_fore, -0.40, 0.30))   # Decline
+  ),
+  scenario = rep(c("S1: High growth", "S2: Moderate growth",
+                   "S3: Stagnation", "S4: Decline"), each = n_fore)
+)
+
+scenario_colors <- c(
+  "S1: High growth"     = "#27ae60",
+  "S2: Moderate growth" = "#2980b9",
+  "S3: Stagnation"      = "#f39c12",
+  "S4: Decline"         = "#c0392b"
+)
+
+ggplot() +
+  geom_line(data = obs_data, aes(x = time, y = value),
+            colour = "black", linewidth = 1.3) +
+  geom_line(
+    data = scenarios,
+    aes(x = time, y = value, colour = scenario, linetype = scenario),
+    linewidth = 1.1
+  ) +
+  geom_vline(xintercept = n_obs, linetype = "dotted",
+             colour = "grey50", linewidth = 0.8) +
+  scale_colour_manual(values = scenario_colors) +
+  scale_linetype_manual(
+    values = c("solid", "dashed", "dotdash", "longdash")
+  ) +
+  theme_uncertainty() +
+  theme(legend.title = element_blank()) +
+  labs(
+    title    = "Scenario Analysis",
+    subtitle = "Four distinct plausible futures — no probabilities assigned to individual scenarios",
+    x = "Time", y = "Value",
+    caption  = paste0(
+      "Illustrative example. Four scenarios shown to prevent anchoring on a ",
+      "'middle' option.\n",
+      "Good practice: Stirling (n.d.) recommends an even number of scenarios."
+    )
+  )
+```
+
+## Figure 6.7 — Verbal Probability Scale {#tbl-verbal}
+
+```{r tbl-verbal}
+#| label: tbl-verbal
+#| tbl-cap: "Illustrative verbal probability scale mapping qualitative
+#|   expressions to approximate numerical probability ranges, based on
+#|   frameworks used by the IPCC and intelligence agencies. The rightmost
+#|   column shows the average spread in public interpretation of each term."
+
+tibble(
+  `Verbal expression`   = c("Virtually certain", "Very likely", "Likely",
+                             "About as likely as not", "Unlikely",
+                             "Very unlikely", "Exceptionally unlikely"),
+  `Approximate range`   = c("99–100%", "90–100%", "66–100%",
+                             "33–66%",  "0–33%",   "0–10%", "0–1%"),
+  `IPCC term`           = c("✓", "✓", "✓", "✓", "✓", "✓", "✓"),
+  `Typical public\ninterpretation spread` = c(
+    "Narrow", "Narrow", "Moderate",
+    "Wide", "Wide", "Wide", "Very wide (0% anchor risk)"
+  )
+) |>
+  gt() |>
+  tab_header(
+    title    = "Verbal Probability Scale with Numeric Translations",
+    subtitle = "Based on IPCC (Mastrandrea et al., 2010) and Dhami & Mandel (2022)"
+  ) |>
+  tab_style(
+    style     = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style     = cell_fill(color = "#eaf4fb"),
+    locations = cells_body(rows = c(1, 3, 5, 7))
+  ) |>
+  tab_style(
+    style     = cell_text(color = "#c0392b"),
+    locations = cells_body(
+      columns = `Typical public\ninterpretation spread`,
+      rows    = c(5, 6, 7)
+    )
+  ) |>
+  tab_source_note(
+    "Note: Always pair verbal expressions with numeric translations in practice.
+     Present the number before the word (e.g., '10% — unlikely')."
+  ) |>
+  tab_options(
+    table.font.size          = 12,
+    heading.title.font.size  = 13,
+    column_labels.background.color = "#2c3e50",
+    column_labels.font.color       = "white"
+  )
+```
+
+## Figure 6.8 — Numerical Format Comparison {#tbl-numerical}
+
+```{r tbl-numerical}
+#| label: tbl-numerical
+#| tbl-cap: "The same probability (10%) expressed in six different numerical
+#|   formats. Format choice affects risk perception and comprehension.
+#|   Adapted from Spiegelhalter (2017)."
+
+tibble(
+  Format             = c("Percentage", "Natural frequency",
+                         "Decimal probability", "Odds", "1-in-X ratio",
+                         "Absolute risk difference"),
+  Expression         = c("10%", "10 out of 100", "0.10",
+                         "1 to 9 (in favour)", "1 in 10",
+                         "+5 per 1,000 (vs baseline of 45 per 1,000)"),
+  `Cognitive notes`  = c(
+    "Widely understood; may feel abstract for very small probabilities",
+    "Intuitive; grounds the probability in a concrete, countable group",
+    "Precise; standard in technical reporting; unfamiliar to many lay audiences",
+    "Common in gambling contexts; easily misunderstood elsewhere",
+    "⚠ Inflates risk perception relative to equivalent N-in-X formats",
+    "Most honest for risk changes; always prefer over relative risk"
+  ),
+  `Best for`         = c(
+    "General and informed audiences",
+    "General public; medical risk communication",
+    "Technical audiences",
+    "Specialist contexts only",
+    "Avoid — use N-in-X instead",
+    "All audiences when communicating risk changes"
+  )
+) |>
+  gt() |>
+  tab_header(
+    title    = "Numerical Formats for the Same Probability (10%)",
+    subtitle = "Adapted from Spiegelhalter (2017) and EFSA (2019)"
+  ) |>
+  tab_style(
+    style     = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style     = cell_fill(color = "#eaf4fb"),
+    locations = cells_body(rows = c(1, 3, 5))
+  ) |>
+  tab_style(
+    style     = cell_fill(color = "#fde8e8"),
+    locations = cells_body(rows = 5)
+  ) |>
+  tab_style(
+    style     = cell_text(color = "#c0392b", weight = "bold"),
+    locations = cells_body(columns = `Best for`, rows = 5)
+  ) |>
+  tab_source_note(
+    "Key rule: Fix the denominator when comparing frequencies. Avoid 1-in-X formats.
+     Always specify the reference class."
+  ) |>
+  cols_width(
+    Format            ~ px(140),
+    Expression        ~ px(200),
+    `Cognitive notes` ~ px(260),
+    `Best for`        ~ px(170)
+  ) |>
+  tab_options(
+    table.font.size          = 11,
+    heading.title.font.size  = 13,
+    column_labels.background.color = "#2c3e50",
+    column_labels.font.color       = "white"
+  )
+```
+
+# Conclusion Figures {#sec-fig-7}
+
+## Figure 7.1 — Method-Audience Summary Table {#tbl-method-audience}
+
+```{r tbl-method-audience}
+#| label: tbl-method-audience
+#| tbl-cap: "Summary of the eight uncertainty communication methods reviewed
+#|   in this paper, mapped to appropriate audience levels and summarising
+#|   each method's primary use case, key strength, and key limitation."
+
+tibble(
+  Method = c(
+    "Forecast Trajectories",
+    "Fan Charts",
+    "Distributions",
+    "Prediction Intervals & Quantiles",
+    "Categorical Approaches",
+    "Scenario & What-If Analysis",
+    "Verbal Expressions",
+    "Numerical Expressions"
+  ),
+  `Best\naudience level` = c(
+    "Technical",
+    "Technical",
+    "Technical",
+    "Entry → Technical",
+    "Entry → Informed",
+    "Informed → Technical",
+    "Entry → Informed",
+    "Entry → Technical"
+  ),
+  `Primary use case` = c(
+    "Stochastic variation; cumulative / path-dependent decisions",
+    "Time-varying uncertainty with expanding horizon; balance of risks",
+    "Full probabilistic detail for expert downstream modelling",
+    "Risk-averse decisions; mass-media communication of uncertainty",
+    "Meta-uncertainty; unquantifiable confidence in evidence quality",
+    "Deep uncertainty; long-horizon strategic planning",
+    "Meta-uncertainty; implicit directionality signals",
+    "Consequential decisions requiring aggregation of probabilities"
+  ),
+  `Key strength` = c(
+    "Shows true path variability and cumulative uncertainty",
+    "Visually encodes widening horizon and distributional skewness",
+    "Informationally complete; enables extraction of any quantile",
+    "Versatile; preserves trust; directly actionable",
+    "Accessible; honest for unquantifiable uncertainty",
+    "Avoids false precision under deep uncertainty",
+    "Natural; directional; accessible without statistical training",
+    "Unambiguous ordering; aggregable; receiver-preferred"
+  ),
+  `Key limitation` = c(
+    "Visual clutter; cherry-picking of single line",
+    "Overwhelming for non-experts; deterministic construal error",
+    "Cognitively demanding; mode/mean confusion; variability conflation",
+    "Uniform distribution fallacy; anchoring on extremes",
+    "Information loss; conflates likelihood and confidence",
+    "Deterministic misuse; future myopia; simulation heuristic",
+    "Massive interpretive variability; severity and extremity effects",
+    "Reference class ambiguity; ratio bias; 1-in-X inflation"
+  )
+) |>
+  gt() |>
+  tab_header(
+    title    = "Uncertainty Communication Methods: A Summary Guide",
+    subtitle = "Audience levels, use cases, strengths, and limitations"
+  ) |>
+  tab_style(
+    style     = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_style(
+    style     = cell_text(weight = "bold", color = "#1a5276"),
+    locations = cells_body(columns = Method)
+  ) |>
+  tab_style(
+    style     = cell_fill(color = "#eaf4fb"),
+    locations = cells_body(rows = c(1, 3, 5, 7))
+  ) |>
+  tab_style(
+    style     = cell_fill(color = "#fdfefe"),
+    locations = cells_body(rows = c(2, 4, 6, 8))
+  ) |>
+  # Colour-code audience levels
+  tab_style(
+    style     = cell_text(color = "#c0392b"),
+    locations = cells_body(
+      columns = `Best\naudience level`,
+      rows    = c(1, 2, 3)
+    )
+  ) |>
+  tab_style(
+    style     = cell_text(color = "#27ae60"),
+    locations = cells_body(
+      columns = `Best\naudience level`,
+      rows    = c(5, 7)
+    )
+  ) |>
+  cols_width(
+    Method                  ~ px(160),
+    `Best\naudience level`  ~ px(120),
+    `Primary use case`      ~ px(220),
+    `Key strength`          ~ px(200),
+    `Key limitation`        ~ px(200)
+  ) |>
+  tab_source_note(
+    "Colour coding: Red = Technical audiences only; 
+     Green = Suitable for entry-level; Black = Broad applicability."
+  ) |>
+  tab_options(
+    table.font.size          = 11,
+    heading.title.font.size  = 13,
+    heading.subtitle.font.size = 11,
+    column_labels.background.color = "#2c3e50",
+    column_labels.font.color       = "white"
+  )
+```

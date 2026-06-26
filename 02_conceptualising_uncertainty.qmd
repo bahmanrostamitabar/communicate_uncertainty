@@ -1,0 +1,315 @@
+# Conceptualising Uncertainty {#sec-conceptualising}
+
+The word "uncertainty" is used freely across virtually every academic
+discipline, yet it carries subtly — and sometimes radically — different
+meanings depending on the field in which it appears. In philosophy it refers to
+the limits of knowledge; in physics it can mean the fundamental indeterminacy
+of quantum mechanics; in statistics it refers to the variability of an
+estimator; in economics it denotes the impossibility of assigning probabilities
+to outcomes; in everyday speech it simply means not knowing what will happen.
+As @makridakis2016 observe, uncertainty "lacks a unique definition and clear
+meaning that varies when used in different fields such as philosophy, physics,
+information science, economics, statistics, finance, politics, psychology,
+engineering and insurance." This multiplicity of meanings is not merely
+terminological housekeeping — it has direct practical consequences. When a
+scientist reports that a finding is "uncertain," a policymaker, a journalist,
+and a risk analyst may each understand something quite different by the
+statement. Conceptual clarity about what uncertainty means, and what it does
+not mean, is therefore a prerequisite for effective communication.
+
+This section reviews the principal frameworks through which scholars have
+attempted to bring analytical order to the concept of uncertainty. It begins
+with the foundational distinction between epistemic and aleatory uncertainty,
+before broadening to consider ontological, linguistic, and deep uncertainty.
+It then examines Stirling's influential matrix of incertitude and the related
+taxonomy of known and unknown unknowns. The section concludes with a
+discussion of the key disagreements in the literature and their implications
+for practice.
+
+## What is Uncertainty?
+
+At its most general, uncertainty refers to a state of incomplete or imperfect
+knowledge — an inability to fully describe the present or reliably predict the
+future [@makridakis2016]. This everyday understanding, however, conceals
+important distinctions. A physician who cannot determine a diagnosis with
+confidence, a meteorologist issuing a five-day forecast, and an engineer
+assessing the structural integrity of a bridge under novel loading conditions
+are all dealing with uncertainty, yet the character of their uncertainty — its
+source, its reducibility, and the kind of information that would help resolve
+it — differs substantially in each case.
+
+A critical philosophical distinction that underpins much of the subsequent
+literature is that uncertainty is fundamentally a property of *knowledge*, not
+of the world itself [@scoones2019]. The future trajectory of a hurricane is
+not inherently uncertain; it is determined by physical laws. It appears
+uncertain to us because we lack the observational precision and computational
+power to fully model those laws. This epistemological framing — uncertainty as
+a gap in human knowledge rather than an objective feature of reality — has
+profound implications for how it should be communicated and managed. It
+suggests that uncertainty can, at least in principle, be reduced through better
+data, better models, and more careful reasoning, even if it can never be
+entirely eliminated.
+
+## Epistemic and Aleatory Uncertainty {#sec-epistemic-aleatory}
+
+The most widely used distinction in statistical and scientific practice is
+between *epistemic* and *aleatory* uncertainty, a division that maps roughly
+onto the contrast between ignorance and irreducible randomness.
+
+**Aleatory uncertainty** is conceptualised as the inherent, irreducible
+stochastic variability within a system — the randomness that remains even with
+perfect knowledge of the underlying processes [@gruber2023]. It represents,
+in @spiegelhalter2017's formulation, the "inevitable unpredictability of the
+future due to unforeseeable factors, fully expressed by classical probabilities."
+In financial contexts, aleatory uncertainty is closely related to what is
+termed latent volatility — the inherent fluctuation in asset prices that cannot
+be predicted regardless of how sophisticated the model [@eggen2025]. The
+canonical example is the outcome of a fair coin toss: no amount of additional
+information about the coin or the person flipping it can, under normal
+circumstances, allow us to predict the result with certainty.
+
+**Epistemic uncertainty**, by contrast, refers to a state of incomplete
+knowledge about the world that could, in theory, be resolved with more data
+or better models. It encompasses, as @spiegelhalter2017 describes it,
+"uncertainty about the structure and parameters of statistical models,
+expressed, for example, through Bayesian probability distributions," and is
+fundamentally reducible through improving models or data [@eggen2025]. In the
+language of @vanderbles2019, epistemic uncertainty concerns "the past and
+present state of the world that arises because of what we do not know but
+could know in theory." A physician who is unsure of a diagnosis because a
+test result is not yet available faces epistemic uncertainty; the same
+physician uncertain about a patient's idiosyncratic biological response to
+a treatment confronts something closer to aleatory uncertainty.
+
+This distinction is practically significant because it implies different
+responses. Epistemic uncertainty motivates investment in better measurement,
+broader data collection, and more refined models. Aleatory uncertainty, by
+contrast, calls for honest acknowledgement of irreducible limits and for
+communication strategies that convey the range of possible outcomes rather
+than implying a determinism that does not exist.
+
+However, the boundary between the two is less clean than it first appears.
+@gruber2023 argue forcefully that a simple decomposition into aleatory and
+epistemic uncertainty "does not do justice to the overarching problem of
+multiple sources of uncertainty." Their central challenge is that the
+classification of uncertainty as aleatory or epistemic is entirely
+context-dependent, not a universal property of the phenomenon being studied.
+A dice roll, for instance, is conventionally treated as purely aleatory; yet
+if one possessed a model that perfectly measured the initial position, velocity,
+and rotation of the die, the outcome would become entirely predictable —
+effectively epistemic. As @gruber2023 conclude, "uncertainties can therefore
+only be distinguished on a model and data basis and not universally." This
+insight is important for communication: claiming that a source of uncertainty
+is irreducibly aleatory may be more a statement about the limits of current
+models than about the nature of reality.
+
+## Ontological, Linguistic, and Deep Uncertainty
+
+Beyond the epistemic-aleatory divide, scholars have identified further
+conceptual layers of uncertainty that resist standard probabilistic treatment.
+
+**Ontological uncertainty** acknowledges the ultimate limits of mathematical
+modelling as a representation of a complex reality. @spiegelhalter2017 defines
+it as "uncertainty about the entire modelling process as a description of
+reality" — the possibility that no model, however sophisticated, fully captures
+the dynamics of the system being studied. This form of uncertainty is
+particularly relevant in complex socio-technical or socio-ecological systems,
+where the interactions between human behaviour, institutional structures, and
+natural processes cannot be fully specified in advance [@scoones2019].
+
+**Linguistic uncertainty** arises from the limits of human language in
+describing and communicating risk and uncertainty. It manifests as vagueness,
+where a term has imprecise boundaries; ambiguity, where a term has multiple
+possible meanings; and under-specificity, where a statement does not provide
+sufficient detail to constrain interpretation [@eco_risk_nd]. Linguistic
+uncertainty is particularly prominent in qualitative risk assessments, where
+terms such as "low risk" or "possible" are routinely used without explicit
+reference to exposure conditions or probability scales, leaving audiences to
+fill in the gaps with their own prior beliefs.
+
+**Deep uncertainty** defines a more radical condition in which the fundamental
+parameters of a problem cannot be agreed upon. @doyle2023 characterise it as
+a situation that "exists when experts or stakeholders do not know or cannot
+agree on conceptual models, uncertainty probability distributions, and how to
+weigh and value desirable alternative outcomes." Deep uncertainty is not merely
+a quantitative problem — it is a problem of contested knowledge and competing
+value systems. Standard probabilistic tools are inadequate under conditions of
+deep uncertainty, and communication strategies must shift accordingly, from
+conveying precise probabilities to facilitating deliberation about alternative
+possible futures.
+
+## Stirling's Matrix: The Four Dimensions of Incertitude {#sec-stirling}
+
+One of the most influential conceptual frameworks for understanding the
+multidimensional character of uncertainty is the incertitude matrix proposed by
+Andy Stirling, which provides a more rigorous taxonomy than the catch-all term
+"uncertainty" alone can supply [@stirling_nd_uncertainty; @scoones2019]. The
+matrix is constructed on two axes: whether knowledge about *outcomes* (what
+could happen) is problematic or unproblematic, and whether knowledge about
+*likelihoods* (how probable each outcome is) is problematic or unproblematic.
+Crossing these two dimensions yields four distinct states of incertitude, each
+of which implies a different analytical and communicative response.
+
+**Risk** occupies the quadrant where both outcomes and their probabilities can
+be reliably estimated [@scoones2019]. This is the domain of classical
+probabilistic risk assessment — rolling dice, actuarial insurance tables, and
+well-studied engineering failure modes. In this condition, standard statistical
+tools are appropriate, and uncertainty can be quantified and communicated as a
+probability distribution or confidence interval.
+
+**Uncertainty**, in the strict Knightian sense, describes conditions where
+possible outcomes are known but there is no reliable basis for assigning
+probabilities to them [@stirling_nd_uncertainty]. One might know that a new
+drug could be effective or ineffective, or that a policy intervention could
+succeed or fail, without having the empirical basis to attach meaningful
+probabilities to these possibilities. In this condition, probability estimates
+are formally illegitimate, and presenting them as though they were meaningful
+constitutes a "pretence of knowledge" [@stirling_nd_risk].
+
+**Ambiguity** arises when probabilities might in principle be calculable, but
+there is fundamental disagreement about how to define or frame the possible
+outcomes [@scoones2019]. This condition is common in contested policy domains
+— such as the risk of genetically modified organisms, or the long-term
+consequences of emerging technologies — where different scientific communities
+or stakeholder groups organise the problem space in incompatible ways.
+
+**Ignorance** represents the most challenging condition: one in which neither
+the outcomes nor their probabilities can be fully characterised, and where
+parameters are "not only contestable but also — at least in part — unknown"
+[@stirling_nd_risk]. This is the domain of "unknown unknowns" — genuinely
+unanticipated effects and emergent phenomena that fall entirely outside the
+existing analytical frame. Black Swan events, as described by @makridakis2016,
+are paradigmatic examples.
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Stirling's Incertitude Matrix**
+
+Suggested figure: A 2×2 matrix with axes labelled "Knowledge about outcomes"
+(unproblematic to problematic) and "Knowledge about likelihoods" (unproblematic
+to problematic), with the four quadrants labelled Risk, Ambiguity, Uncertainty,
+and Ignorance.
+
+Source to use: Figure 1 in @scoones2019 or Figure 3 in @stirling_nd_uncertainty.
+
+Action needed: Reproduce with permission or redraw based on the original.
+:::
+
+A crucial epistemological point about this matrix, emphasised by both
+@stirling_nd_uncertainty and @scoones2019, is that these four conditions are
+*states of knowledge*, not states of nature. They describe the relationship
+between an observer and a system, not objective properties of the system
+itself. The same phenomenon may be treated as a risk by a well-resourced
+modelling team with extensive historical data and as ignorance by a community
+with no access to such information. This relativity of uncertainty states has
+profound implications for governance and communication: it means that
+characterising a situation as "risky" rather than "uncertain" or "ambiguous" is
+always, to some degree, a social and political act, not merely a technical one.
+
+## Known and Unknown Unknowns {#sec-known-unknown}
+
+A complementary taxonomy that has gained wide currency in policy and
+forecasting contexts is the classification of uncertainty into four
+quadrants based on the interaction of what is known and unknown about both
+outcomes and mechanisms [@makridakis2016]. This framework, popularised through
+Donald Rumsfeld's 2002 press conference but with deeper roots in decision
+theory, distinguishes between:
+
+- **Known/Knowns:** Situations where both outcomes and their likelihoods are
+  understood. Standard statistical forecasting applies, uncertainty is
+  measurable, and risk can be estimated within acceptable bounds.
+- **Unknown/Knowns:** Situations where relevant knowledge exists but is ignored,
+  suppressed, or denied — often due to institutional pressures, cognitive
+  biases, or wilful blindness. This is arguably the most dangerous category,
+  as it involves knowable information being rendered operationally invisible.
+- **Known/Unknowns:** Situations where the forecaster is aware of their
+  ignorance — they know they do not know. Uncertainty is large, often fat-tailed,
+  and planning must proceed without reliable probability estimates.
+- **Unknown/Unknowns:** Genuinely unanticipated events that fall entirely
+  outside the existing frame of analysis. These are Black Swan events that
+  cannot be predicted by definition, but whose consequences can sometimes
+  be moderated through robustness and adaptability strategies.
+
+@makridakis2009 introduce a memorable distinction between two limiting cases
+of this taxonomy. *Subway uncertainty* represents the "known unknowns" that
+operate in controlled, well-understood environments — like the random delay
+of a subway train — where standard statistical models apply and uncertainty
+can be quantified. *Coconut uncertainty*, by contrast, encompasses the "unknown
+unknowns" characteristic of rare, catastrophic events — like a fatal accident
+caused by a falling coconut — where the event is "impossible to quantify or
+model... even though we can clearly expect these to occur." This distinction
+highlights that not all uncertainty can be managed by the same tools, and that
+the aspiration to reduce all uncertainty to measurable risk is, in many
+domains, fundamentally misconceived.
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Known/Unknown Unknowns Matrix**
+
+Suggested figure: Table 1 in @makridakis2016, "Forecasting accuracy,
+uncertainty and risk: From Known/Knowns to Black Swans," which maps Rumsfeld's
+four quadrants against predictability, uncertainty type, and associated risk
+levels.
+
+Action needed: Reproduce with permission or recreate as a table.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Three Dimensions of Uncertainty**
+
+Suggested figure: Figure 1.2 in @pascoe_nd, which provides a three-dimensional
+visual framework for categorising uncertainty by location (where it sits in
+the modelling pipeline), nature (aleatory vs epistemic), and level (from
+determinism to ignorance).
+
+Action needed: Reproduce with permission or recreate as a diagram.
+:::
+
+## Disagreements and Tensions in the Literature
+
+Two significant tensions run through the conceptual literature on uncertainty
+and are worth making explicit.
+
+The first concerns the epistemological status of the aleatory-epistemic
+distinction. While this division is widely taught in statistics and machine
+learning curricula, @gruber2023 argue that it is philosophically and
+mathematically untenable as a universal classification. Because whether a
+source of variation is treated as aleatory or epistemic depends on the model
+and data available rather than on any intrinsic property of the phenomenon,
+the distinction is always provisional. This challenges a common assumption in
+uncertainty communication — that some uncertainty is "irreducible" and must
+simply be reported rather than investigated. In reality, what counts as
+irreducible is always relative to the current state of knowledge.
+
+The second concerns the institutional treatment of uncertainty. @stirling_nd_risk
+documents a troubling pattern in which regulatory and environmental institutions,
+facing political pressure to produce clear and actionable numbers, routinely
+describe what is genuinely deep uncertainty as if it were calculable risk.
+The same word — "uncertainty" — is used to describe both a situation where
+probabilities are unknown and a situation where a specific probability has
+been confidently asserted. This institutional conflation, characterised as a
+"pretence of knowledge," has the effect of foreclosing deliberation about
+alternative possibilities and concentrating decision-making authority in
+technical hands. For communicators, the practical implication is clear:
+the choice of how to frame uncertainty — as risk, as uncertainty, as
+ambiguity, or as ignorance — is never a purely technical decision, and its
+consequences deserve careful scrutiny.
+
+## Good Practice
+
+- **Resist reductionism:** Practitioners should resist the temptation to close
+  down complex uncertainty, ambiguity, or ignorance into simple probabilistic
+  risk assessments. Applying risk-based mathematical approaches to deeply
+  uncertain situations is, as @stirling_nd_risk argues, "irrational, unscientific
+  and potentially misleading."
+- **Address linguistic uncertainty:** In qualitative assessments, communicators
+  must actively minimise linguistic uncertainty by explicitly specifying the
+  context in which probability terms are used, ensuring that exposure variables
+  and reference classes are clearly defined [@eco_risk_nd].
+- **Track the cascade of uncertainty:** When developing models or assessments,
+  analysts should explicitly categorise uncertainty across three dimensions —
+  its location in the analytical pipeline, its nature (aleatory or epistemic),
+  and its level (from determinism to deep ignorance) — to maintain a clear
+  audit trail of assumptions [@pascoe_nd].
+- **State clearly what type of uncertainty is being communicated:** Before
+  choosing a communication format, identify whether the uncertainty at hand is
+  aleatory, epistemic, structural, or deep, as each type implies different
+  appropriate formats and levels of precision, as detailed in @sec-methods.
