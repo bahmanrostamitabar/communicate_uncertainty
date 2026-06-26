@@ -1,0 +1,245 @@
+## Numerical Expressions of Uncertainty {#sec-numerical}
+
+Numerical expressions of uncertainty convey the likelihood of an outcome or
+the margin of error surrounding an estimate through explicit quantitative
+values — moving beyond the inherent ambiguity of natural language to provide
+mathematically scalable, verifiable, and aggregable representations of
+probability. These expressions can take a wide variety of forms: precise point
+probabilities (a 75% chance), imprecise numeric ranges (a 65–85% chance),
+fractions (3 in 4), odds (3 to 1 in favour), or natural frequencies such as
+"1 in 10" or "15 out of 100" [@dhami2022]. By mapping uncertainty onto a 0
+to 1 (or 0% to 100%) scale, numerical expressions allow degrees of certainty
+to be quantified, compared, combined, and communicated with a precision that
+verbal expressions cannot achieve. As @mandel2021 observe, "unlike linguistic
+probabilities, numeric probabilities have a transparent ordering that users
+agree on" — a property that is fundamental to their value in decision-making
+contexts where different sources of uncertain information must be integrated.
+
+Numerical expressions are not a single format but a family of closely related
+formats, each with distinctive perceptual and cognitive properties. Percentages
+express probability as a proportion of 100; frequencies express it as a count
+out of a specified denominator; fractions express it as a ratio of numerator
+to denominator; odds express it as the ratio of favourable to unfavourable
+outcomes; and decimal probabilities express it as a number between 0 and 1.
+These formats are mathematically equivalent — a 10% probability, a 1-in-10
+frequency, a 0.10 decimal, and 1-to-9 odds all describe the same underlying
+quantity — yet the evidence reviewed below demonstrates that they can produce
+substantially different perceptions, decisions, and levels of comprehension
+in the same audience. The choice of numerical format is therefore not merely
+a matter of convention; it is a consequential communication decision.
+
+### Practical Example
+
+Numerical expressions of uncertainty are deployed across virtually every
+domain of quantitative science and risk communication. In meteorology, weather
+forecasters express the Probability of Precipitation as a percentage — "a 30
+percent chance of rain" — in public forecasts that reach millions of people
+daily [@nrc2006]. In intelligence analysis, @mandel2021 advocate replacing
+vague verbal expressions with numerical credible intervals — for example,
+reporting a "65% to 85% probability that a given event will occur" — to
+provide unambiguous, verifiable communication of analytic confidence.
+
+In public health and epidemiology, medical risk calculators communicate chronic
+disease risk using frequency formats: "12 of 100 people with this level of
+risk will have a heart attack in the next 10 years" [@spiegelhalter2017].
+This frequency format is specifically chosen because it grounds the abstract
+probability in a concrete, imaginable group of people rather than an abstract
+proportion. In food safety, communicators express incremental risks using
+absolute frequency differences: "one extra case of bowel cancer expected in
+every 100 people eating processed meat daily" [@spiegelhalter2017]. This
+absolute risk format, as discussed further below, is preferred over relative
+risk expressions precisely because it conveys the actual magnitude of the
+risk increment without the inflation that relative framing introduces.
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Multiple Numerical Formats for the Same Risk**
+
+Suggested figure: Table 1 in @spiegelhalter2017, "Examples of methods for
+communicating the lifetime risk of bowel cancer with and without a daily bacon
+sandwich," which contrasts six different numerical expressions for the identical
+underlying risk: Event Rate (%), Expected Frequency, Absolute Risk Difference,
+"1 in X" ratio, Relative Risk, and Number Needed to Treat (NNT).
+
+Action needed: Reproduce with permission from @spiegelhalter2017 or recreate
+as a table using the same six formats applied to a different concrete risk.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Alternative Numerical Representations of 20% Probability**
+
+Suggested figure: Table 3 in @spiegelhalter2017, "Alternative representations
+of chances for an event with an assessed probability of 20%," which
+demonstrates how to translate a percentage probability into fractional odds,
+decimal odds, natural frequencies, and other equivalent formats, providing a
+practical template for numerical format translation.
+
+Action needed: Reproduce with permission from @spiegelhalter2017 or recreate
+using a different illustrative probability (e.g., 30%).
+:::
+
+### Strengths and Limitations
+
+**Strengths.** Numerical expressions offer four distinctive advantages over
+verbal alternatives that make them the preferred format for high-stakes
+uncertainty communication.
+
+The first is *unambiguous ordering and transparency*. Unlike verbal expressions,
+which can be interpreted across a 60-percentage-point range for a single term,
+numerical probabilities have a "transparent ordering that users agree on"
+[@mandel2021]. A stated probability of 35% is unambiguously lower than one of
+60%; there is no analogous consensus about whether "possible" is higher or
+lower than "maybe." This ordering property is essential for comparative risk
+communication, where audiences need to weigh the probability of one outcome
+against another.
+
+The second advantage is *enhanced information processing and aggregation*.
+When decision-making requires the integration of uncertainty information from
+multiple sources, numerical formats substantially outperform verbal ones.
+"Arithmetic accuracy and logical coherence of averaging and multiplying
+probabilities are lower when these are expressed verbally than when expressed
+as point numeric values" [@dhami2022]. In settings where risk information
+must be combined — for example, when a patient needs to weigh the probability
+of benefit against the probability of harm from a treatment — numerical
+expressions produce more coherent and better-calibrated judgements.
+
+The third advantage is *credibility preservation*. Communicating uncertainty
+using numerical ranges or point estimates does not substantially reduce public
+trust in the source or the numbers themselves [@vanderbles2020]. Senders who
+make an inaccurate low-probability forecast also suffer less credibility loss
+if they used a numerical expression than if they used an outcome-incongruent
+verbal term [@dhami2022]. This evidence directly challenges the common
+assumption among institutional communicators that expressing numerical
+uncertainty will damage their credibility.
+
+The fourth advantage is *receiver preference for consequential decisions*. While
+senders prefer verbal expressions for their face-saving properties, receivers
+consistently and strongly prefer numerical precision when they must make
+high-stakes decisions [@dhami2022]. Crucially, this preference for numbers is
+not confined to high-numeracy individuals: "when it really matters, both senders
+and receivers prefer the precise numeric expression of uncertainty" [@dhami2022].
+
+**Limitations.** Despite these advantages, numerical expressions are subject
+to several well-documented biases and limitations that communicators must
+actively address.
+
+The first is *numeracy constraints*. A significant proportion of the general
+public lacks the mathematical training necessary to intuitively process
+quantitative probability information, which limits the efficacy of purely
+numerical communication with entry-level audiences [@nrc2006]. However, as
+@dhami2022 note, recent evidence suggests that low-numeracy individuals are
+not actually harmed by numerical expressions relative to verbal ones — they
+do not make worse decisions with numbers than with words — and they judge
+communicators more harshly when vague verbal formats appear to mask errors.
+The assumption that numbers should be avoided for low-numeracy audiences may
+therefore be overstated.
+
+The second limitation is *reference class ambiguity*. Numerical probabilities
+frequently fail to communicate clearly because audiences misunderstand the
+implicit denominator. A 60% chance of rain is routinely misinterpreted as
+meaning rain for 60% of the day's duration, or rain over 60% of the forecast
+area, rather than rain on 60% of days with similar meteorological conditions
+[@spiegelhalter2017]. This ambiguity is not a property of the number itself
+but of the failure to specify the reference class — the population of events
+to which the probability applies.
+
+The third limitation is *ratio bias and denominator neglect*. When numerical
+uncertainties are expressed as fractions, human probability perception is
+heavily biased by the numerator. People incorrectly perceive a risk of 1,286
+out of 10,000 as larger than one of 24.14 out of 100, because the absolute
+size of the numerator (1,286) is larger [@spiegelhalter2017]. In extreme
+cases, audiences exhibit "denominator neglect" — focusing entirely on the
+number of adverse events and ignoring the size of the population from which
+it is drawn.
+
+The fourth limitation is the *1-in-X magnification effect*. Expressing
+probabilities in a "1-in-X" ratio format systematically inflates the
+audience's perception of risk compared to numerically equivalent "N-in-X"
+formats [@ripberger2022]. A "1 in 33 chance" is perceived as more alarming
+than a "3 in 100 chance" even though they are mathematically identical.
+
+The fifth limitation is *relative risk inflation*. Presenting numerical
+uncertainty as a relative risk reduction — for example, "a 50% decrease in
+the risk of heart attack" — yields larger, more persuasive numbers than
+presenting the same information as an absolute risk difference — "a decrease
+from 8% to 4%" [@efsa2019]. Relative risk framing causes audiences to
+substantially overestimate the magnitude of the effect, with direct consequences
+for medical and policy decision-making.
+
+**Disagreement in the literature.** The most significant and unresolved
+disagreement in the numerical expressions literature concerns the choice
+between *percentage* and *frequency* formats. Some researchers — notably
+Gigerenzer and Hoffrage — argue strongly that natural frequencies vastly
+improve comprehension and Bayesian reasoning, because they align with human
+experiential learning about counts of events rather than abstract proportions
+[@spiegelhalter2017]. A substantial body of research has been developed
+supporting the frequency advantage. However, contradictory empirical results
+from Joslyn and Nichols demonstrate that non-expert users actually understood
+weather forecast uncertainty *better* when probabilities were presented as
+percentages rather than frequencies, directly contradicting the frequency
+advantage hypothesis [@raftery2016]. Extensive subsequent reviews conclude
+that there is "no consistent benefit" to either format and that performance
+depends heavily on the specific task, the population tested, and the context
+of the communication [@ripberger2022]. This disagreement remains unresolved
+and argues for empirical testing in specific contexts rather than universal
+format prescriptions.
+
+### When to Use This Method
+
+Numerical expressions should be used as the primary mode of communication
+whenever the objective is the unambiguous communication of probability to
+support consequential decision-making [@dhami2022]. They are appropriate
+across all three audience levels described in @sec-audiences, though the
+specific format chosen — percentage, frequency, odds, or range — should be
+adapted to the audience's familiarity and the nature of the decision.
+
+Numerical formats are especially important when the audience is expected to
+combine uncertainty information from multiple sources, to compare probabilities
+of different outcomes, or to make a decision that requires trading off
+asymmetric costs and benefits [@dhami2022]. In these contexts, the cognitive
+advantages of numerical over verbal formats are most pronounced and most
+consequential.
+
+Numerical expressions are less appropriate as the primary format when the
+underlying uncertainty is genuinely unquantifiable — for example, when
+expressing the pedigree of evidence or the degree of scientific consensus —
+in which case categorical approaches or verbal expressions of meta-uncertainty
+are more honest, as discussed in @sec-categorical and @sec-verbal.
+
+### Good Practice
+
+- **Use absolute rather than relative risks:** To prevent biased, inflated
+  threat perceptions, always express risks and risk changes in absolute rather
+  than relative terms. Present the actual probabilities before and after an
+  intervention, not just the percentage reduction [@efsa2019]. If relative
+  risks are reported at all, always accompany them with the absolute risk
+  difference.
+- **Fix the denominator:** When making risk comparisons using frequency
+  formats, always keep the denominator constant across the comparisons — for
+  example, "5 out of 1,000" versus "20 out of 1,000" — rather than allowing
+  the denominator to vary across comparisons [@spiegelhalter2017]. Varying
+  denominators activate ratio bias and make comparisons unreliable.
+- **Avoid "1-in-X" formats:** The "1-in-X" format reliably inflates risk
+  perception and should be replaced by "N-in-X" formats using a consistent
+  base-10 denominator — for example, "3 in 100" rather than "1 in 33"
+  [@ripberger2022].
+- **Explicitly define the reference class:** Every numerical probability must
+  be accompanied by a precise specification of what population, time horizon,
+  and conditions it refers to. "A 30% chance of rain" should be accompanied
+  by a clear statement of what "30%" means in the specific forecasting context
+  [@spiegelhalter2017].
+- **Use "% certainty" rather than "% probability" for subjective judgements:**
+  Because laypeople associate "probability" with the physical frequency of
+  random events, communicators expressing subjective expert judgements should
+  use terms such as "experts are 90% certain" rather than "there is a 90%
+  probability," to clarify that the number represents a state of knowledge
+  rather than a population frequency [@efsa2019].
+- **Test the chosen format empirically:** Given the unresolved frequency-
+  versus-percentage debate and the strong context-dependence of numerical
+  format effects, the appropriate numerical format should be determined through
+  empirical testing with the target audience rather than on the basis of
+  general recommendations [@ripberger2022].
+- **Provide multiple formats for different audiences:** When the same numerical
+  uncertainty must be communicated to audiences with different backgrounds,
+  consider providing the information in multiple formats simultaneously —
+  for example, "10% — that is, 1 in 10" — to maximise the probability that
+  at least one format is well matched to each reader's prior experience.

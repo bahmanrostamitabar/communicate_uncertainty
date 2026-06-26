@@ -1,0 +1,239 @@
+## Verbal Expressions of Uncertainty {#sec-verbal}
+
+Verbal expressions of uncertainty use natural language words and phrases —
+such as "likely," "possible," "doubtful," "almost certain," or "slight hope"
+— to convey the probability of an event or the confidence in a scientific
+assessment without relying exclusively on numerical metrics. These expressions
+draw on the full richness of linguistic probability — the repertoire of words
+that human language has evolved to convey degrees of belief, confidence, and
+expectation — and they are the oldest and most instinctive mode of uncertainty
+communication available. Natural language expressions may be used alone, with
+modifiers such as "very" or "extremely," or with hedges such as "almost" or
+"probably" that qualify their directional intent [@dhami2022]. In policy and
+intelligence contexts, standardised sets of verbal expressions are formally
+codified as "words of estimative probability" — prescribed lexicons that assign
+specific verbal terms to specific probability ranges with the goal of reducing
+interpretive variability across analysts and institutions [@mandel2021].
+
+The appeal of verbal expressions is immediate and intuitive: they are the
+mode of communication through which all human beings first learn to express
+uncertainty, and they remain dominant in everyday risk communication from
+medical consultations to weather forecasts to news reporting. Yet the
+literature on verbal uncertainty communication is among the most consistently
+critical in the field, documenting a pattern of systematic misinterpretation,
+variable interpretation, and audience alienation that places severe limits on
+the use of verbal expressions as a standalone communication format.
+
+### Practical Example
+
+The historical benchmark for verbal probability communication — and for its
+failure — is Sherman Kent's 1951 National Intelligence Estimate on Yugoslavia.
+The estimate used the term "serious possibility" to describe the likelihood of
+a Soviet attack on Yugoslavia. When Kent subsequently surveyed the analysts
+who had contributed to the estimate, he discovered that they interpreted the
+same phrase wildly differently: Kent himself took "serious possibility" to mean
+approximately a 65% probability, while other analysts gave estimates ranging
+from 20% to 80% [@mandel2021]. This 60-percentage-point spread in the
+interpretation of a single phrase prompted Kent to advocate for the
+standardisation of verbal probability lexicons in intelligence work — an effort
+that continues today. Modern intelligence agencies including the US Office of
+the Director of National Intelligence (ODNI), the UK Professional Head of
+Intelligence Assessment (PHIA), and NATO all maintain standardised verbal
+scales that map prescribed words onto defined numerical probability ranges
+[@mandel2021].
+
+In climate science, the IPCC employs a highly calibrated verbal likelihood
+scale — including terms such as "virtually certain" (99–100%), "very likely"
+(90–100%), "likely" (66–100%), "about as likely as not" (33–66%), "unlikely"
+(0–33%), and "exceptionally unlikely" (0–1%) — to communicate the likelihood
+of specific future climate outcomes in its assessment reports [@ipcc_guidance].
+This scale is among the most carefully designed verbal probability lexicons in
+science, with each term explicitly defined and consistently applied across
+thousands of findings across multiple working groups.
+
+In meteorology, weather forecasters routinely use linguistic probability
+expressions — "slight chance," "likely," "a good chance" — to indicate the
+probability of precipitation or severe weather events in public forecasts
+[@ripberger2022]. In legal proceedings, the phrase "beyond reasonable doubt"
+functions as a verbal expression of high certainty, though empirical research
+shows that jurors interpret it across a very wide numerical range.
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Intelligence Agency Verbal Probability Lexicons**
+
+Suggested figure: Figure 1 in @dhami2022, which maps the verbal probability
+lexicons used by major intelligence agencies — Kent & Foster, ODNI, PHIA,
+and NATO — onto a common 0% to 100% numeric scale, enabling direct visual
+comparison of how different institutions have attempted to standardise verbal
+probability communication.
+
+Action needed: Reproduce with permission from @dhami2022.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — IPCC Likelihood Scale**
+
+Suggested figure: Table 4.1 in @pascoe_nd or Table 1 in @ipcc_guidance, the
+official IPCC likelihood scale mapping verbal descriptors — from "Virtually
+certain" (99–100%) to "Exceptionally unlikely" (0–1%) — to their strictly
+defined numerical probability ranges.
+
+Action needed: Reproduce with permission from @ipcc_guidance or from IPCC
+publicly available materials. Note that IPCC materials are typically freely
+available for educational use.
+:::
+
+::: {.callout-note appearance="simple"}
+**Figure placeholder — Public Interpretation of Verbal Probability Terms**
+
+Suggested figure: Figure 2.5 in @nrc2006, a bar chart visually plotting the
+wide, overlapping ranges of numerical interpretations that members of the
+public actually assign to common verbal uncertainty terms such as "Possible,"
+"Good Chance," and "Probable," illustrating the empirical extent of
+interpretive variability.
+
+Action needed: Reproduce with permission from @nrc2006.
+:::
+
+### Strengths and Limitations
+
+**Strengths.** Verbal expressions have three genuine strengths that explain
+their persistence across virtually all domains of uncertainty communication.
+
+The first is naturalness and cognitive ease. People "find it easier and more
+natural to use words than numbers" when expressing probability, because language
+is acquired earlier and is the dominant mode of all human communication
+[@dhami2022]. For senders — the scientists, analysts, and practitioners who
+generate uncertainty assessments — verbal expressions reduce the cognitive
+burden of communication and allow nuance to be expressed without the precision
+that numbers imply.
+
+The second is *directionality* — a feature of verbal probability expressions
+that numeric formats cannot replicate. Verbal probability terms possess
+inherent directional orientation: positively phrased terms (e.g., "small
+probability of success") draw attention to the occurrence of an event, while
+negatively phrased terms (e.g., "unlikely to succeed") draw attention to its
+non-occurrence [@dhami2022]. This directionality allows communicators to
+implicitly guide the audience's attention toward or away from specific
+outcomes, providing a framing tool that goes beyond the bare expression of
+probability.
+
+The third is face-saving flexibility. Verbal expressions are inherently less
+precise than numbers, and this imprecision can be used strategically: senders
+can "use terms as a receiver- or self-face-saving strategy, particularly when
+communicating the chances of adverse outcomes" [@dhami2022]. When a prediction
+turns out to be wrong, the vagueness of a verbal expression provides
+insulation against accountability claims in a way that a stated numerical
+probability does not.
+
+**Limitations.** Against these strengths must be set four serious and
+consistently documented limitations.
+
+The most fundamental is *imprecision and interpretive variability*. The
+literature "consensually criticises the use of verbal uncertainty expressions
+alone, which can be responsible for significant misunderstanding" [@efsa2019].
+The numerical interpretation of common verbal probability terms varies
+enormously across individuals: the word "possible," for instance, spans up to
+63 percentage points in the interpretations given by surveyed physicians
+[@dhami2022]. The phrase "beyond reasonable doubt" shows similar variability
+among jurors. This variability is not random — it is systematic, influenced
+by the severity of the outcome described, the context of the communication,
+and the individual's prior beliefs — and it cannot be eliminated by
+encouragement to interpret words consistently.
+
+The second limitation is the *severity effect*: audiences consistently
+interpret the same verbal probability term as numerically higher when the
+event it describes is more severe or undesirable [@ripberger2022]. A doctor
+who says a treatment has a "slight chance" of causing harm may find that
+patients interpret this as a substantially higher probability than if the
+same phrase were used to describe a minor inconvenience. This context
+sensitivity means that verbal expressions cannot be relied upon to convey
+consistent probability information across different content domains.
+
+The third limitation is the *extremity effect*: certain linguistic terms
+drive audiences to assume extreme outcomes. The word "improbable," for
+example, is frequently interpreted as meaning impossible — a 0% probability —
+rather than a low but non-negligible frequency [@ripberger2022; @efsa2019].
+This error is particularly consequential for risk communication about rare
+but important events: calling a Black Swan event "improbable" may cause
+audiences to discount it entirely rather than planning for it at a low
+level of probability.
+
+The fourth limitation is *integration failure*: it is cognitively difficult
+to mathematically combine multiple verbal probability expressions, leading to
+lower logical coherence and worse aggregation accuracy than numerical formats
+[@dhami2022]. When a decision requires integrating uncertainty information from
+multiple sources — each expressed verbally — the resulting judgement is likely
+to be poorly calibrated relative to what numerical integration would produce.
+
+**Disagreement in the literature.** The literature reveals a sharp empirical
+disagreement regarding whether verbal expressions protect or damage
+communicator credibility. @dhami2022 find that senders who use verbal terms
+that are directionally consistent with an unexpected outcome — for example,
+a positive verbal term for a positive outcome that did not occur — "suffered
+less credibility loss" after a wrong prediction, because the linguistic
+vagueness shielded them from precise accountability. This suggests that verbal
+expressions can function as a credibility-protection device.
+
+However, direct experimental evidence from @vanderbles2020 points in the
+opposite direction: adding verbal uncertainty caveats to news articles
+"reduced participants' trust in the source" compared to using numerical ranges
+or no uncertainty qualification at all. Verbal hedging, in this study, actively
+damaged the communicator's credibility rather than protecting it.
+
+A second disagreement concerns the persistent tension between sender preferences
+and receiver needs. Forecasters and analysts strongly prefer verbal expressions
+precisely because of their face-saving properties [@nrc2006], while policymakers
+and the public consistently prefer numerical precision for high-stakes decisions
+[@dhami2022]. This sender-receiver mismatch is not merely a difference in
+stylistic preference: it represents a systematic misalignment between the
+incentives of communicators and the needs of their audiences.
+
+### When to Use This Method
+
+Verbal expressions are best used to summarise the overall quality, strength,
+or limitations of underlying evidence — what the literature terms *meta-
+uncertainty* — where precise quantitative probabilities cannot be legitimately
+calculated [@vanderbles2019]. They are also effective when the communicator
+needs to explicitly convey *directionality* — signalling that a risk is
+increasing relative to a baseline, or that a finding is stronger than
+previously reported — rather than a specific probability value [@ripberger2022].
+
+Verbal expressions should never be used as the sole mode of communicating
+quantitative probability information when a numerical estimate is available
+and when the audience needs to make a consequential decision based on the
+probability [@dhami2022]. In such contexts, they should be used only as a
+supplement to numerical information, not as a replacement for it.
+
+### Good Practice
+
+- **Always pair verbal expressions with numerical translations:** Never use
+  a verbal probability expression in isolation. Always include a specific
+  numerical probability or range directly adjacent to the verbal term
+  [@ripberger2022]. The numerical value should appear first, with the verbal
+  label serving as a mnemonic aid rather than the primary communication.
+- **Present the number before the word:** When combining numerical and verbal
+  formats, present the numerical probability *before* the verbal term — for
+  example, "20% — unlikely" rather than "unlikely (20%)" — to anchor the
+  audience's interpretation in the number and reduce the extremity effect
+  associated with the verbal label [@efsa2019].
+- **Avoid "improbable" and "unlikely" for rare events:** Because non-expert
+  audiences routinely interpret these terms as meaning impossible (0%),
+  communicators should avoid them when describing rare but non-negligible
+  events. Instead, use positively framed terms such as "low probability" or
+  "a small but real chance" [@efsa2019].
+- **Avoid vague hedging words:** Avoid qualifiers such as "about," "around,"
+  "possible," or "there is a chance," as these maximise interpretive
+  variability and degrade comprehension without adding communicative value
+  [@ripberger2022].
+- **Use standardised lexicons where they exist:** In domains such as climate
+  science (IPCC likelihood scale) and intelligence analysis (ODNI, PHIA,
+  NATO scales), use the established standardised verbal probability lexicons
+  consistently and cite their numerical definitions explicitly. Deviation
+  from established scales introduces ambiguity that standardisation was
+  designed to eliminate [@mandel2021].
+- **Test interpretation empirically:** Before deploying verbal probability
+  expressions in a specific communication context, test the intended
+  audience's numerical interpretation of the chosen terms. Given the
+  documented variability in interpretation, terms that seem obviously clear
+  to the communicator may be systematically misunderstood by the audience.
