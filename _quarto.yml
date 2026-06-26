@@ -59,7 +59,7 @@ book:
     - references.qmd
 
 bibliography: references.bib
-csl: apa.csl
+csl: https://www.zotero.org/styles/apa
 
 format:
   html:
