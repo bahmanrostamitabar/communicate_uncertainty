@@ -7,6 +7,8 @@ project:
 
 book:
   title: "Communicating Uncertainty"
+  subtitle: "A Guide Across Disciplines"
+  description: "A practical cross-disciplinary reference for communicating uncertainty across disciplines. Written by Bahman Rostami-Tabar."
   google-analytics: "G-7NGEV74PGX"
   author:
     - name: Bahman Rostami-Tabar
@@ -25,16 +27,14 @@ book:
   sharing: [twitter, linkedin]
   open-graph:
     title: "Communicating Uncertainty"
-    description: "A practical cross-disciplinary reference for communicating
-      uncertainty."
+    description: "A practical cross-disciplinary reference for communicating uncertainty."
     image: https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png
     image-alt: "Book cover for Communicating Uncertainty by Bahman Rostami-Tabar"
     locale: en_GB
  
   twitter-card:
     title: "Communicating Uncertainty"
-    description: "A practical cross-disciplinary reference for communicating
-      uncertainty."
+    description: "A practical cross-disciplinary reference for communicating uncertainty."
     image: https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png
     image-alt: "Book cover for Communicating Uncertainty by Bahman Rostami-Tabar"
     card-style: summary_large_image
