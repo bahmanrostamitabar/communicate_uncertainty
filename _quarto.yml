@@ -9,7 +9,7 @@ book:
       url: https://bahmanrostamitabar.github.io/
   date: today
   date-format: long
-
+  
   cover-image: cover.png
   favicon: cover.png
 

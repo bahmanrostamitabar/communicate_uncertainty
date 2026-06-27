@@ -2,21 +2,13 @@
 title: "Welcome"
 ---
 
-
-::: {.callout-important appearance="default" icon="true"}
-## 🚧 Work in Progress
-
-This book is actively being written and expanded. Content is incomplete,
-sections will change, and new chapters will be added over time.
-A completed version is planned for **August 2027**.
-
-Feedback, suggestions, and corrections are very welcome — use the
-**Report an issue** link in the sidebar of any chapter.
+::: {.content-visible when-format="html"}
+![](cover.png){fig-align="center" width="50%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);"}
 :::
 
 # Welcome {.unnumbered}
 
-This is the online home of **Communicating Uncertainty: A Guide
+This is the online home of **Communicating Uncertainty: A Comprehensive Guide
 Across Disciplines**, authored by
 [Bahman Rostami-Tabar](https://bahmanrostamitabar.com/).
 
