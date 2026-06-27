@@ -42,6 +42,7 @@ book:
     - part: "Part II: Why and To Whom"
       chapters:
         - 05_why_communicate.qmd
+        - 05_1_users.qmd
 
     - part: "Part III: Methods"
       chapters:
