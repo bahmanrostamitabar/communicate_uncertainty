@@ -10,8 +10,8 @@ book:
   date: today
   date-format: long
 
-  cover-image: cover.png
-  favicon: cover.png
+  cover-image: cover2.png
+  favicon: cover2.png
 
   site-url: https://bahmanrostamitabar.github.io/communicate_uncertainty/
   repo-url: https://github.com/bahmanrostamitabar/communicate_uncertainty
@@ -63,8 +63,8 @@ csl: https://www.zotero.org/styles/apa
 format:
   html:
     theme:
-      light: lux
-      dark: slate
+      light: journal
+      dark: darkly
     toc: true
     toc-depth: 3
     toc-title: "On this page"
