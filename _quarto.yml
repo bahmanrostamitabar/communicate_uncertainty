@@ -84,7 +84,7 @@ format:
   html:
     theme:
       light: journal
-      dark: slate
+      dark: superhero
     toc: true
     toc-depth: 3
     toc-title: "On this page"
