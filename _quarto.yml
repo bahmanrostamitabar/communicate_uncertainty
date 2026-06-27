@@ -26,7 +26,7 @@ book:
     title: "Communicating Uncertainty"
     description: "A practical cross-disciplinary reference for communicating
       uncertainty."
-    image: https://bahmanrostamitabar.github.io/communicate_uncertainty/og-image.png
+    image: https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png
     image-alt: "Book cover for Communicating Uncertainty by Bahman Rostami-Tabar"
     locale: en_GB
  
@@ -34,7 +34,7 @@ book:
     title: "Communicating Uncertainty"
     description: "A practical cross-disciplinary reference for communicating
       uncertainty."
-    image: https://bahmanrostamitabar.github.io/communicate_uncertainty/og-image.png
+    image: https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png
     image-alt: "Book cover for Communicating Uncertainty by Bahman Rostami-Tabar"
     card-style: summary_large_image
     creator: "@Bahman_R_T"
