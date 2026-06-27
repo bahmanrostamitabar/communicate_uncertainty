@@ -104,7 +104,7 @@ format:
       margin-width: 200px
 
 execute:
-  freeze: auto
+  #freeze: auto
   echo: false
   warning: false
   message: false
