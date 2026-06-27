@@ -7,8 +7,6 @@ project:
 
 book:
   title: "Communicating Uncertainty"
-  subtitle: "A Guide Across Disciplines"
-  description: "A practical cross-disciplinary reference for communicating uncertainty across disciplines. Written by Bahman Rostami-Tabar."
   google-analytics: "G-7NGEV74PGX"
   author:
     - name: Bahman Rostami-Tabar
