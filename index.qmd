@@ -1,5 +1,20 @@
 ---
 title: "Welcome"
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta property="og:title" content="Communicating Uncertainty: A Guide Across Disciplines" />
+        <meta property="og:description" content="A practical cross-disciplinary reference for communicating uncertainty." />
+        <meta property="og:image" content="https://bahmanrostamitabar.github.io/communicate_uncertainty/og-image.png" />
+        <meta property="og:image:width" content="1216" />
+        <meta property="og:image:height" content="649" />
+        <meta property="og:url" content="https://bahmanrostamitabar.github.io/communicate_uncertainty/" />
+        <meta property="og:type" content="book" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Communicating Uncertainty: A Guide Across Disciplines" />
+        <meta name="twitter:description" content="A practical cross-disciplinary reference for communicating uncertainty." />
+        <meta name="twitter:image" content="https://bahmanrostamitabar.github.io/communicate_uncertainty/og-image.png" />
 ---
 
 
