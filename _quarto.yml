@@ -63,7 +63,7 @@ csl: https://www.zotero.org/styles/apa
 format:
   html:
     theme:
-      light: yeti
+      light: journal
       dark: slate
     toc: true
     toc-depth: 3
