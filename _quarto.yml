@@ -1,6 +1,9 @@
 project:
   type: book
   output-dir: _book
+  resources:
+    - og-image.png
+    - cover.png
 
 book:
   title: "Communicating Uncertainty"
