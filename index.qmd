@@ -16,8 +16,7 @@ Feedback, suggestions, and corrections are very welcome — use the
 
 # Welcome {.unnumbered}
 
-This is the online home of **Communicating Uncertainty: A Guide
-Across Disciplines**, authored by
+This is the online home of **Communicating Uncertainty: A Guide Across Disciplines**, authored by
 [Bahman Rostami-Tabar](https://bahmanrostamitabar.com/).
 
 Uncertainty is an unavoidable part of knowledge and decision-making in almost every field of human activity, including medicine, finance and economics, supply chains, healthcare, and engineering. However, it is often hidden, oversimplified, or communicated in ways that may mislead the people who rely on this information to make informed decisions.
