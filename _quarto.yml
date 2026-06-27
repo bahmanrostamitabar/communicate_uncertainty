@@ -46,6 +46,7 @@ book:
 
     - part: "Part III: Methods"
       chapters:
+        - 06_0_method_intro.qmd
         - 06_1_forecast_trajectories.qmd
         - 06_2_fan_charts.qmd
         - 06_3_distributions.qmd

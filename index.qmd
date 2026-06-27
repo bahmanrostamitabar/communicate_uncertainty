@@ -20,34 +20,20 @@ This is the online home of **Communicating Uncertainty: A Guide
 Across Disciplines**, authored by
 [Bahman Rostami-Tabar](https://bahmanrostamitabar.com/).
 
-Uncertainty is an inescapable feature of knowledge and decision-making in
-virtually every domain of human endeavour — from medicine and meteorology to
-economics, public health, and engineering. Yet despite its ubiquity,
-uncertainty is frequently hidden, oversimplified, or communicated in ways that
-mislead the very audiences who need honest information to make good decisions.
+Uncertainty is an unavoidable part of knowledge and decision-making in almost every field of human activity, including medicine, finance and economics, supply chains, healthcare, and engineering. However, it is often hidden, oversimplified, or communicated in ways that may mislead the people who rely on this information to make informed decisions.
 
-This book addresses that gap. It provides a practical, cross-disciplinary
-reference for anyone who needs to communicate uncertainty — whether in a
-scientific report, a policy document, a public health bulletin, a data
-visualisation, or a financial forecast. It draws on literature spanning
-statistics, psychology, climate science, economics, intelligence analysis,
-ecology, and risk communication.
+This book addresses that gap. It provides a practical, cross-disciplinary reference for anyone who needs to communicate uncertainty, whether in a scientific report, a policy document, a public health bulletin, a data visualisation, or a financial forecast. It draws on knowledge from several disciplines, including statistics, psychology, climate science, economics, intelligence analysis, ecology, and risk communication.
 
 ## What This Book Covers {.unnumbered}
 
 The book is organised in three parts:
 
 **Part I — Foundations** introduces the conceptual landscape. It defines
-uncertainty and its key frameworks (including the epistemic–aleatory
-distinction and Stirling's incertitude matrix), examines the sources from
+uncertainty and its key frameworks, examines the sources from
 which uncertainty arises, and situates uncertainty among closely related
 concepts — variability, volatility, randomness, and risk.
 
-**Part II — Why and To Whom** addresses the fundamental question of whether
-and why uncertainty should be communicated at all. It documents the
-consequences of failing to communicate honestly, and provides a structured
-typology of audiences — from the general public to domain experts — and what
-each type of user needs.
+**Part II — Why and To Whom** addresses the fundamental question of whether and why uncertainty should be communicated at all. It documents the consequences of failing to communicate honestly, and provides a structured typology of audiences and what each type of user needs.
 
 **Part III — Methods** forms the core of the book. Eight distinct methods for
 communicating uncertainty are reviewed in depth:
@@ -63,25 +49,23 @@ communicating uncertainty are reviewed in depth:
 | Verbal Expressions | @sec-verbal |
 | Numerical Expressions | @sec-numerical |
 
-For each method the book covers: what it is, a practical example with a
-figure, strengths and limitations, when to use it, and good practice
+For each method the book covers: what it is, a practical example, strengths and limitations, when to use it, and good practice
 recommendations grounded in the empirical literature.
 
 ## How to Use This Book {.unnumbered}
 
-This book can be read cover to cover, but it is also designed as a reference
-to be consulted as needed. Readers new to the topic should start with Part I
-before turning to the methods. Practitioners who already have a working
-understanding of uncertainty can proceed directly to Part III.
+This book can be read cover to cover, but it is also designed as a reference to be consulted as needed. Readers new to the topic should start with Part I before turning to the methods. Practitioners who already have a working understanding of uncertainty can proceed directly to Part III.
 
 Each method chapter in Part III is self-contained and can be read
 independently.
 
 ## About the Author {.unnumbered}
 
-[Bahman Rostami-Tabar](https://bahmanrostamitabar.com/) is a professor whose
-work spans forecasting, uncertainty communication, and data-informed
-decision-making across public health, humanitarian, and policy contexts.
+[Bahman Rostami-Tabar](https://bahmanrostamitabar.com/) Bahman is Professor of Analytics and Decision Sciences at Cardiff Business School, Cardiff University. He leads the [Data Lab for Social Good](https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good), a [research team](https://bahmanrostamitabar.github.io/supervision/) at Cardiff Business School, Cardiff University. He also founded and is the Academic Director of [the Art, Science and Uncertainty Summer School, an interdisciplinary summer school](https://dl4sg-summer-school.github.io/) that takes place every year in Cardiff, Wales.
+
+His research lies at the intersection of data, uncertainty & future, and decision-making, with a particular focus on how advanced analytical methods can support better decisions in complex and uncertain environments. Drawing on Data Science, Artificial Intelligence (AI), and Operations Research (OR), he develops and applies methods that are both methodologically rigorous and practically relevant to real-world decision problems.
+
+He works closely with academic, public, and industry partners to address important societal challenges. His research covers uncertainty quantification and communication, explainable AI, predictive analytics, and decision sciences, with a particular focus on applications for social good, including healthcare operations, public and global health, supply chains, and sustainability.
 
 ## Licence {.unnumbered}
 

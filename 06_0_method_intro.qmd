@@ -1,0 +1,32 @@
+# Methods for Communicating Uncertainty {#sec-methods}
+
+The eight methods reviewed in this section represent the principal approaches
+through which uncertain information is represented and conveyed to audiences
+across disciplines. They range from fully visual methods — forecast
+trajectories, fan charts, and distributional displays — through numerical
+summaries — prediction intervals and quantiles — to categorical systems,
+narrative approaches, and linguistic and numerical expressions of probability.
+No single method is universally superior; each has particular strengths,
+characteristic limitations, and audiences for which it is best suited. The
+review of each method follows a consistent structure: an opening description
+of what the method is and how it works; a practical example with a figure
+placeholder indicating a specific source figure to reproduce or recreate; an
+assessment of strengths and limitations, including where the literature is
+divided; guidance on when the method is most appropriate; and a set of
+evidence-based good practice recommendations.
+
+A cross-cutting theme across all eight methods is the importance of calibration
+— the property that stated probabilities correspond to observed frequencies.
+A method that is technically sophisticated but poorly calibrated provides a
+false picture of uncertainty and may harm decision-making more than a simpler
+but well-calibrated alternative. Calibration should be verified and reported
+wherever possible, regardless of the method chosen.
+
+A second cross-cutting theme is the tension between completeness and
+cognitive load. More informative displays — full distributions, ensemble
+trajectories, multi-band fan charts — communicate more about the structure
+of uncertainty but impose greater demands on the audience. Simpler displays —
+point estimates, categorical labels, verbal expressions — reduce cognitive
+burden but at the cost of information. Matching the level of complexity to
+the audience and the decision context, as discussed in @sec-why, is the
+central design challenge across all methods.
