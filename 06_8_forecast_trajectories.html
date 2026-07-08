@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>17&nbsp; Forecast Trajectories – Communicating Uncertainty</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./07_conclusion.html" rel="next">
+<link href="./06_7_fan_charts.html" rel="prev">
+<link href="./cover.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-3eaaf8913ce91643d14a48da3c3a0789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ebfc9dbce697e0d111a7827667a11c87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3eaaf8913ce91643d14a48da3c3a0789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7NGEV74PGX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<meta property="og:title" content="Communicating Uncertainty">
+<meta property="og:description" content="A practical cross-disciplinary reference for communicating uncertainty.">
+<meta property="og:image" content="https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png">
+<meta property="og:site_name" content="Communicating Uncertainty">
+<meta property="og:image:alt" content="Book cover for Communicating Uncertainty by Bahman Rostami-Tabar">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:title" content="Communicating Uncertainty">
+<meta name="twitter:description" content="A practical cross-disciplinary reference for communicating uncertainty.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png">
+<meta name="twitter:image:alt" content="Book cover for Communicating Uncertainty by Bahman Rostami-Tabar">
+<meta name="twitter:creator" content="@Bahman_R_T">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Communicating Uncertainty</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-wide tools-end">
+    <a href="https://github.com/bahmanrostamitabar/communicate_uncertainty" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_8_forecast_trajectories.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Forecast Trajectories</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_conceptualising_uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conceptualising Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_sources_of_uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sources of Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_related_concepts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Uncertainty and Related Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Why and To Whom</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_why_communicate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Why Communicate Uncertainty, and to Whom?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_1_users.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Audiences and Their Needs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_2_when.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">When to communicate uncertainty</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Methods</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_0_method_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Methods for Communicating Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_1_verbal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Verbal Expressions of Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_2_numerical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Numerical Expressions of Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_3_categorical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Categorical Approaches</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_4_scenarios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Scenario and What-If Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_5_prediction_intervals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Prediction Intervals and Quantiles</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_6_distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_7_fan_charts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Fan Charts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_8_forecast_trajectories.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Forecast Trajectories</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link active" data-scroll-target="#practical-example"><span class="header-section-number">17.0.1</span> Practical Example</a></li>
+  <li><a href="#strengths-and-limitations" id="toc-strengths-and-limitations" class="nav-link" data-scroll-target="#strengths-and-limitations"><span class="header-section-number">17.0.2</span> Strengths and Limitations</a></li>
+  <li><a href="#when-to-use-this-method" id="toc-when-to-use-this-method" class="nav-link" data-scroll-target="#when-to-use-this-method"><span class="header-section-number">17.0.3</span> When to Use This Method</a></li>
+  <li><a href="#good-practice" id="toc-good-practice" class="nav-link" data-scroll-target="#good-practice"><span class="header-section-number">17.0.4</span> Good Practice</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_8_forecast_trajectories.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_8_forecast_trajectories.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Forecast Trajectories</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-trajectories" class="quarto-section-identifier"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Forecast Trajectories</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Forecast trajectories — frequently referred to in the literature as ensemble plots or spaghetti plots — are a visual method for communicating uncertainty by plotting multiple predicted future paths of a variable simultaneously on a single graph <span class="citation" data-cites="leffrang2025">(<a href="references.html#ref-leffrang2025" role="doc-biblioref">Leffrang &amp; Müller, 2025</a>)</span>. Each individual line represents one possible future, generated by varying the input parameters of a forecasting model or by combining outputs from different models. Rather than collapsing the full range of possible futures into a single summary statistic or a smoothed probability band, forecast trajectories present the raw plurality of predictions, allowing the viewer to see both the central tendency and the diversity of possible outcomes simultaneously. The theoretical foundation of this approach is rooted in the <em>frequency format hypothesis</em>, which frames uncertainty as a set of discrete, countable alternative realities rather than as an abstract probability distribution <span class="citation" data-cites="leffrang2025">(<a href="references.html#ref-leffrang2025" role="doc-biblioref">Leffrang &amp; Müller, 2025</a>)</span>. By making individual possible futures visible, the method aims to convey the genuine openness of the future in a way that more abstract representations cannot.</p>
+<p>Beyond simply displaying multiple lines, trajectory forecasts are technically distinguished by their ability to capture the <em>correlation structure</em> between successive time steps within a forecasting horizon. Unlike marginal, point-in-time distributions — which describe the range of possible values at each future moment in isolation — trajectory forecasts model the full “path-dependency” of a sequence of outcomes, capturing how earlier values constrain and inform later ones <span class="citation" data-cites="kleyholsteg2020probabilistic">(<a href="references.html#ref-kleyholsteg2020probabilistic" role="doc-biblioref">Kley-Holsteg &amp; Ziel, 2020</a>)</span>. Methods such as Gaussian copulas are used to preserve this dependency structure, ensuring that “not only the mean and the marginal properties, but also the correlation structure between hours within the forecasting horizon” are faithfully represented <span class="citation" data-cites="kleyholsteg2020probabilistic">(<a href="references.html#ref-kleyholsteg2020probabilistic" role="doc-biblioref">Kley-Holsteg &amp; Ziel, 2020</a>)</span>. This distinction is consequential: for any decision that depends on the <em>cumulative</em> or <em>aggregate</em> behaviour of a variable over time — rather than its value at a single future moment — only a trajectory forecast that preserves the temporal correlation structure can provide reliable probabilistic guidance <span class="citation" data-cites="gilbert2021probabilistic">(<a href="references.html#ref-gilbert2021probabilistic" role="doc-biblioref">Gilbert et al., 2021</a>)</span>.</p>
+<section id="practical-example" class="level3" data-number="17.0.1">
+<h3 data-number="17.0.1" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">17.0.1</span> Practical Example</h3>
+<p>Forecast trajectories have been applied across a wide range of forecasting domains. In meteorology, they are used to visualise the potential tracks of tropical cyclones, with individual paths representing outputs from distinct weather models <span class="citation" data-cites="spiegelhalter2017">(<a href="references.html#ref-spiegelhalter2017" role="doc-biblioref">Spiegelhalter, 2017</a>)</span>. In hydrology, hydrologists use these plots to display river flow over time, tracing the individual predictions of different ensemble members to communicate the uncertainty in flood forecasts <span class="citation" data-cites="pappenberger2013">(<a href="references.html#ref-pappenberger2013" role="doc-biblioref">Pappenberger et al., 2013</a>)</span>. In public health, ensemble trajectories have been applied to epidemiological forecasting, including the prediction of COVID-19 hospitalisation numbers during the pandemic <span class="citation" data-cites="leffrang2025">(<a href="references.html#ref-leffrang2025" role="doc-biblioref">Leffrang &amp; Müller, 2025</a>)</span>. In demography, population forecasters use trajectories to visualise randomly simulated future fertility rates, allowing users to see historical variability projected forward <span class="citation" data-cites="raftery2023">(<a href="references.html#ref-raftery2023" role="doc-biblioref">Raftery &amp; Ševčíková, 2023</a>)</span>.</p>
+<p>Three further applications illustrate the practical value of the correlation- preserving properties of trajectory forecasts. In water supply management, <span class="citation" data-cites="kleyholsteg2020probabilistic">Kley-Holsteg &amp; Ziel (<a href="references.html#ref-kleyholsteg2020probabilistic" role="doc-biblioref">2020</a>)</span> use probabilistic multi-step-ahead trajectory forecasts to simulate the aggregate path of demand over a 24-hour horizon, enabling planners to assess “the probability with which a water storage capacity can guarantee the supply over a certain period” — a question that cannot be answered by marginal probability intervals alone. In offshore wind energy operations, <span class="citation" data-cites="gilbert2021probabilistic">Gilbert et al. (<a href="references.html#ref-gilbert2021probabilistic" role="doc-biblioref">2021</a>)</span> use sea-state trajectory forecasts to predict “weather windows” for safely transferring technicians to turbines: because the transfer window requires safe vessel conditions continuously throughout the entire pick-up and return journey, a marginal forecast of conditions at a single time point is insufficient, and only a trajectory forecast can determine whether conditions will remain safe throughout the full operational window. In intraday electricity trading, <span class="citation" data-cites="serafin2022trading">Serafin et al. (<a href="references.html#ref-serafin2022trading" role="doc-biblioref">2022</a>)</span> use trajectory forecasts of electricity prices to construct “simultaneous prediction bands” over consecutive trading windows, enabling algorithmic strategies to identify optimal moments to sell renewable energy by detecting when the probability of a price path exceeding a target threshold is sufficiently high.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Hurricane Ensemble Spaghetti Plot</strong></p>
+<p>Suggested figure: Figure 4 in <span class="citation" data-cites="toet2016">Toet et al. (<a href="references.html#ref-toet2016" role="doc-biblioref">2016</a>)</span>, “Spaghetti plot showing an ensemble of predictions from different hurricane forecast models,” which illustrates multiple possible storm tracks diverging from a common starting point.</p>
+<p>Action needed: Reproduce with permission or recreate based on publicly available hurricane track ensemble data.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Path Dependency Types in Trajectory Forecasts</strong></p>
+<p>Suggested figure: Figure 5 in <span class="citation" data-cites="kleyholsteg2020probabilistic">Kley-Holsteg &amp; Ziel (<a href="references.html#ref-kleyholsteg2020probabilistic" role="doc-biblioref">2020</a>)</span>, which visually contrasts four types of path dependency: (a) standard, (b) comonotone (perfectly positive, non-intersecting paths), (c) countermonotone (perfectly negative, zigzagging paths), and (d) independent. This figure provides an excellent pedagogical illustration of why modelling the correlation structure of trajectories matters for cumulative decisions.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="kleyholsteg2020probabilistic">Kley-Holsteg &amp; Ziel (<a href="references.html#ref-kleyholsteg2020probabilistic" role="doc-biblioref">2020</a>)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Transformation from Raw Trajectories to Categorical Risk Display</strong></p>
+<p>Suggested figures: Figures 11 and 12 in <span class="citation" data-cites="gilbert2021probabilistic">Gilbert et al. (<a href="references.html#ref-gilbert2021probabilistic" role="doc-biblioref">2021</a>)</span>, which together show the transformation process from a dense, unreadable raw scenario forecast (Figure 11 — a spaghetti plot of vessel motion trajectories) into a highly readable, colour-coded stacked bar chart (Figure 12) displaying the probability of safe offshore access at each time step. This pair of figures directly illustrates the recommended practice of converting raw trajectories into actionable categorical probability summaries.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="gilbert2021probabilistic">Gilbert et al. (<a href="references.html#ref-gilbert2021probabilistic" role="doc-biblioref">2021</a>)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — COVID-19 Hospitalisation Ensemble Plot</strong></p>
+<p>Suggested figure: Figure 4 in <span class="citation" data-cites="leffrang2025">Leffrang &amp; Müller (<a href="references.html#ref-leffrang2025" role="doc-biblioref">2025</a>)</span>, displaying an ensemble plot for the forecast of COVID-19 hospitalisations, showing multiple trajectory lines alongside a central estimate.</p>
+<p>Action needed: Reproduce with permission or recreate from published COVID-19 forecast data.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="strengths-and-limitations" class="level3" data-number="17.0.2">
+<h3 data-number="17.0.2" class="anchored" data-anchor-id="strengths-and-limitations"><span class="header-section-number">17.0.2</span> Strengths and Limitations</h3>
+<p><strong>Strengths.</strong> Forecast trajectories offer several distinctive advantages over summary-based displays. First, individual trajectories capture the true, noisy evolution of a system over time. As <span class="citation" data-cites="raftery2023">Raftery &amp; Ševčíková (<a href="references.html#ref-raftery2023" role="doc-biblioref">2023</a>)</span> note, averaging or smoothing trajectories suppresses the stochastic variation that is a genuine feature of many real-world processes, and a smooth summary trajectory “would be very unlikely” to actually occur — it represents a statistical artefact rather than a plausible future. By contrast, individual trajectories convey the jerky, discontinuous character of actual realisations in a way that interval-based displays cannot.</p>
+<p>Second, by explicitly illustrating alternative futures, ensemble trajectories intuitively convey that there is no guaranteed outcome, thereby preventing deterministic anchoring — the tendency of audiences to treat a central estimate as a definitive prediction <span class="citation" data-cites="toet2016">(<a href="references.html#ref-toet2016" role="doc-biblioref">Toet et al., 2016</a>)</span>. The visual presence of multiple lines signals directly that uncertainty is real and that the future is genuinely open.</p>
+<p>Third, visualising discrete ensemble members can raise users’ awareness of severe, unlikely events that might be obscured by summary statistics <span class="citation" data-cites="ripberger2022">(<a href="references.html#ref-ripberger2022" role="doc-biblioref">Ripberger et al., 2022</a>)</span>. A tail trajectory that diverges dramatically from the central cluster makes the possibility of an extreme outcome viscerally present in a way that an interval boundary cannot.</p>
+<p>Fourth, for professional users, the visual density of multiple lines implies that a rich web of modelling information has gone into the forecast, which can build confidence in the robustness of the underlying analysis <span class="citation" data-cites="pappenberger2013">(<a href="references.html#ref-pappenberger2013" role="doc-biblioref">Pappenberger et al., 2013</a>)</span>.</p>
+<p>Fifth, and most distinctively for decision contexts that involve cumulative or time-dependent outcomes, trajectory forecasts provide information that no marginal distribution or prediction interval can supply. <span class="citation" data-cites="kleyholsteg2020probabilistic">Kley-Holsteg &amp; Ziel (<a href="references.html#ref-kleyholsteg2020probabilistic" role="doc-biblioref">2020</a>)</span> demonstrate that trajectory forecasts “provide additional information about the expected aggregated or cumulative” outcome over a planning horizon, and <span class="citation" data-cites="serafin2022trading">Serafin et al. (<a href="references.html#ref-serafin2022trading" role="doc-biblioref">2022</a>)</span> show that simultaneous prediction bands — which guarantee that a stated percentage of complete price paths lie within specified boundaries over the full horizon — can only be constructed from joint trajectory distributions, not from point-in-time intervals.</p>
+<p><strong>Limitations.</strong> Against these strengths must be set several well-documented limitations. The most fundamental is visual clutter and cognitive overload: displaying too many trajectories can result in a visual chaos that impairs accurate interpretation, an effect so common that it has given the method its colloquial name <span class="citation" data-cites="leffrang2025">(<a href="references.html#ref-leffrang2025" role="doc-biblioref">Leffrang &amp; Müller, 2025</a>)</span>. This complexity frequently overwhelms general audiences; qualitative studies have documented responses such as “I have no clue which one to believe” when members of the public are shown hurricane ensemble plots <span class="citation" data-cites="toet2016">(<a href="references.html#ref-toet2016" role="doc-biblioref">Toet et al., 2016</a>)</span>. <span class="citation" data-cites="gilbert2021probabilistic">Gilbert et al. (<a href="references.html#ref-gilbert2021probabilistic" role="doc-biblioref">2021</a>)</span> confirm that raw trajectory visualisations produce “uncertainty information [that] is difficult to interpret by any decision maker” in operational high-stakes scheduling contexts.</p>
+<p>A second limitation concerns misdirected attention. While trajectories highlight unlikely alternative futures, they may simultaneously draw attention away from the specific scenarios that forecasters consider most probable <span class="citation" data-cites="ripberger2022">(<a href="references.html#ref-ripberger2022" role="doc-biblioref">Ripberger et al., 2022</a>)</span>. The equal visual weight given to all ensemble members, regardless of their probability, can create a misleading impression of uniform likelihood across the displayed range.</p>
+<p>Third, despite the probabilistic intent of ensemble plots, users frequently subvert it by selecting a single trajectory to follow as if it were a deterministic forecast <span class="citation" data-cites="pappenberger2013">(<a href="references.html#ref-pappenberger2013" role="doc-biblioref">Pappenberger et al., 2013</a>)</span>. This “cherry-picking” defeats the purpose of the ensemble representation.</p>
+<p>Fourth, <span class="citation" data-cites="leffrang2025">Leffrang &amp; Müller (<a href="references.html#ref-leffrang2025" role="doc-biblioref">2025</a>)</span> identify an <em>uncertainty paradox</em>: when uncertainty visualisations are highly effective at depicting extreme volatility, audiences may become alienated and less likely to act on the guidance being communicated.</p>
+<p>Fifth, and critically for technical practitioners, traditional point-wise evaluation metrics — including the Mean Absolute Error, Root Mean Squared Error, and the Pinball score — are entirely “blind” to the temporal correlation structure of trajectory forecasts <span class="citation" data-cites="kleyholsteg2020probabilistic">(<a href="references.html#ref-kleyholsteg2020probabilistic" role="doc-biblioref">Kley-Holsteg &amp; Ziel, 2020</a>)</span>. They cannot detect whether a simulated path is structurally realistic or has been manipulated to have the correct marginal properties at each time step while exhibiting entirely unrealistic path behaviour. This means that practitioners who evaluate trajectory forecasts using standard metrics may be unknowingly deploying poorly calibrated path forecasts.</p>
+<p><strong>Disagreement in the literature.</strong> The literature is actively divided on whether ensemble plots ultimately help or harm lay decision-makers. Some researchers argue that they successfully align risk perceptions with actual risk <span class="citation" data-cites="leffrang2025">(<a href="references.html#ref-leffrang2025" role="doc-biblioref">Leffrang &amp; Müller, 2025</a>)</span>, while others find that they confuse users and degrade trust relative to simpler prediction intervals <span class="citation" data-cites="leffrang2025">(<a href="references.html#ref-leffrang2025" role="doc-biblioref">Leffrang &amp; Müller, 2025</a>)</span>. Among practitioners, there is a fundamental disagreement about the value of displaying individual paths: some value the ability to track individual ensemble members, while others argue that such plots are displayed only because they “allow misuse of probabilistic forecasts by following a single line” <span class="citation" data-cites="pappenberger2013">(<a href="references.html#ref-pappenberger2013" role="doc-biblioref">Pappenberger et al., 2013</a>)</span>.</p>
+</section>
+<section id="when-to-use-this-method" class="level3" data-number="17.0.3">
+<h3 data-number="17.0.3" class="anchored" data-anchor-id="when-to-use-this-method"><span class="header-section-number">17.0.3</span> When to Use This Method</h3>
+<p>Forecast trajectories are most appropriate when the communication goal requires illustrating the inherent volatility and stochastic variation of a system — particularly when summary intervals would falsely imply a smooth, linear progression inconsistent with the actual character of the process <span class="citation" data-cites="raftery2023">(<a href="references.html#ref-raftery2023" role="doc-biblioref">Raftery &amp; Ševčíková, 2023</a>)</span>. They are essential — and irreplaceable by marginal methods — when the decision depends on the <em>cumulative</em> or <em>aggregate</em> behaviour of a variable over multiple time steps, or on whether conditions remain within specified bounds throughout an extended window <span class="citation" data-cites="kleyholsteg2020probabilistic gilbert2021probabilistic">(<a href="references.html#ref-gilbert2021probabilistic" role="doc-biblioref">Gilbert et al., 2021</a>; <a href="references.html#ref-kleyholsteg2020probabilistic" role="doc-biblioref">Kley-Holsteg &amp; Ziel, 2020</a>)</span>.</p>
+<p>They are most suitable for technical audiences who are familiar with ensemble methods. For entry-level and informed audiences, they should be used with caution and only after extensive cognitive testing. They are least appropriate when the primary communication goal is a simple behavioural signal or a single actionable threshold — in such cases, the transformation of raw trajectories into categorical probability summaries, as described in the good practice recommendations below, is strongly preferable.</p>
+</section>
+<section id="good-practice" class="level3" data-number="17.0.4">
+<h3 data-number="17.0.4" class="anchored" data-anchor-id="good-practice"><span class="header-section-number">17.0.4</span> Good Practice</h3>
+<ul>
+<li><strong>Limit the number of trajectories:</strong> Restrict the number of plotted lines to prevent visual overload. An excessive number of ensemble members does not enhance decision-making and actively undermines trust <span class="citation" data-cites="leffrang2025">(<a href="references.html#ref-leffrang2025" role="doc-biblioref">Leffrang &amp; Müller, 2025</a>)</span>.</li>
+<li><strong>Use sequential presentation:</strong> Introduce stochasticity gradually — first a small number of individual trajectories, then summary distributions — to help audiences build intuitive understanding before confronting the full ensemble <span class="citation" data-cites="raftery2023">(<a href="references.html#ref-raftery2023" role="doc-biblioref">Raftery &amp; Ševčíková, 2023</a>)</span>.</li>
+<li><strong>Transform raw trajectories into categorical risk summaries:</strong> Rather than showing end-users raw trajectory lines, transform the ensemble into operational risk categories (e.g., “Good, Fair, Poor, No-Go”) and visualise the percentage of trajectories in each category at each time step <span class="citation" data-cites="gilbert2021probabilistic">(<a href="references.html#ref-gilbert2021probabilistic" role="doc-biblioref">Gilbert et al., 2021</a>)</span>. This distillation into actionable probabilities preserves the information content of the full trajectory forecast while reducing cognitive demand to a level manageable for operational decision-makers.</li>
+<li><strong>Distinguish probability from visual weight:</strong> Make clear that equal visual weight does not imply equal probability. Use visual encoding — line thickness, colour saturation — to convey relative likelihood where trajectories differ in probability.</li>
+<li><strong>Accompany with a central estimate:</strong> Always provide a clearly labelled central estimate or median trajectory alongside the ensemble as a reference point.</li>
+<li><strong>Use the Energy Score for evaluation:</strong> When evaluating whether a trajectory forecast has captured the correct temporal correlation structure, use strictly proper multivariate scoring rules such as the Energy Score or the Variogram Score rather than standard point-wise metrics such as MAE or RMSE, which are entirely insensitive to path dependency <span class="citation" data-cites="kleyholsteg2020probabilistic gilbert2021probabilistic serafin2022trading">(<a href="references.html#ref-gilbert2021probabilistic" role="doc-biblioref">Gilbert et al., 2021</a>; <a href="references.html#ref-kleyholsteg2020probabilistic" role="doc-biblioref">Kley-Holsteg &amp; Ziel, 2020</a>; <a href="references.html#ref-serafin2022trading" role="doc-biblioref">Serafin et al., 2022</a>)</span>.</li>
+<li><strong>Test with the intended audience:</strong> Given the documented confusion effects in non-expert populations, always conduct cognitive testing of ensemble displays with the target audience before deployment.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-gilbert2021probabilistic" class="csl-entry" role="listitem">
+Gilbert, C., Browell, J., &amp; McMillan, D. (2021). Probabilistic access forecasting for improved offshore operations. <em>International Journal of Forecasting</em>, <em>37</em>, 134–150. <a href="https://doi.org/10.1016/j.ijforecast.2020.03.007">https://doi.org/10.1016/j.ijforecast.2020.03.007</a>
+</div>
+<div id="ref-kleyholsteg2020probabilistic" class="csl-entry" role="listitem">
+Kley-Holsteg, J., &amp; Ziel, F. (2020). Probabilistic multi-step-ahead short-term water demand forecasting with lasso. <em>Journal of Water Resources Planning and Management</em>. <a href="https://doi.org/10.1061/(ASCE)WR.1943-5452.0001268">https://doi.org/10.1061/(ASCE)WR.1943-5452.0001268</a>
+</div>
+<div id="ref-leffrang2025" class="csl-entry" role="listitem">
+Leffrang, J., &amp; Müller, R. (2025). Visualizing uncertainty in time series forecasts. <em>Journal of Forecasting</em>. <a href="https://doi.org/10.1002/for.3222">https://doi.org/10.1002/for.3222</a>
+</div>
+<div id="ref-pappenberger2013" class="csl-entry" role="listitem">
+Pappenberger, F., Stephens, E., Thielen, J., Salamon, P., Demeritt, D., Andel, S. J. van, Wetterhall, F., &amp; Alfieri, L. (2013). Visualizing probabilistic flood forecast information: Expert preferences and perceptions of best practice in uncertainty communication. <em>Hydrological Processes</em>, <em>27</em>(1), 132–146. <a href="https://doi.org/10.1002/hyp.9253">https://doi.org/10.1002/hyp.9253</a>
+</div>
+<div id="ref-raftery2023" class="csl-entry" role="listitem">
+Raftery, A. E., &amp; Ševčíková, H. (2023). Probabilistic population forecasting: Short to very long-term. <em>International Journal of Forecasting</em>, <em>39</em>(1), 73–97. <a href="https://doi.org/10.1016/j.ijforecast.2021.09.001">https://doi.org/10.1016/j.ijforecast.2021.09.001</a>
+</div>
+<div id="ref-ripberger2022" class="csl-entry" role="listitem">
+Ripberger, J. T. et al. (2022). Communicating probability information in weather forecasts. <em>Weather, Climate, and Society</em>, <em>14</em>, 482–506. <a href="https://doi.org/10.1175/WCAS-D-21-0031.1">https://doi.org/10.1175/WCAS-D-21-0031.1</a>
+</div>
+<div id="ref-serafin2022trading" class="csl-entry" role="listitem">
+Serafin, T., Marcjasz, G., &amp; Weron, R. (2022). Trading on short-term path forecasts of intraday electricity prices. <em>Energy Economics</em>, <em>112</em>, 106125. <a href="https://doi.org/10.1016/j.eneco.2022.106125">https://doi.org/10.1016/j.eneco.2022.106125</a>
+</div>
+<div id="ref-spiegelhalter2017" class="csl-entry" role="listitem">
+Spiegelhalter, D. J. (2017). Risk and uncertainty communication. <em>Annual Review of Statistics and Its Application</em>, <em>4</em>, 31–60. <a href="https://doi.org/10.1146/annurev-statistics-010814-020148">https://doi.org/10.1146/annurev-statistics-010814-020148</a>
+</div>
+<div id="ref-toet2016" class="csl-entry" role="listitem">
+Toet, A., Erp, J. B. F. van, Boertjes, E. M., &amp; Buuren, S. van. (2016). Visualizing uncertainty: Towards a better understanding of weather forecasts. <em>Unpublished Manuscript</em>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/bahmanrostamitabar\.github\.io\/communicate_uncertainty\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./06_7_fan_charts.html" class="pagination-link" aria-label="Fan Charts">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Fan Charts</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./07_conclusion.html" class="pagination-link" aria-label="Conclusion">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conclusion</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_8_forecast_trajectories.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

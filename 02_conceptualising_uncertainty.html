@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Conceptualising Uncertainty – Communicating Uncertainty</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./03_sources_of_uncertainty.html" rel="next">
+<link href="./01_introduction.html" rel="prev">
+<link href="./cover.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-3eaaf8913ce91643d14a48da3c3a0789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ebfc9dbce697e0d111a7827667a11c87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3eaaf8913ce91643d14a48da3c3a0789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7NGEV74PGX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<meta property="og:title" content="Communicating Uncertainty">
+<meta property="og:description" content="A practical cross-disciplinary reference for communicating uncertainty.">
+<meta property="og:image" content="https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png">
+<meta property="og:site_name" content="Communicating Uncertainty">
+<meta property="og:image:alt" content="Book cover for Communicating Uncertainty by Bahman Rostami-Tabar">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:title" content="Communicating Uncertainty">
+<meta name="twitter:description" content="A practical cross-disciplinary reference for communicating uncertainty.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png">
+<meta name="twitter:image:alt" content="Book cover for Communicating Uncertainty by Bahman Rostami-Tabar">
+<meta name="twitter:creator" content="@Bahman_R_T">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Communicating Uncertainty</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-wide tools-end">
+    <a href="https://github.com/bahmanrostamitabar/communicate_uncertainty" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_introduction.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="./02_conceptualising_uncertainty.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conceptualising Uncertainty</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_conceptualising_uncertainty.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conceptualising Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_sources_of_uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sources of Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_related_concepts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Uncertainty and Related Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Why and To Whom</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_why_communicate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Why Communicate Uncertainty, and to Whom?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_1_users.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Audiences and Their Needs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_2_when.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">When to communicate uncertainty</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Methods</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_0_method_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Methods for Communicating Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_1_verbal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Verbal Expressions of Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_2_numerical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Numerical Expressions of Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_3_categorical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Categorical Approaches</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_4_scenarios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Scenario and What-If Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_5_prediction_intervals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Prediction Intervals and Quantiles</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_6_distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_7_fan_charts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Fan Charts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_8_forecast_trajectories.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Forecast Trajectories</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-uncertainty" id="toc-what-is-uncertainty" class="nav-link active" data-scroll-target="#what-is-uncertainty"><span class="header-section-number">3.1</span> What is Uncertainty?</a></li>
+  <li><a href="#sec-epistemic-aleatory" id="toc-sec-epistemic-aleatory" class="nav-link" data-scroll-target="#sec-epistemic-aleatory"><span class="header-section-number">3.2</span> Epistemic and Aleatory Uncertainty</a></li>
+  <li><a href="#ontological-linguistic-and-deep-uncertainty" id="toc-ontological-linguistic-and-deep-uncertainty" class="nav-link" data-scroll-target="#ontological-linguistic-and-deep-uncertainty"><span class="header-section-number">3.3</span> Ontological, Linguistic, and Deep Uncertainty</a></li>
+  <li><a href="#sec-stirling" id="toc-sec-stirling" class="nav-link" data-scroll-target="#sec-stirling"><span class="header-section-number">3.4</span> Stirling’s Matrix: The Four Dimensions of Incertitude</a></li>
+  <li><a href="#sec-known-unknown" id="toc-sec-known-unknown" class="nav-link" data-scroll-target="#sec-known-unknown"><span class="header-section-number">3.5</span> Known and Unknown Unknowns</a></li>
+  <li><a href="#disagreements-and-tensions-in-the-literature" id="toc-disagreements-and-tensions-in-the-literature" class="nav-link" data-scroll-target="#disagreements-and-tensions-in-the-literature"><span class="header-section-number">3.6</span> Disagreements and Tensions in the Literature</a></li>
+  <li><a href="#good-practice" id="toc-good-practice" class="nav-link" data-scroll-target="#good-practice"><span class="header-section-number">3.7</span> Good Practice</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/02_conceptualising_uncertainty.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_introduction.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="./02_conceptualising_uncertainty.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conceptualising Uncertainty</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-conceptualising" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conceptualising Uncertainty</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The word “uncertainty” is used freely across virtually every academic discipline, yet it carries subtly — and sometimes radically — different meanings depending on the field in which it appears. In philosophy it refers to the limits of knowledge; in physics it can mean the fundamental indeterminacy of quantum mechanics; in statistics it refers to the variability of an estimator; in economics it denotes the impossibility of assigning probabilities to outcomes; in everyday speech it simply means not knowing what will happen. As <span class="citation" data-cites="makridakis2016">Makridakis &amp; Bakas (<a href="references.html#ref-makridakis2016" role="doc-biblioref">2016</a>)</span> observe, uncertainty “lacks a unique definition and clear meaning that varies when used in different fields such as philosophy, physics, information science, economics, statistics, finance, politics, psychology, engineering and insurance.” This multiplicity of meanings is not merely terminological housekeeping — it has direct practical consequences. When a scientist reports that a finding is “uncertain,” a policymaker, a journalist, and a risk analyst may each understand something quite different by the statement. Conceptual clarity about what uncertainty means, and what it does not mean, is therefore a prerequisite for effective communication.</p>
+<p>This section reviews the principal frameworks through which scholars have attempted to bring analytical order to the concept of uncertainty. It begins with the foundational distinction between epistemic and aleatory uncertainty, before broadening to consider ontological, linguistic, and deep uncertainty. It then examines Stirling’s influential matrix of incertitude and the related taxonomy of known and unknown unknowns. The section concludes with a discussion of the key disagreements in the literature and their implications for practice.</p>
+<section id="what-is-uncertainty" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="what-is-uncertainty"><span class="header-section-number">3.1</span> What is Uncertainty?</h2>
+<p>At its most general, uncertainty refers to a state of incomplete or imperfect knowledge — an inability to fully describe the present or reliably predict the future <span class="citation" data-cites="makridakis2016">(<a href="references.html#ref-makridakis2016" role="doc-biblioref">Makridakis &amp; Bakas, 2016</a>)</span>. This everyday understanding, however, conceals important distinctions. A physician who cannot determine a diagnosis with confidence, a meteorologist issuing a five-day forecast, and an engineer assessing the structural integrity of a bridge under novel loading conditions are all dealing with uncertainty, yet the character of their uncertainty — its source, its reducibility, and the kind of information that would help resolve it — differs substantially in each case.</p>
+<p>A critical philosophical distinction that underpins much of the subsequent literature is that uncertainty is fundamentally a property of <em>knowledge</em>, not of the world itself <span class="citation" data-cites="scoones2019">(<a href="references.html#ref-scoones2019" role="doc-biblioref">Scoones, 2019</a>)</span>. The future trajectory of a hurricane is not inherently uncertain; it is determined by physical laws. It appears uncertain to us because we lack the observational precision and computational power to fully model those laws. This epistemological framing — uncertainty as a gap in human knowledge rather than an objective feature of reality — has profound implications for how it should be communicated and managed. It suggests that uncertainty can, at least in principle, be reduced through better data, better models, and more careful reasoning, even if it can never be entirely eliminated.</p>
+</section>
+<section id="sec-epistemic-aleatory" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-epistemic-aleatory"><span class="header-section-number">3.2</span> Epistemic and Aleatory Uncertainty</h2>
+<p>The most widely used distinction in statistical and scientific practice is between <em>epistemic</em> and <em>aleatory</em> uncertainty, a division that maps roughly onto the contrast between ignorance and irreducible randomness.</p>
+<p><strong>Aleatory uncertainty</strong> is conceptualised as the inherent, irreducible stochastic variability within a system — the randomness that remains even with perfect knowledge of the underlying processes <span class="citation" data-cites="gruber2023">(<a href="references.html#ref-gruber2023" role="doc-biblioref">Gruber et al., 2023</a>)</span>. It represents, in <span class="citation" data-cites="spiegelhalter2017">Spiegelhalter (<a href="references.html#ref-spiegelhalter2017" role="doc-biblioref">2017</a>)</span>’s formulation, the “inevitable unpredictability of the future due to unforeseeable factors, fully expressed by classical probabilities.” In financial contexts, aleatory uncertainty is closely related to what is termed latent volatility — the inherent fluctuation in asset prices that cannot be predicted regardless of how sophisticated the model <span class="citation" data-cites="eggen2025">(<a href="references.html#ref-eggen2025" role="doc-biblioref">Eggen, 2025</a>)</span>. The canonical example is the outcome of a fair coin toss: no amount of additional information about the coin or the person flipping it can, under normal circumstances, allow us to predict the result with certainty.</p>
+<p><strong>Epistemic uncertainty</strong>, by contrast, refers to a state of incomplete knowledge about the world that could, in theory, be resolved with more data or better models. It encompasses, as <span class="citation" data-cites="spiegelhalter2017">Spiegelhalter (<a href="references.html#ref-spiegelhalter2017" role="doc-biblioref">2017</a>)</span> describes it, “uncertainty about the structure and parameters of statistical models, expressed, for example, through Bayesian probability distributions,” and is fundamentally reducible through improving models or data <span class="citation" data-cites="eggen2025">(<a href="references.html#ref-eggen2025" role="doc-biblioref">Eggen, 2025</a>)</span>. In the language of <span class="citation" data-cites="vanderbles2019">Bles et al. (<a href="references.html#ref-vanderbles2019" role="doc-biblioref">2019</a>)</span>, epistemic uncertainty concerns “the past and present state of the world that arises because of what we do not know but could know in theory.” A physician who is unsure of a diagnosis because a test result is not yet available faces epistemic uncertainty; the same physician uncertain about a patient’s idiosyncratic biological response to a treatment confronts something closer to aleatory uncertainty.</p>
+<p>This distinction is practically significant because it implies different responses. Epistemic uncertainty motivates investment in better measurement, broader data collection, and more refined models. Aleatory uncertainty, by contrast, calls for honest acknowledgement of irreducible limits and for communication strategies that convey the range of possible outcomes rather than implying a determinism that does not exist.</p>
+<p>However, the boundary between the two is less clean than it first appears. <span class="citation" data-cites="gruber2023">Gruber et al. (<a href="references.html#ref-gruber2023" role="doc-biblioref">2023</a>)</span> argue forcefully that a simple decomposition into aleatory and epistemic uncertainty “does not do justice to the overarching problem of multiple sources of uncertainty.” Their central challenge is that the classification of uncertainty as aleatory or epistemic is entirely context-dependent, not a universal property of the phenomenon being studied. A dice roll, for instance, is conventionally treated as purely aleatory; yet if one possessed a model that perfectly measured the initial position, velocity, and rotation of the die, the outcome would become entirely predictable — effectively epistemic. As <span class="citation" data-cites="gruber2023">Gruber et al. (<a href="references.html#ref-gruber2023" role="doc-biblioref">2023</a>)</span> conclude, “uncertainties can therefore only be distinguished on a model and data basis and not universally.” This insight is important for communication: claiming that a source of uncertainty is irreducibly aleatory may be more a statement about the limits of current models than about the nature of reality.</p>
+</section>
+<section id="ontological-linguistic-and-deep-uncertainty" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="ontological-linguistic-and-deep-uncertainty"><span class="header-section-number">3.3</span> Ontological, Linguistic, and Deep Uncertainty</h2>
+<p>Beyond the epistemic-aleatory divide, scholars have identified further conceptual layers of uncertainty that resist standard probabilistic treatment.</p>
+<p><strong>Ontological uncertainty</strong> acknowledges the ultimate limits of mathematical modelling as a representation of a complex reality. <span class="citation" data-cites="spiegelhalter2017">Spiegelhalter (<a href="references.html#ref-spiegelhalter2017" role="doc-biblioref">2017</a>)</span> defines it as “uncertainty about the entire modelling process as a description of reality” — the possibility that no model, however sophisticated, fully captures the dynamics of the system being studied. This form of uncertainty is particularly relevant in complex socio-technical or socio-ecological systems, where the interactions between human behaviour, institutional structures, and natural processes cannot be fully specified in advance <span class="citation" data-cites="scoones2019">(<a href="references.html#ref-scoones2019" role="doc-biblioref">Scoones, 2019</a>)</span>.</p>
+<p><strong>Linguistic uncertainty</strong> arises from the limits of human language in describing and communicating risk and uncertainty. It manifests as vagueness, where a term has imprecise boundaries; ambiguity, where a term has multiple possible meanings; and under-specificity, where a statement does not provide sufficient detail to constrain interpretation <span class="citation" data-cites="eco_risk_nd">(<a href="references.html#ref-eco_risk_nd" role="doc-biblioref">Unknown Author, n.d.</a>)</span>. Linguistic uncertainty is particularly prominent in qualitative risk assessments, where terms such as “low risk” or “possible” are routinely used without explicit reference to exposure conditions or probability scales, leaving audiences to fill in the gaps with their own prior beliefs.</p>
+<p><strong>Deep uncertainty</strong> defines a more radical condition in which the fundamental parameters of a problem cannot be agreed upon. <span class="citation" data-cites="doyle2023">Doyle et al. (<a href="references.html#ref-doyle2023" role="doc-biblioref">2023</a>)</span> characterise it as a situation that “exists when experts or stakeholders do not know or cannot agree on conceptual models, uncertainty probability distributions, and how to weigh and value desirable alternative outcomes.” Deep uncertainty is not merely a quantitative problem — it is a problem of contested knowledge and competing value systems. Standard probabilistic tools are inadequate under conditions of deep uncertainty, and communication strategies must shift accordingly, from conveying precise probabilities to facilitating deliberation about alternative possible futures.</p>
+</section>
+<section id="sec-stirling" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-stirling"><span class="header-section-number">3.4</span> Stirling’s Matrix: The Four Dimensions of Incertitude</h2>
+<p>One of the most influential conceptual frameworks for understanding the multidimensional character of uncertainty is the incertitude matrix proposed by Andy Stirling, which provides a more rigorous taxonomy than the catch-all term “uncertainty” alone can supply <span class="citation" data-cites="stirling_nd_uncertainty scoones2019">(<a href="references.html#ref-scoones2019" role="doc-biblioref">Scoones, 2019</a>; <a href="references.html#ref-stirling_nd_uncertainty" role="doc-biblioref">Stirling, n.d.b</a>)</span>. The matrix is constructed on two axes: whether knowledge about <em>outcomes</em> (what could happen) is problematic or unproblematic, and whether knowledge about <em>likelihoods</em> (how probable each outcome is) is problematic or unproblematic. Crossing these two dimensions yields four distinct states of incertitude, each of which implies a different analytical and communicative response.</p>
+<p><strong>Risk</strong> occupies the quadrant where both outcomes and their probabilities can be reliably estimated <span class="citation" data-cites="scoones2019">(<a href="references.html#ref-scoones2019" role="doc-biblioref">Scoones, 2019</a>)</span>. This is the domain of classical probabilistic risk assessment — rolling dice, actuarial insurance tables, and well-studied engineering failure modes. In this condition, standard statistical tools are appropriate, and uncertainty can be quantified and communicated as a probability distribution or confidence interval.</p>
+<p><strong>Uncertainty</strong>, in the strict Knightian sense, describes conditions where possible outcomes are known but there is no reliable basis for assigning probabilities to them <span class="citation" data-cites="stirling_nd_uncertainty">(<a href="references.html#ref-stirling_nd_uncertainty" role="doc-biblioref">Stirling, n.d.b</a>)</span>. One might know that a new drug could be effective or ineffective, or that a policy intervention could succeed or fail, without having the empirical basis to attach meaningful probabilities to these possibilities. In this condition, probability estimates are formally illegitimate, and presenting them as though they were meaningful constitutes a “pretence of knowledge” <span class="citation" data-cites="stirling_nd_risk">(<a href="references.html#ref-stirling_nd_risk" role="doc-biblioref">Stirling, n.d.a</a>)</span>.</p>
+<p><strong>Ambiguity</strong> arises when probabilities might in principle be calculable, but there is fundamental disagreement about how to define or frame the possible outcomes <span class="citation" data-cites="scoones2019">(<a href="references.html#ref-scoones2019" role="doc-biblioref">Scoones, 2019</a>)</span>. This condition is common in contested policy domains — such as the risk of genetically modified organisms, or the long-term consequences of emerging technologies — where different scientific communities or stakeholder groups organise the problem space in incompatible ways.</p>
+<p><strong>Ignorance</strong> represents the most challenging condition: one in which neither the outcomes nor their probabilities can be fully characterised, and where parameters are “not only contestable but also — at least in part — unknown” <span class="citation" data-cites="stirling_nd_risk">(<a href="references.html#ref-stirling_nd_risk" role="doc-biblioref">Stirling, n.d.a</a>)</span>. This is the domain of “unknown unknowns” — genuinely unanticipated effects and emergent phenomena that fall entirely outside the existing analytical frame. Black Swan events, as described by <span class="citation" data-cites="makridakis2016">Makridakis &amp; Bakas (<a href="references.html#ref-makridakis2016" role="doc-biblioref">2016</a>)</span>, are paradigmatic examples.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Stirling’s Incertitude Matrix</strong></p>
+<p>Suggested figure: A 2×2 matrix with axes labelled “Knowledge about outcomes” (unproblematic to problematic) and “Knowledge about likelihoods” (unproblematic to problematic), with the four quadrants labelled Risk, Ambiguity, Uncertainty, and Ignorance.</p>
+<p>Source to use: Figure 1 in <span class="citation" data-cites="scoones2019">Scoones (<a href="references.html#ref-scoones2019" role="doc-biblioref">2019</a>)</span> or Figure 3 in <span class="citation" data-cites="stirling_nd_uncertainty">Stirling (<a href="references.html#ref-stirling_nd_uncertainty" role="doc-biblioref">n.d.b</a>)</span>.</p>
+<p>Action needed: Reproduce with permission or redraw based on the original.</p>
+</div>
+</div>
+</div>
+<p>A crucial epistemological point about this matrix, emphasised by both <span class="citation" data-cites="stirling_nd_uncertainty">Stirling (<a href="references.html#ref-stirling_nd_uncertainty" role="doc-biblioref">n.d.b</a>)</span> and <span class="citation" data-cites="scoones2019">Scoones (<a href="references.html#ref-scoones2019" role="doc-biblioref">2019</a>)</span>, is that these four conditions are <em>states of knowledge</em>, not states of nature. They describe the relationship between an observer and a system, not objective properties of the system itself. The same phenomenon may be treated as a risk by a well-resourced modelling team with extensive historical data and as ignorance by a community with no access to such information. This relativity of uncertainty states has profound implications for governance and communication: it means that characterising a situation as “risky” rather than “uncertain” or “ambiguous” is always, to some degree, a social and political act, not merely a technical one.</p>
+</section>
+<section id="sec-known-unknown" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-known-unknown"><span class="header-section-number">3.5</span> Known and Unknown Unknowns</h2>
+<p>A complementary taxonomy that has gained wide currency in policy and forecasting contexts is the classification of uncertainty into four quadrants based on the interaction of what is known and unknown about both outcomes and mechanisms <span class="citation" data-cites="makridakis2016">(<a href="references.html#ref-makridakis2016" role="doc-biblioref">Makridakis &amp; Bakas, 2016</a>)</span>. This framework, popularised through Donald Rumsfeld’s 2002 press conference but with deeper roots in decision theory, distinguishes between:</p>
+<ul>
+<li><strong>Known/Knowns:</strong> Situations where both outcomes and their likelihoods are understood. Standard statistical forecasting applies, uncertainty is measurable, and risk can be estimated within acceptable bounds.</li>
+<li><strong>Unknown/Knowns:</strong> Situations where relevant knowledge exists but is ignored, suppressed, or denied — often due to institutional pressures, cognitive biases, or wilful blindness. This is arguably the most dangerous category, as it involves knowable information being rendered operationally invisible.</li>
+<li><strong>Known/Unknowns:</strong> Situations where the forecaster is aware of their ignorance — they know they do not know. Uncertainty is large, often fat-tailed, and planning must proceed without reliable probability estimates.</li>
+<li><strong>Unknown/Unknowns:</strong> Genuinely unanticipated events that fall entirely outside the existing frame of analysis. These are Black Swan events that cannot be predicted by definition, but whose consequences can sometimes be moderated through robustness and adaptability strategies.</li>
+</ul>
+<p><span class="citation" data-cites="makridakis2009">Makridakis et al. (<a href="references.html#ref-makridakis2009" role="doc-biblioref">2009</a>)</span> introduce a memorable distinction between two limiting cases of this taxonomy. <em>Subway uncertainty</em> represents the “known unknowns” that operate in controlled, well-understood environments — like the random delay of a subway train — where standard statistical models apply and uncertainty can be quantified. <em>Coconut uncertainty</em>, by contrast, encompasses the “unknown unknowns” characteristic of rare, catastrophic events — like a fatal accident caused by a falling coconut — where the event is “impossible to quantify or model… even though we can clearly expect these to occur.” This distinction highlights that not all uncertainty can be managed by the same tools, and that the aspiration to reduce all uncertainty to measurable risk is, in many domains, fundamentally misconceived.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Known/Unknown Unknowns Matrix</strong></p>
+<p>Suggested figure: Table 1 in <span class="citation" data-cites="makridakis2016">Makridakis &amp; Bakas (<a href="references.html#ref-makridakis2016" role="doc-biblioref">2016</a>)</span>, “Forecasting accuracy, uncertainty and risk: From Known/Knowns to Black Swans,” which maps Rumsfeld’s four quadrants against predictability, uncertainty type, and associated risk levels.</p>
+<p>Action needed: Reproduce with permission or recreate as a table.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Three Dimensions of Uncertainty</strong></p>
+<p>Suggested figure: Figure 1.2 in <span class="citation" data-cites="pascoe_nd">Pascoe et al. (<a href="references.html#ref-pascoe_nd" role="doc-biblioref">n.d.</a>)</span>, which provides a three-dimensional visual framework for categorising uncertainty by location (where it sits in the modelling pipeline), nature (aleatory vs epistemic), and level (from determinism to ignorance).</p>
+<p>Action needed: Reproduce with permission or recreate as a diagram.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="disagreements-and-tensions-in-the-literature" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="disagreements-and-tensions-in-the-literature"><span class="header-section-number">3.6</span> Disagreements and Tensions in the Literature</h2>
+<p>Two significant tensions run through the conceptual literature on uncertainty and are worth making explicit.</p>
+<p>The first concerns the epistemological status of the aleatory-epistemic distinction. While this division is widely taught in statistics and machine learning curricula, <span class="citation" data-cites="gruber2023">Gruber et al. (<a href="references.html#ref-gruber2023" role="doc-biblioref">2023</a>)</span> argue that it is philosophically and mathematically untenable as a universal classification. Because whether a source of variation is treated as aleatory or epistemic depends on the model and data available rather than on any intrinsic property of the phenomenon, the distinction is always provisional. This challenges a common assumption in uncertainty communication — that some uncertainty is “irreducible” and must simply be reported rather than investigated. In reality, what counts as irreducible is always relative to the current state of knowledge.</p>
+<p>The second concerns the institutional treatment of uncertainty. <span class="citation" data-cites="stirling_nd_risk">Stirling (<a href="references.html#ref-stirling_nd_risk" role="doc-biblioref">n.d.a</a>)</span> documents a troubling pattern in which regulatory and environmental institutions, facing political pressure to produce clear and actionable numbers, routinely describe what is genuinely deep uncertainty as if it were calculable risk. The same word — “uncertainty” — is used to describe both a situation where probabilities are unknown and a situation where a specific probability has been confidently asserted. This institutional conflation, characterised as a “pretence of knowledge,” has the effect of foreclosing deliberation about alternative possibilities and concentrating decision-making authority in technical hands. For communicators, the practical implication is clear: the choice of how to frame uncertainty — as risk, as uncertainty, as ambiguity, or as ignorance — is never a purely technical decision, and its consequences deserve careful scrutiny.</p>
+</section>
+<section id="good-practice" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="good-practice"><span class="header-section-number">3.7</span> Good Practice</h2>
+<ul>
+<li><strong>Resist reductionism:</strong> Practitioners should resist the temptation to close down complex uncertainty, ambiguity, or ignorance into simple probabilistic risk assessments. Applying risk-based mathematical approaches to deeply uncertain situations is, as <span class="citation" data-cites="stirling_nd_risk">Stirling (<a href="references.html#ref-stirling_nd_risk" role="doc-biblioref">n.d.a</a>)</span> argues, “irrational, unscientific and potentially misleading.”</li>
+<li><strong>Address linguistic uncertainty:</strong> In qualitative assessments, communicators must actively minimise linguistic uncertainty by explicitly specifying the context in which probability terms are used, ensuring that exposure variables and reference classes are clearly defined <span class="citation" data-cites="eco_risk_nd">(<a href="references.html#ref-eco_risk_nd" role="doc-biblioref">Unknown Author, n.d.</a>)</span>.</li>
+<li><strong>Track the cascade of uncertainty:</strong> When developing models or assessments, analysts should explicitly categorise uncertainty across three dimensions — its location in the analytical pipeline, its nature (aleatory or epistemic), and its level (from determinism to deep ignorance) — to maintain a clear audit trail of assumptions <span class="citation" data-cites="pascoe_nd">(<a href="references.html#ref-pascoe_nd" role="doc-biblioref">Pascoe et al., n.d.</a>)</span>.</li>
+<li><strong>State clearly what type of uncertainty is being communicated:</strong> Before choosing a communication format, identify whether the uncertainty at hand is aleatory, epistemic, structural, or deep, as each type implies different appropriate formats and levels of precision, as detailed in <a href="06_0_method_intro.html" class="quarto-xref"><span>Chapter 9</span></a>.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-vanderbles2019" class="csl-entry" role="listitem">
+Bles, A. M. van der, Linden, S. van der, Freeman, A. L. J., Mitchell, J., Galvão, A. B., Zaval, L., &amp; Spiegelhalter, D. J. (2019). Communicating uncertainty about facts, numbers and science. <em>Royal Society Open Science</em>, <em>6</em>(5), 181870. <a href="https://doi.org/10.1098/rsos.181870">https://doi.org/10.1098/rsos.181870</a>
+</div>
+<div id="ref-doyle2023" class="csl-entry" role="listitem">
+Doyle, E. E. H. et al. (2023). Perceptions of uncertainty in natural hazards science. <em>International Journal of Disaster Risk Reduction</em>, <em>96</em>, 103948. <a href="https://doi.org/10.1016/j.ijdrr.2023.103948">https://doi.org/10.1016/j.ijdrr.2023.103948</a>
+</div>
+<div id="ref-eggen2025" class="csl-entry" role="listitem">
+Eggen, M. (2025). Financial time series uncertainty: A review of probabilistic <span>AI</span> applications. <em>Journal of Economic Surveys</em>.
+</div>
+<div id="ref-gruber2023" class="csl-entry" role="listitem">
+Gruber, C., Schenk, P. O., Schierholz, M., Kreuter, F., &amp; Kauermann, G. (2023). <em>Sources of uncertainty in machine learning — a statisticians’ view</em>. Department of Statistics, Ludwig-Maximilians-University Munich.
+</div>
+<div id="ref-makridakis2016" class="csl-entry" role="listitem">
+Makridakis, S., &amp; Bakas, N. (2016). Forecasting and uncertainty: A survey. <em>Risk and Decision Analysis</em>, <em>6</em>(1), 37–64. <a href="https://doi.org/10.3233/RDA-150114">https://doi.org/10.3233/RDA-150114</a>
+</div>
+<div id="ref-makridakis2009" class="csl-entry" role="listitem">
+Makridakis, S., Hogarth, R. M., &amp; Gaba, A. (2009). Forecasting and uncertainty in the economic and business world. <em>International Journal of Forecasting</em>, <em>25</em>(4), 794–812. <a href="https://doi.org/10.1016/j.ijforecast.2009.05.012">https://doi.org/10.1016/j.ijforecast.2009.05.012</a>
+</div>
+<div id="ref-pascoe_nd" class="csl-entry" role="listitem">
+Pascoe, S. et al. (n.d.). <em>Preliminary best practices in climate uncertainty quantification and communication</em>.
+</div>
+<div id="ref-scoones2019" class="csl-entry" role="listitem">
+Scoones, I. (2019). <em>What is uncertainty and why does it matter?</em> (STEPS Working Paper 105). STEPS Centre.
+</div>
+<div id="ref-spiegelhalter2017" class="csl-entry" role="listitem">
+Spiegelhalter, D. J. (2017). Risk and uncertainty communication. <em>Annual Review of Statistics and Its Application</em>, <em>4</em>, 31–60. <a href="https://doi.org/10.1146/annurev-statistics-010814-020148">https://doi.org/10.1146/annurev-statistics-010814-020148</a>
+</div>
+<div id="ref-stirling_nd_risk" class="csl-entry" role="listitem">
+Stirling, A. (n.d.a). <em>Risk, precaution and science: Towards a more constructive policy debate</em>.
+</div>
+<div id="ref-stirling_nd_uncertainty" class="csl-entry" role="listitem">
+Stirling, A. (n.d.b). <em>Uncertainty: Lecture notes</em>.
+</div>
+<div id="ref-eco_risk_nd" class="csl-entry" role="listitem">
+Unknown Author. (n.d.). <em>Best practice and current practice in ecological risk assessment</em>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/bahmanrostamitabar\.github\.io\/communicate_uncertainty\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./01_introduction.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03_sources_of_uncertainty.html" class="pagination-link" aria-label="Sources of Uncertainty">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sources of Uncertainty</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/02_conceptualising_uncertainty.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

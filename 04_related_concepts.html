@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Uncertainty and Related Concepts – Communicating Uncertainty</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./05_why_communicate.html" rel="next">
+<link href="./03_sources_of_uncertainty.html" rel="prev">
+<link href="./cover.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-3eaaf8913ce91643d14a48da3c3a0789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ebfc9dbce697e0d111a7827667a11c87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3eaaf8913ce91643d14a48da3c3a0789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7NGEV74PGX"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<meta property="og:title" content="Communicating Uncertainty">
+<meta property="og:description" content="A practical cross-disciplinary reference for communicating uncertainty.">
+<meta property="og:image" content="https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png">
+<meta property="og:site_name" content="Communicating Uncertainty">
+<meta property="og:image:alt" content="Book cover for Communicating Uncertainty by Bahman Rostami-Tabar">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:title" content="Communicating Uncertainty">
+<meta name="twitter:description" content="A practical cross-disciplinary reference for communicating uncertainty.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/bahmanrostamitabar/communicate_uncertainty/main/og-image.png">
+<meta name="twitter:image:alt" content="Book cover for Communicating Uncertainty by Bahman Rostami-Tabar">
+<meta name="twitter:creator" content="@Bahman_R_T">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Communicating Uncertainty</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-wide tools-end">
+    <a href="https://github.com/bahmanrostamitabar/communicate_uncertainty" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_introduction.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="./04_related_concepts.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Uncertainty and Related Concepts</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part I: Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_conceptualising_uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conceptualising Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_sources_of_uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sources of Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_related_concepts.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Uncertainty and Related Concepts</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part II: Why and To Whom</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_why_communicate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Why Communicate Uncertainty, and to Whom?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_1_users.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Audiences and Their Needs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_2_when.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">When to communicate uncertainty</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part III: Methods</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_0_method_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Methods for Communicating Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_1_verbal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Verbal Expressions of Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_2_numerical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Numerical Expressions of Uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_3_categorical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Categorical Approaches</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_4_scenarios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Scenario and What-If Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_5_prediction_intervals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Prediction Intervals and Quantiles</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_6_distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Distributions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_7_fan_charts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Fan Charts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_8_forecast_trajectories.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Forecast Trajectories</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-uncertainty-risk" id="toc-sec-uncertainty-risk" class="nav-link active" data-scroll-target="#sec-uncertainty-risk"><span class="header-section-number">5.1</span> Uncertainty and Risk</a></li>
+  <li><a href="#sec-uncertainty-variability" id="toc-sec-uncertainty-variability" class="nav-link" data-scroll-target="#sec-uncertainty-variability"><span class="header-section-number">5.2</span> Uncertainty and Variability</a></li>
+  <li><a href="#sec-uncertainty-randomness" id="toc-sec-uncertainty-randomness" class="nav-link" data-scroll-target="#sec-uncertainty-randomness"><span class="header-section-number">5.3</span> Uncertainty and Randomness</a></li>
+  <li><a href="#sec-uncertainty-volatility" id="toc-sec-uncertainty-volatility" class="nav-link" data-scroll-target="#sec-uncertainty-volatility"><span class="header-section-number">5.4</span> Uncertainty and Volatility</a></li>
+  <li><a href="#sec-concepts-summary" id="toc-sec-concepts-summary" class="nav-link" data-scroll-target="#sec-concepts-summary"><span class="header-section-number">5.5</span> Summary: How These Concepts Relate</a></li>
+  <li><a href="#disagreements-in-the-literature" id="toc-disagreements-in-the-literature" class="nav-link" data-scroll-target="#disagreements-in-the-literature"><span class="header-section-number">5.6</span> Disagreements in the Literature</a></li>
+  <li><a href="#good-practice" id="toc-good-practice" class="nav-link" data-scroll-target="#good-practice"><span class="header-section-number">5.7</span> Good Practice</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/04_related_concepts.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01_introduction.html">Part I: Foundations</a></li><li class="breadcrumb-item"><a href="./04_related_concepts.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Uncertainty and Related Concepts</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-related" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Uncertainty and Related Concepts</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The term “uncertainty” is frequently used as if it were interchangeable with a cluster of related concepts — risk, variability, randomness, and volatility — that in fact carry distinct technical meanings. This conflation is not merely an academic inconvenience; it has direct practical consequences for how information is communicated, how audiences interpret it, and how decisions are made. A communicator who presents variability data as if it were epistemic uncertainty, or who treats genuine uncertainty as if it were calculable risk, produces systematic distortions in audience understanding that no amount of presentational skill can fully correct. Conceptual clarity about the distinctions between these terms is therefore a prerequisite for effective communication.</p>
+<p>As <span class="citation" data-cites="makridakis2016">Makridakis &amp; Bakas (<a href="references.html#ref-makridakis2016" role="doc-biblioref">2016</a>)</span> observe, “uncertainty” lacks a unique definition and is frequently treated as a linguistic catch-all, leading to theoretical confusion and flawed communication across disciplines. This section examines how uncertainty relates to and differs from four closely related concepts — risk, variability, randomness, and volatility — and concludes with a comparative summary table.</p>
+<section id="sec-uncertainty-risk" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-uncertainty-risk"><span class="header-section-number">5.1</span> Uncertainty and Risk</h2>
+<p>The distinction between uncertainty and risk is foundational to the field and originates in the classic economic framework established by Frank Knight in 1921. In the Knightian paradigm, <em>risk</em> denotes a state where all potential outcomes are known and their precise probabilities can be mathematically calculated <span class="citation" data-cites="scoones2019">(<a href="references.html#ref-scoones2019" role="doc-biblioref">Scoones, 2019</a>)</span>. The probability that a fair die shows a six is exactly one in six; the probability that a bridge collapses under a specified load can be estimated from engineering models and empirical data. Risk, in this strict sense, is measurable, and the tools of classical probability theory are fully appropriate.</p>
+<p><em>Uncertainty</em>, by contrast, defines a state where probabilities cannot be reliably assigned because the underlying mechanisms are unknown, the environment is genuinely novel, or the outcomes themselves are contested <span class="citation" data-cites="scoones2019">(<a href="references.html#ref-scoones2019" role="doc-biblioref">Scoones, 2019</a>)</span>. Frank Knight’s original argument was that profit in a market economy arises precisely from this kind of genuine uncertainty — from situations where no competitor can calculate the odds. <span class="citation" data-cites="stirling_nd_uncertainty">Stirling (<a href="references.html#ref-stirling_nd_uncertainty" role="doc-biblioref">n.d.b</a>)</span> formalises this distinction within the incertitude matrix discussed in <a href="02_conceptualising_uncertainty.html#sec-stirling" class="quarto-xref"><span>Section 3.4</span></a>: risk occupies the quadrant where both outcomes and likelihoods are unproblematic, while uncertainty in the strict sense describes conditions where likelihoods cannot be confidently estimated even though the space of outcomes may be known.</p>
+<p>Despite the clarity of this theoretical distinction, it is routinely violated in practice. <span class="citation" data-cites="stirling_nd_risk">Stirling (<a href="references.html#ref-stirling_nd_risk" role="doc-biblioref">n.d.a</a>)</span> documents a troubling institutional pattern in which regulatory and environmental bodies, facing political pressure to produce clear and actionable numbers, use the word “uncertainty” to describe situations where they have in fact asserted a specific probability — treating deep uncertainty as if it were calculable risk. This conflation is characterised as an irresponsible “pretence of knowledge” that forecloses deliberation about alternative possibilities and concentrates decision-making authority in technical hands. For communicators, the implication is that the choice of framing — presenting something as a quantified risk versus an unquantifiable uncertainty — carries substantial political and epistemic weight and should not be made carelessly.</p>
+</section>
+<section id="sec-uncertainty-variability" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-uncertainty-variability"><span class="header-section-number">5.2</span> Uncertainty and Variability</h2>
+<p>Variability refers to the natural, objective heterogeneity that exists within a population or a system — the genuine differences between individuals, locations, or time points that reflect real physical, biological, or social diversity <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. Human body weights vary; regional rainfall varies; the time it takes different people to respond to a drug varies. Variability is a property of the world, not of our knowledge of it.</p>
+<p>Epistemic uncertainty, by contrast, refers to the subjective limits of a forecaster’s or analyst’s knowledge regarding a specific, single true value. As <span class="citation" data-cites="vanderbles2019">Bles et al. (<a href="references.html#ref-vanderbles2019" role="doc-biblioref">2019</a>)</span> put it, epistemic uncertainty concerns “the past and present state of the world that arises because of what we do not know but could know in theory.” When a scientist reports uncertainty about the average global temperature in a given year, they are reporting epistemic uncertainty about a single quantity, not variability in that quantity.</p>
+<p>The practical importance of this distinction lies in how audiences interpret graphical displays of uncertainty. The literature consistently documents that non-expert audiences routinely conflate the two, misinterpreting statistical distributions or error bars designed to show a forecaster’s lack of knowledge — epistemic uncertainty — as maps of physical population variation — variability <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. A patient shown a probability distribution over possible treatment outcomes may interpret it as showing how different patients respond, rather than how uncertain the physician is about this specific patient’s likely response. This misinterpretation can lead to systematically distorted risk perceptions and poorly calibrated decisions.</p>
+<p>The communication implication is direct: whenever a display is intended to convey epistemic uncertainty about a single quantity, the accompanying text must explicitly clarify that the distribution represents a state of knowledge, not a description of population heterogeneity. As <span class="citation" data-cites="efsa2019">European Food Safety Authority et al. (<a href="references.html#ref-efsa2019" role="doc-biblioref">2019</a>)</span> recommend, communicators should “explain clearly that the distribution represents uncertainty about the quantity of interest, for which there is a single true value.”</p>
+</section>
+<section id="sec-uncertainty-randomness" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-uncertainty-randomness"><span class="header-section-number">5.3</span> Uncertainty and Randomness</h2>
+<p>Randomness — what statisticians and machine learning researchers call aleatory uncertainty — describes the stochastic behaviour of a system that generates different outcomes even when initial conditions appear identical <span class="citation" data-cites="spiegelhalter2017">(<a href="references.html#ref-spiegelhalter2017" role="doc-biblioref">Spiegelhalter, 2017</a>)</span>. It is the irreducible variability of a chaotic or probabilistic process: the unpredictable fluctuations of a Brownian particle, the decay time of a radioactive atom, the outcome of a fair coin toss. Randomness is characterised by the fact that collecting more data or building a better model cannot, in principle, eliminate it — it reflects an inherent property of the system, not a limitation of the observer <span class="citation" data-cites="gruber2023">(<a href="references.html#ref-gruber2023" role="doc-biblioref">Gruber et al., 2023</a>)</span>.</p>
+<p>Epistemic uncertainty, in contrast, represents a reducible gap in human knowledge: the uncertainty that arises because we do not know what the true value of a parameter is, which of several competing models is correct, or how a system will respond under novel conditions. In principle, additional information could resolve epistemic uncertainty; no additional information can resolve randomness.</p>
+<p>This distinction has important practical implications. Communicating a source of uncertainty as “random” implies that it is irreducible and that further investment in data or modelling will not help. Communicating the same source as epistemic implies that it could, in principle, be reduced with more resources or better methods. As <span class="citation" data-cites="gruber2023">Gruber et al. (<a href="references.html#ref-gruber2023" role="doc-biblioref">2023</a>)</span> point out, however, the boundary between randomness and epistemic uncertainty is not always as clear as textbook presentations suggest. A dice roll is conventionally treated as purely random; yet if one possessed a sufficiently detailed physical model of the dice, the throw, and the surface, the outcome would become perfectly predictable. The classification of uncertainty as aleatory or epistemic is therefore always relative to the current state of knowledge and the available models — not an absolute property of the phenomenon.</p>
+</section>
+<section id="sec-uncertainty-volatility" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="sec-uncertainty-volatility"><span class="header-section-number">5.4</span> Uncertainty and Volatility</h2>
+<p>Volatility is the specific manifestation of aleatory uncertainty — randomness — within financial and economic time series. It refers to the degree of variance and the rapidity of fluctuations in market prices, exchange rates, or economic indicators over time <span class="citation" data-cites="eggen2025">(<a href="references.html#ref-eggen2025" role="doc-biblioref">Eggen, 2025</a>)</span>. Volatility is, in this sense, measurable: statistical models such as GARCH (Generalised Autoregressive Conditional Heteroskedasticity) exist precisely to estimate and forecast the conditional variance of financial returns, and market-implied volatility indices such as the VIX provide real-time quantitative measures of expected price variability <span class="citation" data-cites="makridakis2016">(<a href="references.html#ref-makridakis2016" role="doc-biblioref">Makridakis &amp; Bakas, 2016</a>)</span>.</p>
+<p>Volatility is therefore distinct from uncertainty in the strict Knightian sense. A highly volatile financial asset — one whose price fluctuates dramatically from day to day — may nonetheless operate within a risk framework if the statistical distribution of those fluctuations is well characterised and stable. The uncertainty that cannot be captured by standard volatility models is of a different character: it arises during structural breaks, crises, and Black Swan events, where the distributional assumptions that underpin the model are violated and the parameters of the volatility process itself change in ways that were not anticipated <span class="citation" data-cites="scoones2019">(<a href="references.html#ref-scoones2019" role="doc-biblioref">Scoones, 2019</a>)</span>. In such conditions, volatility modelling breaks down and the system moves from the domain of measurable risk into the domain of genuine uncertainty or ignorance.</p>
+<p><span class="citation" data-cites="scoones2019">Scoones (<a href="references.html#ref-scoones2019" role="doc-biblioref">2019</a>)</span>’s discussion of the 2007–08 financial crisis illustrates this distinction vividly. Pre-crisis, the banking system operated in a world of apparent risk: volatility was being measured, hedged, and traded. The crisis revealed that beneath this veneer of quantified risk lay deep uncertainty about the structure of network dependencies, the reliability of rating agency assessments, and the behaviour of interconnected institutions under stress — uncertainties that no volatility model had captured or could have captured.</p>
+</section>
+<section id="sec-concepts-summary" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="sec-concepts-summary"><span class="header-section-number">5.5</span> Summary: How These Concepts Relate</h2>
+<p><a href="#tbl-concepts" class="quarto-xref">Table&nbsp;<span>5.1</span></a> summarises the key distinctions between uncertainty and the four related concepts discussed in this section, across five dimensions relevant to communication practice.</p>
+<div id="tbl-concepts" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-concepts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.1: Key distinctions between uncertainty and related concepts
+</figcaption>
+<div aria-describedby="tbl-concepts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 14%">
+<col style="width: 26%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Definition</th>
+<th>Knowability</th>
+<th>Reducibility</th>
+<th>Graphical representation</th>
+<th>Communication challenge</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Uncertainty</strong></td>
+<td>Unknown probabilities of outcomes</td>
+<td>Probabilities unknown</td>
+<td>Partially, through better models</td>
+<td>Scenarios, ranges, qualitative scales</td>
+<td>Avoiding false precision</td>
+</tr>
+<tr class="even">
+<td><strong>Risk</strong></td>
+<td>Known probabilities of known outcomes</td>
+<td>Fully quantifiable</td>
+<td>Already quantified</td>
+<td>Distributions, intervals, point estimates</td>
+<td>Ensuring calibration</td>
+</tr>
+<tr class="odd">
+<td><strong>Variability</strong></td>
+<td>Real differences in a population</td>
+<td>Measurable</td>
+<td>Not reducible (it is real)</td>
+<td>Distributions, box plots</td>
+<td>Distinguishing from epistemic uncertainty</td>
+</tr>
+<tr class="even">
+<td><strong>Randomness</strong></td>
+<td>Irreducible stochastic variation</td>
+<td>Characterisable statistically</td>
+<td>Not reducible</td>
+<td>Probability distributions</td>
+<td>Avoiding deterministic misinterpretation</td>
+</tr>
+<tr class="odd">
+<td><strong>Volatility</strong></td>
+<td>Measurable fluctuation in time series</td>
+<td>Estimable (e.g.&nbsp;via GARCH)</td>
+<td>Model-dependent</td>
+<td>Fan charts, volatility indices</td>
+<td>Distinguishing from deep uncertainty</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Incertitude Matrix as Disambiguation Tool</strong></p>
+<p>Suggested figure: Figure 1 in <span class="citation" data-cites="scoones2019">Scoones (<a href="references.html#ref-scoones2019" role="doc-biblioref">2019</a>)</span> or Figure 3 in <span class="citation" data-cites="stirling_nd_uncertainty">Stirling (<a href="references.html#ref-stirling_nd_uncertainty" role="doc-biblioref">n.d.b</a>)</span> — the four-dimensional incertitude matrix showing how Risk, Uncertainty, Ambiguity, and Ignorance relate to one another. This figure serves double duty: introduced in <a href="02_conceptualising_uncertainty.html#sec-stirling" class="quarto-xref"><span>Section 3.4</span></a> for the conceptual framework, it can be referenced here to show where variability, randomness, and volatility fall within the overall taxonomy.</p>
+<p>Action needed: Cross-reference the figure already used in Section 2.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Forms of Unpredictability</strong></p>
+<p>Suggested figure: Table 5.1 in <span class="citation" data-cites="scoones2020">Scoones &amp; Stirling (<a href="references.html#ref-scoones2020" role="doc-biblioref">2020</a>)</span>, “Forms of unpredictability: definitions and outcomes,” which cleanly contrasts Risk against Uncertainty and Unknown Unknowns across dimensions including operational approach (Control, Manage, Cope).</p>
+<p>Action needed: Reproduce with permission or recreate as a table.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="disagreements-in-the-literature" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="disagreements-in-the-literature"><span class="header-section-number">5.6</span> Disagreements in the Literature</h2>
+<p>Two disagreements are worth noting. The first concerns the institutional conflation of risk and uncertainty described above: <span class="citation" data-cites="stirling_nd_risk">Stirling (<a href="references.html#ref-stirling_nd_risk" role="doc-biblioref">n.d.a</a>)</span> argues this is an active political choice with serious governance implications, while mainstream policy and regulatory practice treats it as a pragmatic necessity. The second concerns the status of the aleatory-epistemic boundary: <span class="citation" data-cites="gruber2023">Gruber et al. (<a href="references.html#ref-gruber2023" role="doc-biblioref">2023</a>)</span> challenge the assumption that randomness and epistemic uncertainty are cleanly separable categories, arguing that the boundary is model-dependent and therefore always provisional. Both disagreements have practical consequences for communication: if the boundary between uncertainty and risk is political rather than technical, then choosing how to frame a situation has ethical dimensions that communicators should acknowledge; and if the boundary between randomness and epistemic uncertainty is provisional, then claiming that a source of uncertainty is irreducible should be treated with appropriate caution.</p>
+</section>
+<section id="good-practice" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="good-practice"><span class="header-section-number">5.7</span> Good Practice</h2>
+<ul>
+<li><strong>Explicitly distinguish uncertainty from variability in text:</strong> Because audiences routinely interpret distributional graphics as showing population variability rather than epistemic uncertainty, communicators must always provide explicit textual clarification that the display represents a state of knowledge about a single quantity <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</li>
+<li><strong>Use subjective terminology for epistemic uncertainty:</strong> To prevent audiences from confusing expert epistemic judgements with population frequencies, use the term “percentage certainty” (e.g., “experts are 90% certain”) rather than “percentage probability” when describing subjective assessments, since laypeople associate “probability” with the physical frequency of random events <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</li>
+<li><strong>Do not present deep uncertainty as risk:</strong> When probabilities cannot be reliably assigned, communicators should resist the institutional pressure to produce a number. Presenting deep uncertainty as if it were calculable risk is misleading and can be “irrational, unscientific and potentially misleading” <span class="citation" data-cites="stirling_nd_risk">(<a href="references.html#ref-stirling_nd_risk" role="doc-biblioref">Stirling, n.d.a</a>)</span>.</li>
+<li><strong>Acknowledge when volatility modelling reaches its limits:</strong> In financial and economic communication, be explicit about the conditions under which standard volatility models remain valid and the conditions — structural breaks, crises, genuinely novel events — under which they do not.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-vanderbles2019" class="csl-entry" role="listitem">
+Bles, A. M. van der, Linden, S. van der, Freeman, A. L. J., Mitchell, J., Galvão, A. B., Zaval, L., &amp; Spiegelhalter, D. J. (2019). Communicating uncertainty about facts, numbers and science. <em>Royal Society Open Science</em>, <em>6</em>(5), 181870. <a href="https://doi.org/10.1098/rsos.181870">https://doi.org/10.1098/rsos.181870</a>
+</div>
+<div id="ref-eggen2025" class="csl-entry" role="listitem">
+Eggen, M. (2025). Financial time series uncertainty: A review of probabilistic <span>AI</span> applications. <em>Journal of Economic Surveys</em>.
+</div>
+<div id="ref-efsa2019" class="csl-entry" role="listitem">
+European Food Safety Authority, Benford, D., Halldorsson, T., Jeger, M. J., Knutsen, H. K., More, S., Naegeli, H., Noteborn, H., Ockleford, C., Ricci, A., Rychen, G., Schlatter, J. R., Silano, V., Solecki, R., Turck, D., Younes, M., Craig, P., Hart, A., Von Goetz, N., … Hardy, A. (2019). Guidance on communication of uncertainty in scientific assessments. In <em>EFSA Journal</em> (1; Vol. 17, p. 5520). European Food Safety Authority. <a href="https://doi.org/10.2903/j.efsa.2019.5520">https://doi.org/10.2903/j.efsa.2019.5520</a>
+</div>
+<div id="ref-gruber2023" class="csl-entry" role="listitem">
+Gruber, C., Schenk, P. O., Schierholz, M., Kreuter, F., &amp; Kauermann, G. (2023). <em>Sources of uncertainty in machine learning — a statisticians’ view</em>. Department of Statistics, Ludwig-Maximilians-University Munich.
+</div>
+<div id="ref-makridakis2016" class="csl-entry" role="listitem">
+Makridakis, S., &amp; Bakas, N. (2016). Forecasting and uncertainty: A survey. <em>Risk and Decision Analysis</em>, <em>6</em>(1), 37–64. <a href="https://doi.org/10.3233/RDA-150114">https://doi.org/10.3233/RDA-150114</a>
+</div>
+<div id="ref-scoones2019" class="csl-entry" role="listitem">
+Scoones, I. (2019). <em>What is uncertainty and why does it matter?</em> (STEPS Working Paper 105). STEPS Centre.
+</div>
+<div id="ref-scoones2020" class="csl-entry" role="listitem">
+Scoones, I., &amp; Stirling, A. (Eds.). (2020). <em>The politics of uncertainty: Challenges of transformation</em>. Routledge.
+</div>
+<div id="ref-spiegelhalter2017" class="csl-entry" role="listitem">
+Spiegelhalter, D. J. (2017). Risk and uncertainty communication. <em>Annual Review of Statistics and Its Application</em>, <em>4</em>, 31–60. <a href="https://doi.org/10.1146/annurev-statistics-010814-020148">https://doi.org/10.1146/annurev-statistics-010814-020148</a>
+</div>
+<div id="ref-stirling_nd_risk" class="csl-entry" role="listitem">
+Stirling, A. (n.d.a). <em>Risk, precaution and science: Towards a more constructive policy debate</em>.
+</div>
+<div id="ref-stirling_nd_uncertainty" class="csl-entry" role="listitem">
+Stirling, A. (n.d.b). <em>Uncertainty: Lecture notes</em>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/bahmanrostamitabar\.github\.io\/communicate_uncertainty\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./03_sources_of_uncertainty.html" class="pagination-link" aria-label="Sources of Uncertainty">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sources of Uncertainty</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./05_why_communicate.html" class="pagination-link" aria-label="Why Communicate Uncertainty, and to Whom?">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Why Communicate Uncertainty, and to Whom?</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/04_related_concepts.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
