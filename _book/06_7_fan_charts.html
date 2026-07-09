@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Bahman Rostami-Tabar">
-<meta name="dcterms.date" content="2026-07-08">
 
-<title>Welcome</title>
+<title>16&nbsp; Fan Charts – Communicating Uncertainty</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -32,7 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_introduction.html" rel="next">
+<link href="./06_8_forecast_trajectories.html" rel="next">
+<link href="./06_6_distributions.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -306,7 +325,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_7_fan_charts.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Fan Charts</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -332,7 +351,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
   </div>
 </li>
@@ -453,7 +472,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_7_fan_charts.html" class="sidebar-item-text sidebar-link">
+  <a href="./06_7_fan_charts.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Fan Charts</span></span></a>
   </div>
 </li>
@@ -487,42 +506,27 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
-  <ul class="collapse">
-  <li><a href="#what-this-book-covers" id="toc-what-this-book-covers" class="nav-link" data-scroll-target="#what-this-book-covers">What This Book Covers</a></li>
-  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to Use This Book</a></li>
-  <li><a href="#about-the-author" id="toc-about-the-author" class="nav-link" data-scroll-target="#about-the-author">About the Author</a></li>
-  <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence">Licence</a></li>
-  </ul></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link active" data-scroll-target="#practical-example"><span class="header-section-number">16.0.1</span> Practical Example</a></li>
+  <li><a href="#strengths-and-limitations" id="toc-strengths-and-limitations" class="nav-link" data-scroll-target="#strengths-and-limitations"><span class="header-section-number">16.0.2</span> Strengths and Limitations</a></li>
+  <li><a href="#when-to-use-this-method" id="toc-when-to-use-this-method" class="nav-link" data-scroll-target="#when-to-use-this-method"><span class="header-section-number">16.0.3</span> When to Use This Method</a></li>
+  <li><a href="#good-practice" id="toc-good-practice" class="nav-link" data-scroll-target="#good-practice"><span class="header-section-number">16.0.4</span> Good Practice</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_7_fan_charts.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_7_fan_charts.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Fan Charts</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Welcome</h1>
+<h1 class="title"><span id="sec-fan-charts" class="quarto-section-identifier"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Fan Charts</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p><a href="https://bahmanrostamitabar.github.io/">Bahman Rostami-Tabar</a> </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -532,105 +536,86 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 </header>
 
 
-<p><img src="cover.png" title="Communicating Uncertainty" class="quarto-cover-image nolightbox img-fluid"></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>🚧 Work in Progress
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This book is actively being written and expanded. Content is incomplete, sections will change, and new chapters will be added over time. A completed version is planned for <strong>August 2027</strong>.</p>
-<p>Feedback, suggestions, and corrections are very welcome — use the <strong>Report an issue</strong> link in the sidebar of any chapter.</p>
-</div>
-</div>
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome</h1>
-<p>This is the online home of <strong>Communicating Uncertainty: A Guide Across Disciplines</strong>, authored by <a href="https://bahmanrostamitabar.com/">Bahman Rostami-Tabar</a>.</p>
-<p>Uncertainty is an unavoidable part of knowledge and decision-making in almost every field of human activity, including medicine, finance and economics, supply chains, healthcare, and engineering. However, it is often hidden, oversimplified, or communicated in ways that may mislead the people who rely on this information to make informed decisions.</p>
-<p>This book addresses that gap. It provides a practical, cross-disciplinary reference for anyone who needs to communicate uncertainty, whether in a scientific report, a policy document, a public health bulletin, a data visualisation, or a financial forecast. It draws on knowledge from several disciplines, including statistics, psychology, climate science, economics, intelligence analysis, ecology, and risk communication.</p>
-<section id="what-this-book-covers" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-this-book-covers">What This Book Covers</h2>
-<p>The book is organised in three parts:</p>
-<p><strong>Part I — Foundations</strong> introduces the conceptual landscape. It defines uncertainty and its key frameworks, examines the sources from which uncertainty arises, and situates uncertainty among closely related concepts — variability, volatility, randomness, and risk.</p>
-<p><strong>Part II — Why and To Whom</strong> addresses the fundamental question of whether and why uncertainty should be communicated at all. It documents the consequences of failing to communicate honestly, and provides a structured typology of audiences and what each type of user needs.</p>
-<p><strong>Part III — Methods</strong> forms the core of the book. Eight distinct methods for communicating uncertainty are reviewed in depth:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Method</th>
-<th>Section</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Forecast Trajectories (spaghetti plots)</td>
-<td><a href="06_8_forecast_trajectories.html" class="quarto-xref"><span>Chapter 17</span></a></td>
-</tr>
-<tr class="even">
-<td>Fan Charts</td>
-<td><a href="06_7_fan_charts.html" class="quarto-xref"><span>Chapter 16</span></a></td>
-</tr>
-<tr class="odd">
-<td>Probability Distributions</td>
-<td><a href="06_6_distributions.html" class="quarto-xref"><span>Chapter 15</span></a></td>
-</tr>
-<tr class="even">
-<td>Prediction Intervals and Quantiles</td>
-<td><a href="06_5_prediction_intervals.html" class="quarto-xref"><span>Chapter 14</span></a></td>
-</tr>
-<tr class="odd">
-<td>Categorical Approaches (e.g., RAG)</td>
-<td><a href="06_3_categorical.html" class="quarto-xref"><span>Chapter 12</span></a></td>
-</tr>
-<tr class="even">
-<td>Scenario and What-If Analysis</td>
-<td><a href="06_4_scenarios.html" class="quarto-xref"><span>Chapter 13</span></a></td>
-</tr>
-<tr class="odd">
-<td>Verbal Expressions</td>
-<td><a href="06_1_verbal.html" class="quarto-xref"><span>Chapter 10</span></a></td>
-</tr>
-<tr class="even">
-<td>Numerical Expressions</td>
-<td><a href="06_2_numerical.html" class="quarto-xref"><span>Chapter 11</span></a></td>
-</tr>
-</tbody>
-</table>
-<p>For each method the book covers: what it is, a practical example, strengths and limitations, when to use it, and good practice recommendations grounded in the empirical literature.</p>
-</section>
-<section id="how-to-use-this-book" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to Use This Book</h2>
-<p>This book can be read cover to cover, but it is also designed as a reference to be consulted as needed. Readers new to the topic should start with Part I before turning to the methods. Practitioners who already have a working understanding of uncertainty can proceed directly to Part III.</p>
-<p>Each method chapter in Part III is self-contained and can be read independently.</p>
-</section>
-<section id="about-the-author" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="about-the-author">About the Author</h2>
-<p><a href="https://bahmanrostamitabar.com/">Bahman Rostami-Tabar</a> Bahman is Professor of Analytics and Decision Sciences at Cardiff Business School, Cardiff University. He leads the <a href="https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good">Data Lab for Social Good</a>, a <a href="https://bahmanrostamitabar.github.io/supervision/">research team</a> at Cardiff Business School, Cardiff University. He also founded and is the Academic Director of <a href="https://dl4sg-summer-school.github.io/">the Art, Science and Uncertainty Summer School, an interdisciplinary summer school</a> that takes place every year in Cardiff, Wales.</p>
-<p>His research lies at the intersection of data, uncertainty &amp; future, and decision-making, with a particular focus on how advanced analytical methods can support better decisions in complex and uncertain environments. Drawing on Data Science, Artificial Intelligence (AI), and Operations Research (OR), he develops and applies methods that are both methodologically rigorous and practically relevant to real-world decision problems.</p>
-<p>He works closely with academic, public, and industry partners to address important societal challenges. His research covers uncertainty quantification and communication, explainable AI, predictive analytics, and decision sciences, with a particular focus on applications for social good, including healthcare operations, public and global health, supply chains, and sustainability.</p>
-</section>
-<section id="licence" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="licence">Licence</h2>
-<p>This online book is licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Licence</a>.</p>
-<p>You are free to share the material for non-commercial purposes, provided you give appropriate credit and do not modify the material.</p>
-<hr>
+<p>Fan charts are visual displays of probabilistic forecasts over time that represent the full range of uncertainty as a series of nested, shaded bands radiating outward from a central estimate — producing the characteristic widening shape from which the method takes its name. The defining visual feature of a fan chart is that “the range of uncertainty inherent in the forecasts broadens with the forecast horizon” <span class="citation" data-cites="bankofengland_nd">(<a href="references.html#ref-bankofengland_nd" role="doc-biblioref">Bank of England, n.d.</a>)</span>, an insight that the graphic encodes directly and intuitively: the further into the future the forecast extends, the wider the fan becomes. Typically, the central band represents the modal — most likely — forecast, while surrounding regions of progressively lighter shading or different colours encode decreasing probability bands, representing “the range of possible outcomes and the subjective probabilities that the actual outcomes will fall within each range” <span class="citation" data-cites="bankofengland_nd">(<a href="references.html#ref-bankofengland_nd" role="doc-biblioref">Bank of England, n.d.</a>)</span>. As <span class="citation" data-cites="vanderbles2019">Bles et al. (<a href="references.html#ref-vanderbles2019" role="doc-biblioref">2019</a>)</span> describe them, fan charts display “the bounds of several different confidence intervals, often coloured to emphasise the changing probability density going further from the point estimate.” Unlike spaghetti plots, which show individual trajectories, fan charts present a smoothed, continuous summary of the full probability distribution across all forecast horizons simultaneously, making the structure of uncertainty immediately visible without requiring the viewer to integrate over multiple individual lines.</p>
+<section id="practical-example" class="level3" data-number="16.0.1">
+<h3 data-number="16.0.1" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">16.0.1</span> Practical Example</h3>
+<p>The most prominent and widely studied application of fan charts is in macroeconomic forecasting. The Bank of England’s Monetary Policy Committee pioneered the use of fan charts in 1997 to communicate probabilistic projections of inflation and GDP growth to policymakers, financial markets, and the public <span class="citation" data-cites="spiegelhalter2011">(<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">Spiegelhalter et al., 2011</a>)</span>. In these charts, the central interval represents 10% probability, and the largest interval 90% probability, calculated using a frequency interpretation of historical forecast errors <span class="citation" data-cites="spiegelhalter2011">(<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">Spiegelhalter et al., 2011</a>)</span>. The Bank’s fan charts have since become an international reference point for uncertainty communication in economic policy, and have been adapted by the UK Office for National Statistics to visualise both historical and forecasted uncertainties surrounding GDP growth <span class="citation" data-cites="galvao2019">(<a href="references.html#ref-galvao2019" role="doc-biblioref">Galvão et al., 2019</a>)</span>.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Found an error or have a suggestion?</strong> Use the <strong>Edit this page</strong> or <strong>Report an issue</strong> links in the right sidebar of any chapter to contribute via GitHub.</p>
+<p><strong>Figure placeholder — Bank of England Fan Chart for GDP</strong></p>
+<p>Suggested figure: Figure 5E in <span class="citation" data-cites="spiegelhalter2011">Spiegelhalter et al. (<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">2011</a>)</span>, which shows the Bank of England’s fan chart for projecting gross domestic product, with nested probability bands at 10%, 30%, 50%, 70%, and 90% confidence levels.</p>
+<p>Action needed: Reproduce with permission from the Bank of England or from <span class="citation" data-cites="spiegelhalter2011">Spiegelhalter et al. (<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">2011</a>)</span>. Publicly available versions can be downloaded from the Bank of England’s Inflation Report archives.</p>
 </div>
 </div>
 </div>
-
-
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Simplified Fan Chart for Survey Experiment</strong></p>
+<p>Suggested figure: The Option C graphic in <span class="citation" data-cites="galvao2019">Galvão et al. (<a href="references.html#ref-galvao2019" role="doc-biblioref">2019</a>)</span>, a stylised fan chart used in their survey experiments to test expert and public comprehension of economic GDP growth uncertainty. This figure is useful because it was specifically designed for comprehension testing and therefore represents a communication-optimised rather than production-oriented version of the method.</p>
+<p>Action needed: Reproduce with permission or recreate based on the description in <span class="citation" data-cites="galvao2019">Galvão et al. (<a href="references.html#ref-galvao2019" role="doc-biblioref">2019</a>)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Fan Chart in Context of Other Visual Uncertainty Displays</strong></p>
+<p>Suggested figure: Figure 5 (panel iv) in <span class="citation" data-cites="vanderbles2019">Bles et al. (<a href="references.html#ref-vanderbles2019" role="doc-biblioref">2019</a>)</span>, which illustrates a simplified fan plot alongside other visual expressions of uncertainty including error bars, violin plots, and density strips, allowing direct visual comparison of the fan chart against alternative methods.</p>
+<p>Action needed: Reproduce with permission or recreate based on the original figure.</p>
+</div>
+</div>
+</div>
 </section>
+<section id="strengths-and-limitations" class="level3" data-number="16.0.2">
+<h3 data-number="16.0.2" class="anchored" data-anchor-id="strengths-and-limitations"><span class="header-section-number">16.0.2</span> Strengths and Limitations</h3>
+<p><strong>Strengths.</strong> Fan charts offer a number of genuine communicative advantages. For audiences with statistical training, they are highly informative, providing “the most effective” means of conveying uncertainty to “statisticians and other expert users with familiarity of probability distribution functions” <span class="citation" data-cites="galvao2019">(<a href="references.html#ref-galvao2019" role="doc-biblioref">Galvão et al., 2019</a>)</span>. The widening shape of the graphic acts as a powerful visual metaphor that communicates the structure of forecasting uncertainty intuitively and without requiring any statistical interpretation: the further out the forecast, the less certain it becomes. <span class="citation" data-cites="bankofengland_nd">Bank of England (<a href="references.html#ref-bankofengland_nd" role="doc-biblioref">n.d.</a>)</span> argue that this makes fan charts an effective vehicle for conveying “the high degree of uncertainty in economic forecasts, especially at longer horizons, an important message for the public to hear.”</p>
+<p>Fan charts also have a distinctive advantage in their ability to communicate the <em>balance of risks</em> around a central forecast. Because the shading can be applied asymmetrically, a “lopsided” fan chart visually communicates whether forecasters place more weight on outcomes falling above or below the central projection <span class="citation" data-cites="bankofengland_nd">(<a href="references.html#ref-bankofengland_nd" role="doc-biblioref">Bank of England, n.d.</a>)</span>. This depiction of distributional skewness — that the risks are tilted to the upside or the downside — is difficult to convey through intervals or point estimates alone, and is of direct relevance to policy makers and financial market participants who need to understand whether the risks around a forecast are symmetric or directional.</p>
+<p><strong>Limitations.</strong> Against these strengths must be set several well-documented limitations. The most significant is that the information density of fan charts “may be too complicated for many users” <span class="citation" data-cites="galvao2019">(<a href="references.html#ref-galvao2019" role="doc-biblioref">Galvão et al., 2019</a>)</span>. In expert surveys, professionals who were themselves comfortable with fan charts acknowledged concerns that “many journalists would not understand it and certainly would not pass it on to the public” <span class="citation" data-cites="galvao2019">(<a href="references.html#ref-galvao2019" role="doc-biblioref">Galvão et al., 2019</a>)</span>. For entry-level audiences, the simultaneous presentation of multiple nested probability bands, each requiring the viewer to hold in mind a different probability level, imposes a cognitive load that substantially exceeds what non-specialist users can typically manage.</p>
+<p>A second limitation is the persistence of the <em>deterministic construal error</em> even in the presence of explicitly displayed uncertainty bands. Despite the visual prominence of the fan, end-users frequently ignore the uncertainty information entirely; as <span class="citation" data-cites="galvao2019">Galvão et al. (<a href="references.html#ref-galvao2019" role="doc-biblioref">2019</a>)</span> observe, “much of the subsequent discussion” of Bank of England fan chart releases “lost sight of this and reverted to focus on the central estimate.” The widening bands, however visually striking, do not automatically redirect audience attention away from the single central line.</p>
+<p>A third concern is the <em>illusion of precision</em>. When forecasters make subjective, ad hoc adjustments to the width or skew of the fan without grounding those adjustments in rigorous empirical modelling of historical forecast errors, the chart “conveys a false sense of precision” that may mislead users into believing the uncertainty bounds are more solidly founded than they actually are <span class="citation" data-cites="bankofengland_nd">(<a href="references.html#ref-bankofengland_nd" role="doc-biblioref">Bank of England, n.d.</a>)</span>.</p>
+<p><strong>Disagreement in the literature.</strong> There is a stark and unresolved division in the literature regarding the ultimate utility of fan charts. On one side, prominent practitioners and researchers praise them as an “innovative” and “pioneering approach” to communicating economic uncertainty that has advanced the field substantially <span class="citation" data-cites="galvao2019">(<a href="references.html#ref-galvao2019" role="doc-biblioref">Galvão et al., 2019</a>)</span>. On the other, a recent rigorous review of the Bank of England’s own practices reaches the blunt conclusion that fan charts “have outlived their usefulness” and “have weak conceptual foundations, convey little useful information over and above what could be communicated in other, more direct ways, and receive little attention from the public” <span class="citation" data-cites="bankofengland_nd">(<a href="references.html#ref-bankofengland_nd" role="doc-biblioref">Bank of England, n.d.</a>)</span>. The same review recommends that fan charts “should be eliminated” from institutional communications. A second source of tension concerns whether a numerical central estimate should accompany the fan chart. The Bank of England historically refused to include a specific central number alongside the graphic — precisely to prevent audiences from ignoring the bands and focusing solely on the point estimate — a practice that attracted sustained “criticism by journalists” who found the omission evasive <span class="citation" data-cites="spiegelhalter2011">(<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">Spiegelhalter et al., 2011</a>)</span>.</p>
+</section>
+<section id="when-to-use-this-method" class="level3" data-number="16.0.3">
+<h3 data-number="16.0.3" class="anchored" data-anchor-id="when-to-use-this-method"><span class="header-section-number">16.0.3</span> When to Use This Method</h3>
+<p>Fan charts are best deployed when communicating with statisticians, economists, and other expert users who are mathematically equipped to interpret complex probability distribution functions and directional skewness <span class="citation" data-cites="galvao2019">(<a href="references.html#ref-galvao2019" role="doc-biblioref">Galvão et al., 2019</a>)</span>. They are conceptually most appropriate when the primary goal is to demonstrate how “the range of uncertainty inherent in the forecasts broadens with the forecast horizon” <span class="citation" data-cites="bankofengland_nd">(<a href="references.html#ref-bankofengland_nd" role="doc-biblioref">Bank of England, n.d.</a>)</span> — that is, when the time-varying structure of forecast uncertainty is itself the key message. In institutional contexts such as central bank communications, where the audience includes sophisticated financial market participants who trade on probabilistic assessments of policy paths, fan charts provide a level of information that simpler formats cannot match.</p>
+<p>Fan charts are not appropriate for entry-level audiences without extensive interpretive support, and should not be used as a stand-alone communication tool even for informed audiences. The documented failure of non-experts and journalists to engage with the uncertainty bands suggests that fan charts function best as a supplementary display accompanying plain-language uncertainty summaries, rather than as the primary mode of uncertainty communication.</p>
+</section>
+<section id="good-practice" class="level3" data-number="16.0.4">
+<h3 data-number="16.0.4" class="anchored" data-anchor-id="good-practice"><span class="header-section-number">16.0.4</span> Good Practice</h3>
+<ul>
+<li><strong>Ground the fan in empirical forecast errors:</strong> To avoid conveying a false sense of precision, ensure that the baseline widths of the fan are grounded in the historical record of forecast errors for the quantity in question, rather than in subjective, ad hoc committee adjustments <span class="citation" data-cites="bankofengland_nd">(<a href="references.html#ref-bankofengland_nd" role="doc-biblioref">Bank of England, n.d.</a>)</span>. Documenting and disclosing the methodological basis for the bands should be standard practice.</li>
+<li><strong>Complement with simpler formats:</strong> Because fan charts frequently overwhelm non-expert audiences, they should not be the sole mode of uncertainty communication. For entry-level and informed audiences, supplement or replace fan charts with plain-language risk statements, simple numerical ranges, or explicit narrative accounts of the balance of risk <span class="citation" data-cites="bankofengland_nd galvao2019">(<a href="references.html#ref-bankofengland_nd" role="doc-biblioref">Bank of England, n.d.</a>; <a href="references.html#ref-galvao2019" role="doc-biblioref">Galvão et al., 2019</a>)</span>.</li>
+<li><strong>Consider providing a central estimate:</strong> The institutional reluctance to include a numerical central estimate alongside the fan — motivated by a desire to prevent audiences from ignoring the bands — may be counterproductive if it causes audiences to disengage from the graphic entirely. Providing the central estimate explicitly, with strong textual emphasis on the uncertainty bands, may better serve comprehension than withholding it <span class="citation" data-cites="spiegelhalter2011">(<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">Spiegelhalter et al., 2011</a>)</span>.</li>
+<li><strong>Label probability levels explicitly:</strong> Every shaded band in the fan chart should be clearly labelled with its associated probability level, either directly on the graphic or in an immediately adjacent legend. Audiences should not be required to consult a separate methodological document to understand what each band represents.</li>
+<li><strong>Test with the intended audience:</strong> Given the evidence that even professional users frequently revert to the central estimate, communication products using fan charts should be tested with target audiences before deployment to verify that the uncertainty information is actually being processed and used.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-bankofengland_nd" class="csl-entry" role="listitem">
+Bank of England. (n.d.). <em>Forecasting for monetary policy making and communication at the <span class="nocase">Bank of England</span>: A review</em>. Bank of England.
+</div>
+<div id="ref-vanderbles2019" class="csl-entry" role="listitem">
+Bles, A. M. van der, Linden, S. van der, Freeman, A. L. J., Mitchell, J., Galvão, A. B., Zaval, L., &amp; Spiegelhalter, D. J. (2019). Communicating uncertainty about facts, numbers and science. <em>Royal Society Open Science</em>, <em>6</em>(5), 181870. <a href="https://doi.org/10.1098/rsos.181870">https://doi.org/10.1098/rsos.181870</a>
+</div>
+<div id="ref-galvao2019" class="csl-entry" role="listitem">
+Galvão, A. B., Mitchell, J., &amp; Runge, J. (2019). <em>Measuring data uncertainty: An application using the <span class="nocase">Bank of England</span>’s <span>“<span>Fan Charts</span>”</span> for historical <span>GDP</span> growth</em> (ESCoE Discussion Paper 2019-08). ESCoE.
+</div>
+<div id="ref-spiegelhalter2011" class="csl-entry" role="listitem">
+Spiegelhalter, D. J., Pearson, M., &amp; Short, I. (2011). Visualizing uncertainty about the future. <em>Science</em>, <em>333</em>(6048), 1393–1400. <a href="https://doi.org/10.1126/science.1191181">https://doi.org/10.1126/science.1191181</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1056,10 +1041,13 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./06_6_distributions.html" class="pagination-link" aria-label="Distributions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Distributions</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_8_forecast_trajectories.html" class="pagination-link" aria-label="Forecast Trajectories">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Forecast Trajectories</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1068,5 +1056,5 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_7_fan_charts.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

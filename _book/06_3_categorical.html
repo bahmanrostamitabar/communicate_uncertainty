@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Bahman Rostami-Tabar">
-<meta name="dcterms.date" content="2026-07-08">
 
-<title>Welcome</title>
+<title>12&nbsp; Categorical Approaches – Communicating Uncertainty</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -32,7 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_introduction.html" rel="next">
+<link href="./06_4_scenarios.html" rel="next">
+<link href="./06_2_numerical.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -306,7 +325,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_3_categorical.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Categorical Approaches</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -332,7 +351,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
   </div>
 </li>
@@ -429,7 +448,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_3_categorical.html" class="sidebar-item-text sidebar-link">
+  <a href="./06_3_categorical.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Categorical Approaches</span></span></a>
   </div>
 </li>
@@ -487,42 +506,27 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
-  <ul class="collapse">
-  <li><a href="#what-this-book-covers" id="toc-what-this-book-covers" class="nav-link" data-scroll-target="#what-this-book-covers">What This Book Covers</a></li>
-  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to Use This Book</a></li>
-  <li><a href="#about-the-author" id="toc-about-the-author" class="nav-link" data-scroll-target="#about-the-author">About the Author</a></li>
-  <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence">Licence</a></li>
-  </ul></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link active" data-scroll-target="#practical-example"><span class="header-section-number">12.0.1</span> Practical Example</a></li>
+  <li><a href="#strengths-and-limitations" id="toc-strengths-and-limitations" class="nav-link" data-scroll-target="#strengths-and-limitations"><span class="header-section-number">12.0.2</span> Strengths and Limitations</a></li>
+  <li><a href="#when-to-use-this-method" id="toc-when-to-use-this-method" class="nav-link" data-scroll-target="#when-to-use-this-method"><span class="header-section-number">12.0.3</span> When to Use This Method</a></li>
+  <li><a href="#good-practice" id="toc-good-practice" class="nav-link" data-scroll-target="#good-practice"><span class="header-section-number">12.0.4</span> Good Practice</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_3_categorical.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_3_categorical.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Categorical Approaches</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Welcome</h1>
+<h1 class="title"><span id="sec-categorical" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Categorical Approaches</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p><a href="https://bahmanrostamitabar.github.io/">Bahman Rostami-Tabar</a> </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -532,105 +536,102 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 </header>
 
 
-<p><img src="cover.png" title="Communicating Uncertainty" class="quarto-cover-image nolightbox img-fluid"></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>🚧 Work in Progress
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This book is actively being written and expanded. Content is incomplete, sections will change, and new chapters will be added over time. A completed version is planned for <strong>August 2027</strong>.</p>
-<p>Feedback, suggestions, and corrections are very welcome — use the <strong>Report an issue</strong> link in the sidebar of any chapter.</p>
-</div>
-</div>
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome</h1>
-<p>This is the online home of <strong>Communicating Uncertainty: A Guide Across Disciplines</strong>, authored by <a href="https://bahmanrostamitabar.com/">Bahman Rostami-Tabar</a>.</p>
-<p>Uncertainty is an unavoidable part of knowledge and decision-making in almost every field of human activity, including medicine, finance and economics, supply chains, healthcare, and engineering. However, it is often hidden, oversimplified, or communicated in ways that may mislead the people who rely on this information to make informed decisions.</p>
-<p>This book addresses that gap. It provides a practical, cross-disciplinary reference for anyone who needs to communicate uncertainty, whether in a scientific report, a policy document, a public health bulletin, a data visualisation, or a financial forecast. It draws on knowledge from several disciplines, including statistics, psychology, climate science, economics, intelligence analysis, ecology, and risk communication.</p>
-<section id="what-this-book-covers" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-this-book-covers">What This Book Covers</h2>
-<p>The book is organised in three parts:</p>
-<p><strong>Part I — Foundations</strong> introduces the conceptual landscape. It defines uncertainty and its key frameworks, examines the sources from which uncertainty arises, and situates uncertainty among closely related concepts — variability, volatility, randomness, and risk.</p>
-<p><strong>Part II — Why and To Whom</strong> addresses the fundamental question of whether and why uncertainty should be communicated at all. It documents the consequences of failing to communicate honestly, and provides a structured typology of audiences and what each type of user needs.</p>
-<p><strong>Part III — Methods</strong> forms the core of the book. Eight distinct methods for communicating uncertainty are reviewed in depth:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Method</th>
-<th>Section</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Forecast Trajectories (spaghetti plots)</td>
-<td><a href="06_8_forecast_trajectories.html" class="quarto-xref"><span>Chapter 17</span></a></td>
-</tr>
-<tr class="even">
-<td>Fan Charts</td>
-<td><a href="06_7_fan_charts.html" class="quarto-xref"><span>Chapter 16</span></a></td>
-</tr>
-<tr class="odd">
-<td>Probability Distributions</td>
-<td><a href="06_6_distributions.html" class="quarto-xref"><span>Chapter 15</span></a></td>
-</tr>
-<tr class="even">
-<td>Prediction Intervals and Quantiles</td>
-<td><a href="06_5_prediction_intervals.html" class="quarto-xref"><span>Chapter 14</span></a></td>
-</tr>
-<tr class="odd">
-<td>Categorical Approaches (e.g., RAG)</td>
-<td><a href="06_3_categorical.html" class="quarto-xref"><span>Chapter 12</span></a></td>
-</tr>
-<tr class="even">
-<td>Scenario and What-If Analysis</td>
-<td><a href="06_4_scenarios.html" class="quarto-xref"><span>Chapter 13</span></a></td>
-</tr>
-<tr class="odd">
-<td>Verbal Expressions</td>
-<td><a href="06_1_verbal.html" class="quarto-xref"><span>Chapter 10</span></a></td>
-</tr>
-<tr class="even">
-<td>Numerical Expressions</td>
-<td><a href="06_2_numerical.html" class="quarto-xref"><span>Chapter 11</span></a></td>
-</tr>
-</tbody>
-</table>
-<p>For each method the book covers: what it is, a practical example, strengths and limitations, when to use it, and good practice recommendations grounded in the empirical literature.</p>
-</section>
-<section id="how-to-use-this-book" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to Use This Book</h2>
-<p>This book can be read cover to cover, but it is also designed as a reference to be consulted as needed. Readers new to the topic should start with Part I before turning to the methods. Practitioners who already have a working understanding of uncertainty can proceed directly to Part III.</p>
-<p>Each method chapter in Part III is self-contained and can be read independently.</p>
-</section>
-<section id="about-the-author" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="about-the-author">About the Author</h2>
-<p><a href="https://bahmanrostamitabar.com/">Bahman Rostami-Tabar</a> Bahman is Professor of Analytics and Decision Sciences at Cardiff Business School, Cardiff University. He leads the <a href="https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good">Data Lab for Social Good</a>, a <a href="https://bahmanrostamitabar.github.io/supervision/">research team</a> at Cardiff Business School, Cardiff University. He also founded and is the Academic Director of <a href="https://dl4sg-summer-school.github.io/">the Art, Science and Uncertainty Summer School, an interdisciplinary summer school</a> that takes place every year in Cardiff, Wales.</p>
-<p>His research lies at the intersection of data, uncertainty &amp; future, and decision-making, with a particular focus on how advanced analytical methods can support better decisions in complex and uncertain environments. Drawing on Data Science, Artificial Intelligence (AI), and Operations Research (OR), he develops and applies methods that are both methodologically rigorous and practically relevant to real-world decision problems.</p>
-<p>He works closely with academic, public, and industry partners to address important societal challenges. His research covers uncertainty quantification and communication, explainable AI, predictive analytics, and decision sciences, with a particular focus on applications for social good, including healthcare operations, public and global health, supply chains, and sustainability.</p>
-</section>
-<section id="licence" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="licence">Licence</h2>
-<p>This online book is licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Licence</a>.</p>
-<p>You are free to share the material for non-commercial purposes, provided you give appropriate credit and do not modify the material.</p>
-<hr>
+<p>Categorical approaches communicate uncertainty by classifying data, model outputs, or expert assessments into discrete, ordered qualitative tiers — such as low, medium, and high — or by employing visual symbolic systems that encode these tiers through colour, icon, or label. The most widely recognised example is the Red-Amber-Green (RAG) traffic light system, in which colours convey an ordered progression from acceptable to problematic <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. Other instances include national terrorism threat level scales, IPCC confidence grids, ecological risk matrices, and data pedigree charts that rate the quality of scientific evidence. What unites all these systems is the act of <em>discretisation</em>: continuous probabilistic information, or complex multi- dimensional uncertainty, is compressed into a small number of mutually exclusive categories that are easier to communicate, easier to remember, and easier to act upon — at the cost of the quantitative precision and nuance that the underlying information may possess.</p>
+<p>Categorical systems serve a fundamentally different communicative function from the quantitative methods reviewed in the preceding sections. Rather than attempting to convey the magnitude or shape of uncertainty, they aim to convey its <em>significance</em>: whether the level of uncertainty associated with a particular assessment warrants concern, caution, or confidence. As <span class="citation" data-cites="vanderbles2019">Bles et al. (<a href="references.html#ref-vanderbles2019" role="doc-biblioref">2019</a>)</span> observe, “indirect uncertainty” — uncertainty about the quality, completeness, or consensus underlying an assessment — is “possibly best amalgamated into a qualitative or ordered categorical scale,” precisely because such uncertainty does not lend itself to numerical expression in the first place.</p>
+<section id="practical-example" class="level3" data-number="12.0.1">
+<h3 data-number="12.0.1" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">12.0.1</span> Practical Example</h3>
+<p>Categorical approaches are deployed across a strikingly diverse range of domains. In climate risk assessment, the DNV recommended practice for simulation models uses a categorical risk matrix that evaluates the danger of a model failing by combining an uncertainty categorisation — Low, Medium, High — with an assessment of the severity of consequences — Minor to Catastrophic — and mapping the combined result onto a colour-coded “traffic light” grid ranging from green (trusted) to red (not trusted) <span class="citation" data-cites="pascoe_nd">(<a href="references.html#ref-pascoe_nd" role="doc-biblioref">Pascoe et al., n.d.</a>)</span>. This two-dimensional categorical framework communicates both the degree of uncertainty and its practical importance in a single compact display.</p>
+<p>In ecological risk assessment, probabilistic Bayesian network analyses of environmental chemical exposures map the probability of Risk Quotient intervals onto a visual categorical scale where “colours range from green (no risk) to red (posing a risk)” <span class="citation" data-cites="moe2022">(<a href="references.html#ref-moe2022" role="doc-biblioref">Moe et al., 2022</a>)</span>. This approach bridges the gap between quantitative probabilistic analysis and actionable risk communication, by translating continuous probability outputs into categories that regulatory decision-makers can act on directly.</p>
+<p>In intelligence analysis and national security, the US National Intelligence Council communicates analytic confidence using a categorical “high/medium/low scale,” while the UK defines its national Terrorism Threat Level through a categorical scale with verbal labels — where “SEVERE” is defined as a highly likely attack — that is communicated directly to the public through media and government channels <span class="citation" data-cites="spiegelhalter2017">(<a href="references.html#ref-spiegelhalter2017" role="doc-biblioref">Spiegelhalter, 2017</a>)</span>. In science quality assessment, the NUSAP (Numeral, Unit, Spread, Assessment, Pedigree) notational system evaluates the mode of production and quality of scientific information, which “can be represented as a spider or radar chart using traffic light symbols — green for good quality, red for low quality” <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</p>
+<p>Finally, the Intergovernmental Panel on Climate Change uses a categorical two-dimensional confidence grid that combines a verbal assessment of evidence strength (“limited,” “medium,” “robust”) with a verbal assessment of scientific agreement (“low,” “medium,” “high”) to communicate the overall confidence in specific findings <span class="citation" data-cites="ipcc_guidance">(<a href="references.html#ref-ipcc_guidance" role="doc-biblioref">Mastrandrea et al., 2010</a>)</span>.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Found an error or have a suggestion?</strong> Use the <strong>Edit this page</strong> or <strong>Report an issue</strong> links in the right sidebar of any chapter to contribute via GitHub.</p>
+<p><strong>Figure placeholder — DNV Risk Matrix with Traffic Light Colours</strong></p>
+<p>Suggested figure: Figure 3.2 in <span class="citation" data-cites="pascoe_nd">Pascoe et al. (<a href="references.html#ref-pascoe_nd" role="doc-biblioref">n.d.</a>)</span>, a risk matrix using a traffic light colour scheme — green, yellow, orange, red — to combine uncertainty categorisation with consequence severity, producing a two-dimensional categorical display that is both intuitive and information-dense.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="pascoe_nd">Pascoe et al. (<a href="references.html#ref-pascoe_nd" role="doc-biblioref">n.d.</a>)</span> or from the DNV source document.</p>
 </div>
 </div>
 </div>
-
-
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Ecological Risk Categorical Bar Charts</strong></p>
+<p>Suggested figure: Figures A–D in <span class="citation" data-cites="moe2022">Moe et al. (<a href="references.html#ref-moe2022" role="doc-biblioref">2022</a>)</span>, bar charts displaying the probability of intervals mapped to a categorical colour scale ranging from green (“no risk”) to red (“posing a risk”), demonstrating how continuous probabilistic outputs are translated into categorical risk communication.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="moe2022">Moe et al. (<a href="references.html#ref-moe2022" role="doc-biblioref">2022</a>)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — IPCC Confidence Grid</strong></p>
+<p>Suggested figure: The IPCC confidence calibration table in <span class="citation" data-cites="ipcc_guidance">Mastrandrea et al. (<a href="references.html#ref-ipcc_guidance" role="doc-biblioref">2010</a>)</span>, which maps combinations of evidence strength and agreement level onto a categorical confidence scale from “low confidence” to “high confidence,” providing a widely used template for categorical meta-uncertainty communication.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="ipcc_guidance">Mastrandrea et al. (<a href="references.html#ref-ipcc_guidance" role="doc-biblioref">2010</a>)</span>.</p>
+</div>
+</div>
+</div>
 </section>
+<section id="strengths-and-limitations" class="level3" data-number="12.0.2">
+<h3 data-number="12.0.2" class="anchored" data-anchor-id="strengths-and-limitations"><span class="header-section-number">12.0.2</span> Strengths and Limitations</h3>
+<p><strong>Strengths.</strong> Categorical approaches offer two distinctive strengths that quantitative methods cannot replicate. The first is accessibility: evaluative labels such as “high,” “moderate,” and “low” are accessible to lay audiences and can “highlight aspects of uncertainty information that may otherwise be overlooked in more complex numerical displays” <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. For audiences with limited statistical literacy, a traffic light system communicates the essential decision-relevant information — is this safe or not? should I be concerned? — without requiring any interpretation of probability values.</p>
+<p>The second strength is their suitability for expressing what might be called <em>unquantifiable</em> or <em>indirect</em> uncertainty — the kind that cannot legitimately be assigned a precise numerical probability because it concerns the quality, completeness, or contested nature of the underlying knowledge rather than the probability of a specific outcome. As <span class="citation" data-cites="spiegelhalter2017">Spiegelhalter (<a href="references.html#ref-spiegelhalter2017" role="doc-biblioref">2017</a>)</span> notes, such “unmodelled uncertainty can only be expressed as a qualitative and subjective assessment.” When the goal is to communicate the pedigree of evidence, the degree of scientific consensus, or the confidence in a model rather than the probability of a specific event, categorical scales are not merely simpler than quantitative formats — they are more epistemically honest.</p>
+<p><strong>Limitations.</strong> Against these strengths must be set several well-documented and serious limitations. The most significant is what <span class="citation" data-cites="efsa2019">European Food Safety Authority et al. (<a href="references.html#ref-efsa2019" role="doc-biblioref">2019</a>)</span> describe as the “double-edged sword” of evaluative labels: categorical labels can inadvertently signal to a layperson that the categorised element is the only thing that matters, causing them to fixate on the label and “ignore other ways of looking at uncertainty like examining upper and lower values.” By directing attention so powerfully to the category, the system may inadvertently suppress consideration of the quantitative information from which the category was derived.</p>
+<p>A second limitation is the conflation of likelihood and confidence. Qualitative categorical scales routinely blur the crucial distinction between the probability of an outcome occurring and the assessor’s confidence in that estimate, because “likelihood implicitly contains confidence levels” <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. A risk assessed as “high” might be high because it is likely or because the analysts are very confident it will occur at moderate frequency — two very different epistemic states that the categorical label cannot distinguish.</p>
+<p>A third limitation is ambiguity and lack of standardisation. Most categorical scales lack formal operational definitions of the type that exist for probability itself, leading to inconsistent interpretation across different audiences, contexts, and time periods <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. The word “possible” in one categorical framework may correspond to a 20–30% probability; in another, it may indicate any outcome that cannot be excluded. Without explicit quantitative anchoring, categorical labels are susceptible to motivated interpretation.</p>
+<p>A fourth limitation is information loss. By forcing continuous probabilistic data into discrete categorical buckets, the system “limits users’ ability to obtain the information that may be most useful” <span class="citation" data-cites="nrc2006">(<a href="references.html#ref-nrc2006" role="doc-biblioref">National Research Council, 2006</a>)</span>. All values within a category are treated as equivalent for communication purposes, even if they differ substantially in their underlying probabilities or consequences.</p>
+<p>A fifth concern, documented through empirical testing, is that some categorical symbol systems are actively harmful. Attempts to use +/– tables to convey the direction of uncertainty have been found “confusing” by both technical and lay audiences, who “misinterpreted the +/– signs as cancelling each other out” — a response described as finding them “incomprehensible” <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</p>
+<p><strong>Disagreement in the literature.</strong> The literature highlights a persistent and unresolved conflict between user preferences and comprehension accuracy. Certain professional audiences — including aviation forecasters and industry stakeholders — strongly prefer categorical simplifications because they feel intuitive and actionable <span class="citation" data-cites="nrc2006 efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>; <a href="references.html#ref-nrc2006" role="doc-biblioref">National Research Council, 2006</a>)</span>. Yet empirical research “consensually criticises the use of verbal uncertainty expressions alone, which can be responsible for significant misunderstanding” <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. The preference for categories appears to reflect their communicative convenience rather than their epistemic accuracy, suggesting that the widespread use of categorical systems may be driven by communication comfort rather than communication effectiveness.</p>
+</section>
+<section id="when-to-use-this-method" class="level3" data-number="12.0.3">
+<h3 data-number="12.0.3" class="anchored" data-anchor-id="when-to-use-this-method"><span class="header-section-number">12.0.3</span> When to Use This Method</h3>
+<p>Categorical approaches are most appropriate when the goal is to communicate <em>meta-uncertainty</em> — the overall quality, strength, or consensus of the underlying evidence — rather than the precise probability of a specific outcome <span class="citation" data-cites="spiegelhalter2017 vanderbles2019">(<a href="references.html#ref-vanderbles2019" role="doc-biblioref">Bles et al., 2019</a>; <a href="references.html#ref-spiegelhalter2017" role="doc-biblioref">Spiegelhalter, 2017</a>)</span>. They are also appropriate when the uncertainty being communicated is genuinely unquantifiable — for example, when expressing the confidence in a model’s structural assumptions, the pedigree of data, or the degree of expert consensus — because in such cases a categorical scale is not an approximation of a more precise quantity but the most honest available representation of the state of knowledge.</p>
+<p>Categorical scales should be restricted to “unambiguous events” to prevent audiences from confusing the linguistic ambiguity of the event description with the uncertainty about its probability <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. They should always be supplemented with quantitative information where available, and should never serve as the primary or sole means of communicating numerical probability estimates.</p>
+</section>
+<section id="good-practice" class="level3" data-number="12.0.4">
+<h3 data-number="12.0.4" class="anchored" data-anchor-id="good-practice"><span class="header-section-number">12.0.4</span> Good Practice</h3>
+<ul>
+<li><strong>Explicitly define all cut-offs:</strong> When using evaluative categories such as “high,” “moderate,” and “low,” ensure that the quantitative thresholds for each category are precisely defined and the rationale for the chosen thresholds is transparently explained <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. Vague categorical labels whose boundaries are undefined invite inconsistent interpretation.</li>
+<li><strong>Provide quantitative translations:</strong> Any qualitative category or symbol must be explicitly paired with a quantitative definition of its meaning every time it is used — not only in a technical appendix <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. A table hidden in a footnote is insufficient; the quantitative translation should appear directly alongside the categorical label in the main communication.</li>
+<li><strong>Supplement with numeric scales where appropriate:</strong> Following the InterAcademy Council’s recommendations to the IPCC, qualitative confidence scales “may be supplemented by a quantitative probability scale, if appropriate” <span class="citation" data-cites="ipcc_guidance">(<a href="references.html#ref-ipcc_guidance" role="doc-biblioref">Mastrandrea et al., 2010</a>)</span>. This supplementation preserves the accessibility of the categorical display while protecting against the information loss that discretisation inevitably introduces.</li>
+<li><strong>Avoid +/– symbol systems:</strong> Given the documented confusion and misinterpretation associated with directional symbol tables, communicators should not use +/– notation to convey uncertainty direction. If directional information is important, convey it through explicit text or through asymmetric visual displays <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</li>
+<li><strong>Use two-dimensional categorical matrices with caution:</strong> Two-dimensional risk matrices that combine uncertainty with consequence severity — such as the DNV risk matrix — provide more information than one-dimensional categorical scales, but also impose greater cognitive demands. Ensure that both axes are clearly labelled and that the colour scheme is accessible to colour-blind users.</li>
+<li><strong>Test categorical labels empirically:</strong> Because the interpretation of categorical labels is highly context-dependent and can vary substantially across audiences, test the chosen labels with representative members of the target audience before deployment, rather than assuming that terms like “moderate” or “significant” have a shared meaning.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-vanderbles2019" class="csl-entry" role="listitem">
+Bles, A. M. van der, Linden, S. van der, Freeman, A. L. J., Mitchell, J., Galvão, A. B., Zaval, L., &amp; Spiegelhalter, D. J. (2019). Communicating uncertainty about facts, numbers and science. <em>Royal Society Open Science</em>, <em>6</em>(5), 181870. <a href="https://doi.org/10.1098/rsos.181870">https://doi.org/10.1098/rsos.181870</a>
+</div>
+<div id="ref-efsa2019" class="csl-entry" role="listitem">
+European Food Safety Authority, Benford, D., Halldorsson, T., Jeger, M. J., Knutsen, H. K., More, S., Naegeli, H., Noteborn, H., Ockleford, C., Ricci, A., Rychen, G., Schlatter, J. R., Silano, V., Solecki, R., Turck, D., Younes, M., Craig, P., Hart, A., Von Goetz, N., … Hardy, A. (2019). Guidance on communication of uncertainty in scientific assessments. In <em>EFSA Journal</em> (1; Vol. 17, p. 5520). European Food Safety Authority. <a href="https://doi.org/10.2903/j.efsa.2019.5520">https://doi.org/10.2903/j.efsa.2019.5520</a>
+</div>
+<div id="ref-ipcc_guidance" class="csl-entry" role="listitem">
+Mastrandrea, M. D., Field, C. B., Stocker, T. F., Edenhofer, O., Ebi, K. L., Frame, D. J., Held, H., Kriegler, E., Mach, K. J., Matschoss, P. R., Plattner, G.-K., Yohe, G. W., &amp; Zwiers, F. W. (2010). <em>Guidance note for lead authors of the <span>IPCC</span> fifth assessment report on consistent treatment of uncertainties</em>. Intergovernmental Panel on Climate Change.
+</div>
+<div id="ref-moe2022" class="csl-entry" role="listitem">
+Moe, S. J., Carriger, J. F., &amp; Glendell, M. (2022). Robust risk assessments require probabilistic approaches. <em>Integrated Environmental Assessment and Management</em>, <em>18</em>(4), 1078–1090. <a href="https://doi.org/10.1002/ieam.4533">https://doi.org/10.1002/ieam.4533</a>
+</div>
+<div id="ref-nrc2006" class="csl-entry" role="listitem">
+National Research Council. (2006). <em>Completing the forecast: Characterizing and communicating uncertainty for better decisions using weather and climate forecasts</em>. The National Academies Press. <a href="https://doi.org/10.17226/11699">https://doi.org/10.17226/11699</a>
+</div>
+<div id="ref-pascoe_nd" class="csl-entry" role="listitem">
+Pascoe, S. et al. (n.d.). <em>Preliminary best practices in climate uncertainty quantification and communication</em>.
+</div>
+<div id="ref-spiegelhalter2017" class="csl-entry" role="listitem">
+Spiegelhalter, D. J. (2017). Risk and uncertainty communication. <em>Annual Review of Statistics and Its Application</em>, <em>4</em>, 31–60. <a href="https://doi.org/10.1146/annurev-statistics-010814-020148">https://doi.org/10.1146/annurev-statistics-010814-020148</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1056,10 +1057,13 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./06_2_numerical.html" class="pagination-link" aria-label="Numerical Expressions of Uncertainty">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Numerical Expressions of Uncertainty</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_4_scenarios.html" class="pagination-link" aria-label="Scenario and What-If Analysis">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Scenario and What-If Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1068,5 +1072,5 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_3_categorical.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

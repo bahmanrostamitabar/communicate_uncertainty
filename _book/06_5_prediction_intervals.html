@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Bahman Rostami-Tabar">
-<meta name="dcterms.date" content="2026-07-08">
 
-<title>Welcome</title>
+<title>14&nbsp; Prediction Intervals and Quantiles – Communicating Uncertainty</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -32,7 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_introduction.html" rel="next">
+<link href="./06_6_distributions.html" rel="next">
+<link href="./06_4_scenarios.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -306,7 +325,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_5_prediction_intervals.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Prediction Intervals and Quantiles</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -332,7 +351,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
   </div>
 </li>
@@ -441,7 +460,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_5_prediction_intervals.html" class="sidebar-item-text sidebar-link">
+  <a href="./06_5_prediction_intervals.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Prediction Intervals and Quantiles</span></span></a>
   </div>
 </li>
@@ -487,42 +506,27 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
-  <ul class="collapse">
-  <li><a href="#what-this-book-covers" id="toc-what-this-book-covers" class="nav-link" data-scroll-target="#what-this-book-covers">What This Book Covers</a></li>
-  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to Use This Book</a></li>
-  <li><a href="#about-the-author" id="toc-about-the-author" class="nav-link" data-scroll-target="#about-the-author">About the Author</a></li>
-  <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence">Licence</a></li>
-  </ul></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link active" data-scroll-target="#practical-example"><span class="header-section-number">14.0.1</span> Practical Example</a></li>
+  <li><a href="#strengths-and-limitations" id="toc-strengths-and-limitations" class="nav-link" data-scroll-target="#strengths-and-limitations"><span class="header-section-number">14.0.2</span> Strengths and Limitations</a></li>
+  <li><a href="#when-to-use-this-method" id="toc-when-to-use-this-method" class="nav-link" data-scroll-target="#when-to-use-this-method"><span class="header-section-number">14.0.3</span> When to Use This Method</a></li>
+  <li><a href="#good-practice" id="toc-good-practice" class="nav-link" data-scroll-target="#good-practice"><span class="header-section-number">14.0.4</span> Good Practice</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_5_prediction_intervals.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_5_prediction_intervals.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Prediction Intervals and Quantiles</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Welcome</h1>
+<h1 class="title"><span id="sec-intervals" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Prediction Intervals and Quantiles</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p><a href="https://bahmanrostamitabar.github.io/">Bahman Rostami-Tabar</a> </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -532,105 +536,130 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 </header>
 
 
-<p><img src="cover.png" title="Communicating Uncertainty" class="quarto-cover-image nolightbox img-fluid"></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>🚧 Work in Progress
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This book is actively being written and expanded. Content is incomplete, sections will change, and new chapters will be added over time. A completed version is planned for <strong>August 2027</strong>.</p>
-<p>Feedback, suggestions, and corrections are very welcome — use the <strong>Report an issue</strong> link in the sidebar of any chapter.</p>
-</div>
-</div>
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome</h1>
-<p>This is the online home of <strong>Communicating Uncertainty: A Guide Across Disciplines</strong>, authored by <a href="https://bahmanrostamitabar.com/">Bahman Rostami-Tabar</a>.</p>
-<p>Uncertainty is an unavoidable part of knowledge and decision-making in almost every field of human activity, including medicine, finance and economics, supply chains, healthcare, and engineering. However, it is often hidden, oversimplified, or communicated in ways that may mislead the people who rely on this information to make informed decisions.</p>
-<p>This book addresses that gap. It provides a practical, cross-disciplinary reference for anyone who needs to communicate uncertainty, whether in a scientific report, a policy document, a public health bulletin, a data visualisation, or a financial forecast. It draws on knowledge from several disciplines, including statistics, psychology, climate science, economics, intelligence analysis, ecology, and risk communication.</p>
-<section id="what-this-book-covers" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-this-book-covers">What This Book Covers</h2>
-<p>The book is organised in three parts:</p>
-<p><strong>Part I — Foundations</strong> introduces the conceptual landscape. It defines uncertainty and its key frameworks, examines the sources from which uncertainty arises, and situates uncertainty among closely related concepts — variability, volatility, randomness, and risk.</p>
-<p><strong>Part II — Why and To Whom</strong> addresses the fundamental question of whether and why uncertainty should be communicated at all. It documents the consequences of failing to communicate honestly, and provides a structured typology of audiences and what each type of user needs.</p>
-<p><strong>Part III — Methods</strong> forms the core of the book. Eight distinct methods for communicating uncertainty are reviewed in depth:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Method</th>
-<th>Section</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Forecast Trajectories (spaghetti plots)</td>
-<td><a href="06_8_forecast_trajectories.html" class="quarto-xref"><span>Chapter 17</span></a></td>
-</tr>
-<tr class="even">
-<td>Fan Charts</td>
-<td><a href="06_7_fan_charts.html" class="quarto-xref"><span>Chapter 16</span></a></td>
-</tr>
-<tr class="odd">
-<td>Probability Distributions</td>
-<td><a href="06_6_distributions.html" class="quarto-xref"><span>Chapter 15</span></a></td>
-</tr>
-<tr class="even">
-<td>Prediction Intervals and Quantiles</td>
-<td><a href="06_5_prediction_intervals.html" class="quarto-xref"><span>Chapter 14</span></a></td>
-</tr>
-<tr class="odd">
-<td>Categorical Approaches (e.g., RAG)</td>
-<td><a href="06_3_categorical.html" class="quarto-xref"><span>Chapter 12</span></a></td>
-</tr>
-<tr class="even">
-<td>Scenario and What-If Analysis</td>
-<td><a href="06_4_scenarios.html" class="quarto-xref"><span>Chapter 13</span></a></td>
-</tr>
-<tr class="odd">
-<td>Verbal Expressions</td>
-<td><a href="06_1_verbal.html" class="quarto-xref"><span>Chapter 10</span></a></td>
-</tr>
-<tr class="even">
-<td>Numerical Expressions</td>
-<td><a href="06_2_numerical.html" class="quarto-xref"><span>Chapter 11</span></a></td>
-</tr>
-</tbody>
-</table>
-<p>For each method the book covers: what it is, a practical example, strengths and limitations, when to use it, and good practice recommendations grounded in the empirical literature.</p>
-</section>
-<section id="how-to-use-this-book" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to Use This Book</h2>
-<p>This book can be read cover to cover, but it is also designed as a reference to be consulted as needed. Readers new to the topic should start with Part I before turning to the methods. Practitioners who already have a working understanding of uncertainty can proceed directly to Part III.</p>
-<p>Each method chapter in Part III is self-contained and can be read independently.</p>
-</section>
-<section id="about-the-author" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="about-the-author">About the Author</h2>
-<p><a href="https://bahmanrostamitabar.com/">Bahman Rostami-Tabar</a> Bahman is Professor of Analytics and Decision Sciences at Cardiff Business School, Cardiff University. He leads the <a href="https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good">Data Lab for Social Good</a>, a <a href="https://bahmanrostamitabar.github.io/supervision/">research team</a> at Cardiff Business School, Cardiff University. He also founded and is the Academic Director of <a href="https://dl4sg-summer-school.github.io/">the Art, Science and Uncertainty Summer School, an interdisciplinary summer school</a> that takes place every year in Cardiff, Wales.</p>
-<p>His research lies at the intersection of data, uncertainty &amp; future, and decision-making, with a particular focus on how advanced analytical methods can support better decisions in complex and uncertain environments. Drawing on Data Science, Artificial Intelligence (AI), and Operations Research (OR), he develops and applies methods that are both methodologically rigorous and practically relevant to real-world decision problems.</p>
-<p>He works closely with academic, public, and industry partners to address important societal challenges. His research covers uncertainty quantification and communication, explainable AI, predictive analytics, and decision sciences, with a particular focus on applications for social good, including healthcare operations, public and global health, supply chains, and sustainability.</p>
-</section>
-<section id="licence" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="licence">Licence</h2>
-<p>This online book is licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Licence</a>.</p>
-<p>You are free to share the material for non-commercial purposes, provided you give appropriate credit and do not modify the material.</p>
-<hr>
+<p>Prediction intervals and quantiles represent uncertainty by identifying specific points or bounded ranges in the probability distribution of a future outcome — communicating not the full shape of the distribution but the most decision-relevant summaries of its extent. A prediction interval specifies a range within which a future observation is expected to fall with a stated probability: a 90% prediction interval, for instance, is constructed to contain the true future value on approximately 90% of occasions when the forecast is made under similar conditions <span class="citation" data-cites="raftery2016">(<a href="references.html#ref-raftery2016" role="doc-biblioref">Raftery, 2016</a>)</span>. A quantile specifies a threshold below which a given proportion of possible outcomes are expected to fall: a forecast at the 0.65 quantile, for example, “will estimate a value that is lower than the observed value 65% of the time” <span class="citation" data-cites="amazon_nd">(<a href="references.html#ref-amazon_nd" role="doc-biblioref">Unknown Author, n.d.</a>)</span>.</p>
+<p>These two closely related concepts can be presented visually — most commonly through error bars, box plots, or shaded bands on time series plots — or numerically, as explicit lower and upper bounds accompanying a central estimate. In a standard box plot, a central rectangle represents the middle quartiles (the 25th to 75th percentile range), a line inside the box indicates the median, and extending whiskers represent upper and lower probability bounds <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>. In time series forecasting, prediction intervals are typically displayed as a shaded region surrounding the central forecast line, widening as the horizon extends to reflect the accumulation of uncertainty over time.</p>
+<p>The relationship between prediction intervals and the full distributional displays described in <a href="06_6_distributions.html" class="quarto-xref"><span>Chapter 15</span></a> is one of summarisation: a prediction interval extracts two specific quantiles from the full distribution and presents them without the distributional shape that lies between and beyond them. This compression is precisely what makes intervals practical for non-expert audiences — and precisely what creates their characteristic limitations, as the information that is discarded by the compression is not always negligible.</p>
+<section id="practical-example" class="level3" data-number="14.0.1">
+<h3 data-number="14.0.1" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">14.0.1</span> Practical Example</h3>
+<p>Prediction intervals have been applied across a wide range of forecasting contexts. In weather forecasting, the University of Washington’s Probcast website communicated temperature uncertainty to the general public using the 10th and 90th percentiles of the forecast distribution — an 80% prediction interval — alongside the probability of specific adverse weather events <span class="citation" data-cites="raftery2016">(<a href="references.html#ref-raftery2016" role="doc-biblioref">Raftery, 2016</a>)</span>. The choice of 80% rather than 95% intervals was deliberate: while 95% intervals contain more true outcomes, they are “also much wider and hence may be judged less useful” for practical decision-making by users planning outdoor activities or making weather-sensitive choices <span class="citation" data-cites="raftery2016">(<a href="references.html#ref-raftery2016" role="doc-biblioref">Raftery, 2016</a>)</span>.</p>
+<p>In epidemiological forecasting during the COVID-19 pandemic, 95% prediction intervals were used to present probabilistic bounds around time-series forecasts of hospital bed occupancy, providing health system managers with an upper bound for capacity planning <span class="citation" data-cites="leffrang2025">(<a href="references.html#ref-leffrang2025" role="doc-biblioref">Leffrang &amp; Müller, 2025</a>)</span>. In demographic forecasting, <span class="citation" data-cites="raftery2023">Raftery &amp; Ševčíková (<a href="references.html#ref-raftery2023" role="doc-biblioref">2023</a>)</span> use prediction intervals around Total Fertility Rate projections to demonstrate how forecast uncertainty is “narrow for short-term predictions, then widens and finally stabilises as the forecast horizon increases” — a pattern that is directly legible from the interval display without requiring the viewer to interpret a full distributional shape.</p>
+<p>In intelligence analysis, <span class="citation" data-cites="mandel2021">Mandel &amp; Irwin (<a href="references.html#ref-mandel2021" role="doc-biblioref">2021</a>)</span> advocate for replacing vague linguistic probability terms with explicit numeric credible intervals: reporting that there is a “65% to 85% probability that a given event will occur” is more precise, more verifiable, and less susceptible to motivated misinterpretation than verbal alternatives such as “likely.”</p>
+<p>In retail and supply chain management, the quantile framework is applied directly to asymmetric cost structures: when “the cost of being understocked is often higher than the cost of being overstocked,” planning at the 75th quantile rather than the median is more economically appropriate, because it provides protection against the higher-cost error at an acceptable frequency <span class="citation" data-cites="amazon_nd">(<a href="references.html#ref-amazon_nd" role="doc-biblioref">Unknown Author, n.d.</a>)</span>.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Found an error or have a suggestion?</strong> Use the <strong>Edit this page</strong> or <strong>Report an issue</strong> links in the right sidebar of any chapter to contribute via GitHub.</p>
+<p><strong>Figure placeholder — Annotated Box-and-Whisker Plot</strong></p>
+<p>Suggested figure: Figure 2 in <span class="citation" data-cites="efsa2019">European Food Safety Authority et al. (<a href="references.html#ref-efsa2019" role="doc-biblioref">2019</a>)</span>, “Example of a box-and-whisker plot for the average prevalence of pregnant slaughtered animals,” which explicitly annotates the 50% certainty interval (the box), the 98% certainty interval (the whiskers), and the median (the central line), providing an exemplary template for a labelled interval display.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="efsa2019">European Food Safety Authority et al. (<a href="references.html#ref-efsa2019" role="doc-biblioref">2019</a>)</span>.</p>
 </div>
 </div>
 </div>
-
-
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Meteorological Prediction Interval Band</strong></p>
+<p>Suggested figure: Figure 5B in <span class="citation" data-cites="spiegelhalter2011">Spiegelhalter et al. (<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">2011</a>)</span>, “95% prediction intervals produced by the UK Meteorological Office for the maximum temperature expected for 5 days,” showing a standard interval band overlaying a line chart of forecast temperatures.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="spiegelhalter2011">Spiegelhalter et al. (<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">2011</a>)</span> or from publicly available UK Met Office forecast archives.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Epidemiological Prediction Interval</strong></p>
+<p>Suggested figure: Figure 4 in <span class="citation" data-cites="leffrang2025">Leffrang &amp; Müller (<a href="references.html#ref-leffrang2025" role="doc-biblioref">2025</a>)</span>, showing a 95% prediction interval plot for the forecast of COVID-19 hospitalisations, providing a modern example of a predictive interval band mapped onto a time series in a public health context.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="leffrang2025">Leffrang &amp; Müller (<a href="references.html#ref-leffrang2025" role="doc-biblioref">2025</a>)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Wind Speed Box Plot with Prediction Intervals</strong></p>
+<p>Suggested figure: Figure 4 in <span class="citation" data-cites="nadav2008">Nadav-Greenberg et al. (<a href="references.html#ref-nadav2008" role="doc-biblioref">2008</a>)</span>, displaying a customised box plot showing median wind speed inside a box representing the 50% prediction interval, with whiskers representing the 80% prediction interval — a format specifically designed and tested for weather forecast communication.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="nadav2008">Nadav-Greenberg et al. (<a href="references.html#ref-nadav2008" role="doc-biblioref">2008</a>)</span>.</p>
+</div>
+</div>
+</div>
 </section>
+<section id="strengths-and-limitations" class="level3" data-number="14.0.2">
+<h3 data-number="14.0.2" class="anchored" data-anchor-id="strengths-and-limitations"><span class="header-section-number">14.0.2</span> Strengths and Limitations</h3>
+<p><strong>Strengths.</strong> Prediction intervals have several important practical advantages. First, they facilitate risk management under conditions of asymmetric costs. Because quantiles can be specified to match the cost structure of a particular decision — providing more protection against the more costly type of error — they enable decision-makers to optimise their planning in a way that a simple central estimate cannot support <span class="citation" data-cites="amazon_nd">(<a href="references.html#ref-amazon_nd" role="doc-biblioref">Unknown Author, n.d.</a>)</span>. The “risk avoider” identified by <span class="citation" data-cites="raftery2016">Raftery (<a href="references.html#ref-raftery2016" role="doc-biblioref">2016</a>)</span> — a user whose primary goal is to limit the probability of an adverse outcome below an acceptable threshold — finds a specific quantile far more actionable than the full distributional information from which it is derived.</p>
+<p>Second, visualising uncertainty through box plots and error bars enables users to extract mean estimates and make subsequent decisions with higher accuracy than complex distributional displays. <span class="citation" data-cites="edwards2012">Edwards et al. (<a href="references.html#ref-edwards2012" role="doc-biblioref">2012</a>)</span> found that “error bar displays and box plots work best for mean estimation and choice of action” — a finding that supports the use of intervals precisely in contexts where simplicity and actionability are priorities.</p>
+<p>Third, communicating uncertainty through numerical ranges with a point estimate does not significantly reduce public trust in the source. <span class="citation" data-cites="vanderbles2020">Bles et al. (<a href="references.html#ref-vanderbles2020" role="doc-biblioref">2020</a>)</span> demonstrate that this format “does not substantially decrease trust in either the numbers or the source” — directly addressing one of the most common concerns among institutional communicators who worry that expressing uncertainty will damage their credibility.</p>
+<p>Fourth, quantile-based communication offers a practical solution to the challenge of expert knowledge communication. <span class="citation" data-cites="raftery2016">Raftery (<a href="references.html#ref-raftery2016" role="doc-biblioref">2016</a>)</span> demonstrate that a single, well-chosen quantile can serve as the entire actionable output of a complex probabilistic analysis — as in the International Whaling Commission’s use of the fifth percentile of the bowhead whale replacement yield distribution as a precautionary quota limit — delivering probabilistically principled decisions without requiring the audience to interpret a full distribution.</p>
+<p><strong>Limitations.</strong> The most persistent and well-documented limitation of prediction intervals is what <span class="citation" data-cites="toet2016">Toet et al. (<a href="references.html#ref-toet2016" role="doc-biblioref">2016</a>)</span> call the <em>uniform distribution fallacy</em>: when numeric intervals or error bars are presented without explicit information about distributional shape, audiences routinely assume a uniform distribution, incorrectly believing that all values within the range are equally probable. As <span class="citation" data-cites="spiegelhalter2011">Spiegelhalter et al. (<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">2011</a>)</span> describe it, the visual presentation of an interval makes it appear as though “values within the interval are equally likely,” encouraging users to anchor on the extreme bounds rather than the central estimate — even though those extremes represent the least likely outcomes within the interval.</p>
+<p>A related limitation is excessive focus on the extremes. Because the bounds of an interval are visually salient — they are the edges of a bar or the endpoints of a whisker — users tend to anchor on them, producing a systematic bias toward the consideration of extreme scenarios at the expense of the more probable central outcomes <span class="citation" data-cites="spiegelhalter2011">(<a href="references.html#ref-spiegelhalter2011" role="doc-biblioref">Spiegelhalter et al., 2011</a>)</span>.</p>
+<p>A third limitation is the <em>deterministic construal error</em> in its interval- specific form: audiences frequently interpret the boundaries of a prediction interval as strict categorical partitions, perceiving values within the interval as “accurate” and values outside it as “erroneous” — as if the interval were a binary classifier rather than a probabilistic statement <span class="citation" data-cites="leffrang2025">(<a href="references.html#ref-leffrang2025" role="doc-biblioref">Leffrang &amp; Müller, 2025</a>)</span>. This misinterpretation can lead to inappropriate surprise and loss of trust when an actual outcome falls outside a stated interval, even if that outcome had a non-trivial probability.</p>
+<p>Finally, because box plots and ranges are also widely used to display population variability, audiences routinely misinterpret epistemic uncertainty intervals as descriptions of real-world heterogeneity — the same confusion documented for distributional displays in <a href="06_6_distributions.html" class="quarto-xref"><span>Chapter 15</span></a>.</p>
+<p><strong>Disagreement in the literature.</strong> The literature reveals a historical disagreement about how numeric intervals affect perceived competence and trust. <span class="citation" data-cites="vanderbles2020">Bles et al. (<a href="references.html#ref-vanderbles2020" role="doc-biblioref">2020</a>)</span> conclude from meta-analysis that providing numeric ranges does not negatively affect trust, while earlier research by Johnson and Slovic (referenced in <span class="citation" data-cites="vanderbles2020">Bles et al. (<a href="references.html#ref-vanderbles2020" role="doc-biblioref">2020</a>)</span>) found that interval communication “signalled honesty and competency for some participants, but dishonesty and incompetency for others.” A second tension concerns the visual design of interval boundaries: while traditional statistical graphics use sharp, crisp boundary lines for intervals, <span class="citation" data-cites="toet2016">Toet et al. (<a href="references.html#ref-toet2016" role="doc-biblioref">2016</a>)</span> argue that “blurred or dashed (versus sharp) borders” would better convey that values become gradually less probable as they approach the extremes of the interval, reducing the deterministic construal error. This recommendation has not yet been widely adopted in practice.</p>
+</section>
+<section id="when-to-use-this-method" class="level3" data-number="14.0.3">
+<h3 data-number="14.0.3" class="anchored" data-anchor-id="when-to-use-this-method"><span class="header-section-number">14.0.3</span> When to Use This Method</h3>
+<p>Prediction intervals and quantile forecasts are appropriate across a wide range of audiences and contexts, making them among the most versatile methods in the uncertainty communicator’s toolkit. For risk avoiders who need to guarantee an outcome up to a specific probability threshold, a specific quantile — chosen to match the cost structure of the decision — is the appropriate output <span class="citation" data-cites="raftery2016">(<a href="references.html#ref-raftery2016" role="doc-biblioref">Raftery, 2016</a>)</span>. For mass-media communications regarding scientific facts, numerical intervals with a central point estimate represent “the most robust format for conveying uncertainty without confusing the general public” <span class="citation" data-cites="vanderbles2020">(<a href="references.html#ref-vanderbles2020" role="doc-biblioref">Bles et al., 2020</a>)</span>.</p>
+<p>The choice of coverage probability matters. <span class="citation" data-cites="raftery2016">Raftery (<a href="references.html#ref-raftery2016" role="doc-biblioref">2016</a>)</span> recommend 80% prediction intervals over the conventional 95% for public-facing communications, on the grounds that narrower intervals are more useful for practical decision-making even though they contain fewer actual outcomes. For high-stakes decisions where the tail risk is the primary concern — flood protection, capacity planning, infrastructure resilience — wider intervals or specific extreme quantiles may be more appropriate.</p>
+<p>Intervals should be preferred over full distributional displays when the audience is at the entry or informed level, when the communication context does not support the cognitive load of distributional interpretation, or when the specific decision can be mapped onto a single probability threshold.</p>
+</section>
+<section id="good-practice" class="level3" data-number="14.0.4">
+<h3 data-number="14.0.4" class="anchored" data-anchor-id="good-practice"><span class="header-section-number">14.0.4</span> Good Practice</h3>
+<ul>
+<li><strong>Always state the associated probability explicitly:</strong> Never present a numeric range in isolation. Always pair the range with a clear statement of the probability that the quantity falls within it — for example, “there is a 90% probability that the outcome will fall between X and Y” <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</li>
+<li><strong>Always provide the central estimate:</strong> Accompany every interval with a median or mean estimate to counter the tendency of users to focus on the extremes and to signal whether the distribution is symmetric or skewed <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</li>
+<li><strong>Incorporate density cues where possible:</strong> To reduce the uniform distribution fallacy, supplement intervals or box plots with a visual density strip or explicit text explaining that central values are more probable than extreme values <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</li>
+<li><strong>Consider blurred or dashed interval borders:</strong> To reduce the deterministic construal error, explore the use of visual treatments — such as gradual fading at the interval boundaries — that signal the continuous nature of the probability distribution beyond the stated bounds <span class="citation" data-cites="toet2016">(<a href="references.html#ref-toet2016" role="doc-biblioref">Toet et al., 2016</a>)</span>.</li>
+<li><strong>Communicate interval bounds explicitly in text:</strong> Do not require audiences to read the bounds of an interval from a graphical axis. Always state the upper and lower bounds numerically in accompanying text so that the precise values are unambiguous <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</li>
+<li><strong>Always accompany box plots with explanations:</strong> Because box plots are frequently misunderstood, include a textual or graphical key that explicitly defines what the whiskers, box, and central line represent, and reiterate that the graphic represents epistemic uncertainty about a single quantity rather than population variability <span class="citation" data-cites="efsa2019">(<a href="references.html#ref-efsa2019" role="doc-biblioref">European Food Safety Authority et al., 2019</a>)</span>.</li>
+<li><strong>Match the quantile to the decision:</strong> When advising specific users rather than a general audience, choose the quantile to communicate based on the cost structure of their decision — protecting against the high-cost error at an appropriate frequency rather than defaulting to the conventional 50th or 95th percentile <span class="citation" data-cites="amazon_nd raftery2016">(<a href="references.html#ref-raftery2016" role="doc-biblioref">Raftery, 2016</a>; <a href="references.html#ref-amazon_nd" role="doc-biblioref">Unknown Author, n.d.</a>)</span>.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-vanderbles2020" class="csl-entry" role="listitem">
+Bles, A. M. van der, Linden, S. van der, Freeman, A. L. J., &amp; Spiegelhalter, D. J. (2020). The effects of communicating uncertainty on public trust in facts and numbers. <em>Proceedings of the National Academy of Sciences</em>, <em>117</em>(14), 7672–7683. <a href="https://doi.org/10.1073/pnas.1913678117">https://doi.org/10.1073/pnas.1913678117</a>
+</div>
+<div id="ref-edwards2012" class="csl-entry" role="listitem">
+Edwards, J. A., Snyder, F. J., Allen, P. M., Makinson, K. A., &amp; Hamby, D. M. (2012). Decision making for risk management: A comparison of graphical methods for presenting quantitative uncertainty. <em>Risk Analysis</em>, <em>32</em>(12), 2055–2070. <a href="https://doi.org/10.1111/j.1539-6924.2012.01839.x">https://doi.org/10.1111/j.1539-6924.2012.01839.x</a>
+</div>
+<div id="ref-efsa2019" class="csl-entry" role="listitem">
+European Food Safety Authority, Benford, D., Halldorsson, T., Jeger, M. J., Knutsen, H. K., More, S., Naegeli, H., Noteborn, H., Ockleford, C., Ricci, A., Rychen, G., Schlatter, J. R., Silano, V., Solecki, R., Turck, D., Younes, M., Craig, P., Hart, A., Von Goetz, N., … Hardy, A. (2019). Guidance on communication of uncertainty in scientific assessments. In <em>EFSA Journal</em> (1; Vol. 17, p. 5520). European Food Safety Authority. <a href="https://doi.org/10.2903/j.efsa.2019.5520">https://doi.org/10.2903/j.efsa.2019.5520</a>
+</div>
+<div id="ref-leffrang2025" class="csl-entry" role="listitem">
+Leffrang, J., &amp; Müller, R. (2025). Visualizing uncertainty in time series forecasts. <em>Journal of Forecasting</em>. <a href="https://doi.org/10.1002/for.3222">https://doi.org/10.1002/for.3222</a>
+</div>
+<div id="ref-mandel2021" class="csl-entry" role="listitem">
+Mandel, D. R., &amp; Irwin, D. (2021). Uncertainty, intelligence, and national security decisionmaking. <em>International Journal of Intelligence and CounterIntelligence</em>, <em>34</em>(3), 558–582. <a href="https://doi.org/10.1080/08850607.2020.1809056">https://doi.org/10.1080/08850607.2020.1809056</a>
+</div>
+<div id="ref-nadav2008" class="csl-entry" role="listitem">
+Nadav-Greenberg, L., Joslyn, S. L., &amp; Taing, M. U. (2008). The effect of uncertainty visualizations on decision making in weather forecasting. <em>Journal of Cognitive Engineering and Decision Making</em>, <em>2</em>(1), 24–47. <a href="https://doi.org/10.1518/155534308X284354">https://doi.org/10.1518/155534308X284354</a>
+</div>
+<div id="ref-raftery2016" class="csl-entry" role="listitem">
+Raftery, A. E. (2016). Use and communication of probabilistic forecasts. <em>Statistical Analysis and Data Mining: The ASA Data Science Journal</em>, <em>9</em>(6), 397–410. <a href="https://doi.org/10.1002/sam.11302">https://doi.org/10.1002/sam.11302</a>
+</div>
+<div id="ref-raftery2023" class="csl-entry" role="listitem">
+Raftery, A. E., &amp; Ševčíková, H. (2023). Probabilistic population forecasting: Short to very long-term. <em>International Journal of Forecasting</em>, <em>39</em>(1), 73–97. <a href="https://doi.org/10.1016/j.ijforecast.2021.09.001">https://doi.org/10.1016/j.ijforecast.2021.09.001</a>
+</div>
+<div id="ref-spiegelhalter2011" class="csl-entry" role="listitem">
+Spiegelhalter, D. J., Pearson, M., &amp; Short, I. (2011). Visualizing uncertainty about the future. <em>Science</em>, <em>333</em>(6048), 1393–1400. <a href="https://doi.org/10.1126/science.1191181">https://doi.org/10.1126/science.1191181</a>
+</div>
+<div id="ref-toet2016" class="csl-entry" role="listitem">
+Toet, A., Erp, J. B. F. van, Boertjes, E. M., &amp; Buuren, S. van. (2016). Visualizing uncertainty: Towards a better understanding of weather forecasts. <em>Unpublished Manuscript</em>.
+</div>
+<div id="ref-amazon_nd" class="csl-entry" role="listitem">
+Unknown Author. (n.d.). <em>What-if forecasting analysis</em>. Amazon.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1056,10 +1085,13 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./06_4_scenarios.html" class="pagination-link" aria-label="Scenario and What-If Analysis">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Scenario and What-If Analysis</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_6_distributions.html" class="pagination-link" aria-label="Distributions">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Distributions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1068,5 +1100,5 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_5_prediction_intervals.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

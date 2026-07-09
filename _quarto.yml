@@ -60,18 +60,22 @@ book:
       chapters:
         - 05_why_communicate.qmd
         - 05_1_users.qmd
+        - 05_2_when.qmd
 
     - part: "Part III: Methods"
       chapters:
         - 06_0_method_intro.qmd
-        - 06_1_forecast_trajectories.qmd
-        - 06_2_fan_charts.qmd
-        - 06_3_distributions.qmd
-        - 06_4_prediction_intervals.qmd
-        - 06_5_categorical.qmd
-        - 06_6_scenarios.qmd
-        - 06_7_verbal.qmd
-        - 06_8_numerical.qmd
+        - 06_1_verbal.qmd
+        - 06_2_numerical.qmd
+        - 06_3_categorical.qmd
+        - 06_4_scenarios.qmd
+        - 06_5_prediction_intervals.qmd
+        - 06_6_distributions.qmd
+        - 06_7_fan_charts.qmd
+        - 06_8_forecast_trajectories.qmd
+
+
+
 
     - 07_conclusion.qmd
     - references.qmd

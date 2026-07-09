@@ -2,74 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/index.html</loc>
-    <lastmod>2026-06-27T17:03:08.084Z</lastmod>
+    <lastmod>2026-07-08T10:47:04.052Z</lastmod>
   </url>
   <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/01_introduction.html</loc>
-    <lastmod>2026-06-17T20:40:50.000Z</lastmod>
+    <lastmod>2026-07-08T10:47:03.945Z</lastmod>
   </url>
   <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/02_conceptualising_uncertainty.html</loc>
-    <lastmod>2026-06-17T21:45:27.839Z</lastmod>
+    <lastmod>2026-07-08T10:47:03.945Z</lastmod>
   </url>
   <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/03_sources_of_uncertainty.html</loc>
-    <lastmod>2026-06-17T21:48:12.006Z</lastmod>
+    <lastmod>2026-07-08T10:47:03.946Z</lastmod>
   </url>
   <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/04_related_concepts.html</loc>
-    <lastmod>2026-06-17T21:51:49.377Z</lastmod>
+    <lastmod>2026-07-08T10:47:03.946Z</lastmod>
   </url>
   <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/05_why_communicate.html</loc>
-    <lastmod>2026-06-27T09:27:07.126Z</lastmod>
+    <lastmod>2026-07-08T10:47:03.947Z</lastmod>
   </url>
   <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/05_1_users.html</loc>
-    <lastmod>2026-06-27T09:27:40.902Z</lastmod>
+    <lastmod>2026-07-08T10:47:03.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/05_2_when.html</loc>
+    <lastmod>2026-07-08T08:28:00.292Z</lastmod>
   </url>
   <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_0_method_intro.html</loc>
-    <lastmod>2026-06-27T10:08:08.181Z</lastmod>
+    <lastmod>2026-07-08T10:47:03.948Z</lastmod>
   </url>
   <url>
-    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_1_forecast_trajectories.html</loc>
-    <lastmod>2026-06-27T10:08:22.118Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_2_fan_charts.html</loc>
-    <lastmod>2026-06-17T22:04:48.154Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_3_distributions.html</loc>
-    <lastmod>2026-06-17T22:06:51.453Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_4_prediction_intervals.html</loc>
-    <lastmod>2026-06-17T22:11:51.138Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_5_categorical.html</loc>
-    <lastmod>2026-06-17T22:14:08.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_6_scenarios.html</loc>
-    <lastmod>2026-06-17T22:17:34.822Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_7_verbal.html</loc>
+    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_1_verbal.html</loc>
     <lastmod>2026-06-26T21:41:14.044Z</lastmod>
   </url>
   <url>
-    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_8_numerical.html</loc>
+    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_2_numerical.html</loc>
     <lastmod>2026-06-26T21:41:45.816Z</lastmod>
   </url>
   <url>
+    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_3_categorical.html</loc>
+    <lastmod>2026-06-17T22:14:08.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_4_scenarios.html</loc>
+    <lastmod>2026-06-17T22:17:34.822Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_5_prediction_intervals.html</loc>
+    <lastmod>2026-06-17T22:11:51.138Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_6_distributions.html</loc>
+    <lastmod>2026-06-17T22:06:51.453Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_7_fan_charts.html</loc>
+    <lastmod>2026-06-17T22:04:48.154Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/06_8_forecast_trajectories.html</loc>
+    <lastmod>2026-06-27T10:08:22.118Z</lastmod>
+  </url>
+  <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/07_conclusion.html</loc>
-    <lastmod>2026-06-17T22:32:12.629Z</lastmod>
+    <lastmod>2026-07-08T10:47:03.951Z</lastmod>
   </url>
   <url>
     <loc>https://bahmanrostamitabar.github.io/communicate_uncertainty/references.html</loc>
-    <lastmod>2026-06-26T19:02:04.000Z</lastmod>
+    <lastmod>2026-07-08T10:47:04.064Z</lastmod>
   </url>
 </urlset>

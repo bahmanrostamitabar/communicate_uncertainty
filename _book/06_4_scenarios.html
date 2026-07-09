@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Bahman Rostami-Tabar">
-<meta name="dcterms.date" content="2026-07-08">
 
-<title>Welcome</title>
+<title>13&nbsp; Scenario and What-If Analysis – Communicating Uncertainty</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -32,7 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01_introduction.html" rel="next">
+<link href="./06_5_prediction_intervals.html" rel="next">
+<link href="./06_3_categorical.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -306,7 +325,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_4_scenarios.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Scenario and What-If Analysis</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -332,7 +351,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
   </div>
 </li>
@@ -435,7 +454,7 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_4_scenarios.html" class="sidebar-item-text sidebar-link">
+  <a href="./06_4_scenarios.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Scenario and What-If Analysis</span></span></a>
   </div>
 </li>
@@ -487,42 +506,27 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
-  <ul class="collapse">
-  <li><a href="#what-this-book-covers" id="toc-what-this-book-covers" class="nav-link" data-scroll-target="#what-this-book-covers">What This Book Covers</a></li>
-  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to Use This Book</a></li>
-  <li><a href="#about-the-author" id="toc-about-the-author" class="nav-link" data-scroll-target="#about-the-author">About the Author</a></li>
-  <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence">Licence</a></li>
-  </ul></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link active" data-scroll-target="#practical-example"><span class="header-section-number">13.0.1</span> Practical Example</a></li>
+  <li><a href="#strengths-and-limitations" id="toc-strengths-and-limitations" class="nav-link" data-scroll-target="#strengths-and-limitations"><span class="header-section-number">13.0.2</span> Strengths and Limitations</a></li>
+  <li><a href="#when-to-use-this-method" id="toc-when-to-use-this-method" class="nav-link" data-scroll-target="#when-to-use-this-method"><span class="header-section-number">13.0.3</span> When to Use This Method</a></li>
+  <li><a href="#good-practice" id="toc-good-practice" class="nav-link" data-scroll-target="#good-practice"><span class="header-section-number">13.0.4</span> Good Practice</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_4_scenarios.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_0_method_intro.html">Part III: Methods</a></li><li class="breadcrumb-item"><a href="./06_4_scenarios.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Scenario and What-If Analysis</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Welcome</h1>
+<h1 class="title"><span id="sec-scenarios" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Scenario and What-If Analysis</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p><a href="https://bahmanrostamitabar.github.io/">Bahman Rostami-Tabar</a> </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -532,105 +536,104 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 </header>
 
 
-<p><img src="cover.png" title="Communicating Uncertainty" class="quarto-cover-image nolightbox img-fluid"></p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>🚧 Work in Progress
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This book is actively being written and expanded. Content is incomplete, sections will change, and new chapters will be added over time. A completed version is planned for <strong>August 2027</strong>.</p>
-<p>Feedback, suggestions, and corrections are very welcome — use the <strong>Report an issue</strong> link in the sidebar of any chapter.</p>
-</div>
-</div>
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome</h1>
-<p>This is the online home of <strong>Communicating Uncertainty: A Guide Across Disciplines</strong>, authored by <a href="https://bahmanrostamitabar.com/">Bahman Rostami-Tabar</a>.</p>
-<p>Uncertainty is an unavoidable part of knowledge and decision-making in almost every field of human activity, including medicine, finance and economics, supply chains, healthcare, and engineering. However, it is often hidden, oversimplified, or communicated in ways that may mislead the people who rely on this information to make informed decisions.</p>
-<p>This book addresses that gap. It provides a practical, cross-disciplinary reference for anyone who needs to communicate uncertainty, whether in a scientific report, a policy document, a public health bulletin, a data visualisation, or a financial forecast. It draws on knowledge from several disciplines, including statistics, psychology, climate science, economics, intelligence analysis, ecology, and risk communication.</p>
-<section id="what-this-book-covers" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-this-book-covers">What This Book Covers</h2>
-<p>The book is organised in three parts:</p>
-<p><strong>Part I — Foundations</strong> introduces the conceptual landscape. It defines uncertainty and its key frameworks, examines the sources from which uncertainty arises, and situates uncertainty among closely related concepts — variability, volatility, randomness, and risk.</p>
-<p><strong>Part II — Why and To Whom</strong> addresses the fundamental question of whether and why uncertainty should be communicated at all. It documents the consequences of failing to communicate honestly, and provides a structured typology of audiences and what each type of user needs.</p>
-<p><strong>Part III — Methods</strong> forms the core of the book. Eight distinct methods for communicating uncertainty are reviewed in depth:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Method</th>
-<th>Section</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Forecast Trajectories (spaghetti plots)</td>
-<td><a href="06_8_forecast_trajectories.html" class="quarto-xref"><span>Chapter 17</span></a></td>
-</tr>
-<tr class="even">
-<td>Fan Charts</td>
-<td><a href="06_7_fan_charts.html" class="quarto-xref"><span>Chapter 16</span></a></td>
-</tr>
-<tr class="odd">
-<td>Probability Distributions</td>
-<td><a href="06_6_distributions.html" class="quarto-xref"><span>Chapter 15</span></a></td>
-</tr>
-<tr class="even">
-<td>Prediction Intervals and Quantiles</td>
-<td><a href="06_5_prediction_intervals.html" class="quarto-xref"><span>Chapter 14</span></a></td>
-</tr>
-<tr class="odd">
-<td>Categorical Approaches (e.g., RAG)</td>
-<td><a href="06_3_categorical.html" class="quarto-xref"><span>Chapter 12</span></a></td>
-</tr>
-<tr class="even">
-<td>Scenario and What-If Analysis</td>
-<td><a href="06_4_scenarios.html" class="quarto-xref"><span>Chapter 13</span></a></td>
-</tr>
-<tr class="odd">
-<td>Verbal Expressions</td>
-<td><a href="06_1_verbal.html" class="quarto-xref"><span>Chapter 10</span></a></td>
-</tr>
-<tr class="even">
-<td>Numerical Expressions</td>
-<td><a href="06_2_numerical.html" class="quarto-xref"><span>Chapter 11</span></a></td>
-</tr>
-</tbody>
-</table>
-<p>For each method the book covers: what it is, a practical example, strengths and limitations, when to use it, and good practice recommendations grounded in the empirical literature.</p>
-</section>
-<section id="how-to-use-this-book" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to Use This Book</h2>
-<p>This book can be read cover to cover, but it is also designed as a reference to be consulted as needed. Readers new to the topic should start with Part I before turning to the methods. Practitioners who already have a working understanding of uncertainty can proceed directly to Part III.</p>
-<p>Each method chapter in Part III is self-contained and can be read independently.</p>
-</section>
-<section id="about-the-author" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="about-the-author">About the Author</h2>
-<p><a href="https://bahmanrostamitabar.com/">Bahman Rostami-Tabar</a> Bahman is Professor of Analytics and Decision Sciences at Cardiff Business School, Cardiff University. He leads the <a href="https://www.cardiff.ac.uk/research/explore/research-units/data-lab-for-social-good">Data Lab for Social Good</a>, a <a href="https://bahmanrostamitabar.github.io/supervision/">research team</a> at Cardiff Business School, Cardiff University. He also founded and is the Academic Director of <a href="https://dl4sg-summer-school.github.io/">the Art, Science and Uncertainty Summer School, an interdisciplinary summer school</a> that takes place every year in Cardiff, Wales.</p>
-<p>His research lies at the intersection of data, uncertainty &amp; future, and decision-making, with a particular focus on how advanced analytical methods can support better decisions in complex and uncertain environments. Drawing on Data Science, Artificial Intelligence (AI), and Operations Research (OR), he develops and applies methods that are both methodologically rigorous and practically relevant to real-world decision problems.</p>
-<p>He works closely with academic, public, and industry partners to address important societal challenges. His research covers uncertainty quantification and communication, explainable AI, predictive analytics, and decision sciences, with a particular focus on applications for social good, including healthcare operations, public and global health, supply chains, and sustainability.</p>
-</section>
-<section id="licence" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="licence">Licence</h2>
-<p>This online book is licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Licence</a>.</p>
-<p>You are free to share the material for non-commercial purposes, provided you give appropriate credit and do not modify the material.</p>
-<hr>
+<p>Scenario and what-if analyses are methods for exploring possible futures without sampling from an underlying probability distribution — making them fundamentally distinct from the frequency-based probabilistic approaches reviewed in earlier sections. Where prediction intervals, fan charts, and distributional displays express uncertainty as a probability assigned to different values of a continuous quantity, scenario analysis instead develops “a set of possible futures based on extrapolating current trends and varying key parameters, without sampling in a systematic manner from an uncertainty distribution” <span class="citation" data-cites="ipcc2015">(<a href="references.html#ref-ipcc2015" role="doc-biblioref">Intergovernmental Panel on Climate Change, 2015</a>)</span>. The scenarios produced by this method are not random draws from a probability model; they are deliberately constructed, internally consistent narratives about how the future might unfold under different assumptions about the key drivers of change.</p>
+<p>In strategic planning and organisational foresight, scenarios are described as “purposeful stories about how the contextual environment could unfold over time,” composed of internally consistent causal accounts of how different variables — social, technological, economic, political, and environmental — interact and co-evolve <span class="citation" data-cites="wright2009">(<a href="references.html#ref-wright2009" role="doc-biblioref">Wright &amp; Goodwin, 2009</a>)</span>. Each scenario represents one coherent version of a possible future, designed not to be the most likely outcome but to be a plausible and internally consistent one that illuminates a specific combination of uncertainties. In algorithmic forecasting, what-if analysis takes a more specific and quantitative form: it is “a scenario modelling technique where you make a hypothetical change to a time series and compare the forecasts generated by these changes against the baseline” <span class="citation" data-cites="amazon_nd">(<a href="references.html#ref-amazon_nd" role="doc-biblioref">Unknown Author, n.d.</a>)</span>, allowing decision-makers to see directly how different choices or conditions would affect projected outcomes.</p>
+<p>The shared feature of both approaches is their deliberate agnosticism about probability. By presenting a small number of distinctly different possible futures without attaching explicit probabilities to each, scenario analysis communicates the <em>range of plausibility</em> rather than the <em>probability distribution</em> of outcomes — a distinction that is both its greatest strength and the source of its most characteristic misuse.</p>
+<section id="practical-example" class="level3" data-number="13.0.1">
+<h3 data-number="13.0.1" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">13.0.1</span> Practical Example</h3>
+<p>Scenario and what-if analysis have been applied across a remarkably wide range of domains. In climate policy, the Intergovernmental Panel on Climate Change uses scenarios — currently presented as Representative Concentration Pathways (RCPs) — to represent different emission trajectories and model the Earth’s possible responses under each <span class="citation" data-cites="ipcc2015">(<a href="references.html#ref-ipcc2015" role="doc-biblioref">Intergovernmental Panel on Climate Change, 2015</a>)</span>. The Royal Netherlands Meteorological Institute (KNMI) communicates climate risks to policy advisers and the public using a four-quadrant framework that intersects two key axes of uncertainty — low versus high CO2 emissions, and wetter versus drier climates — to produce four clearly differentiated scenarios for the future climate of the Netherlands <span class="citation" data-cites="pascoe_nd">(<a href="references.html#ref-pascoe_nd" role="doc-biblioref">Pascoe et al., n.d.</a>)</span>.</p>
+<p>In public health, preparations for unknown future disease outbreaks are formalised through scenario or table-top exercises that envisage catastrophic possibilities, trace their implications through the health system, and test the robustness of response protocols against genuinely uncertain threats <span class="citation" data-cites="scoones2019">(<a href="references.html#ref-scoones2019" role="doc-biblioref">Scoones, 2019</a>)</span>. In social science research, <span class="citation" data-cites="komp2020">Komp-Leukkunen (<a href="references.html#ref-komp2020" role="doc-biblioref">2020</a>)</span> applies scenario-based foresighting to map how the social integration of refugees might evolve under different hypothetical immigration policy frameworks — a domain where neither historical precedent nor probability models can adequately capture the range of possible futures.</p>
+<p>In retail and commercial forecasting, algorithmic what-if analysis tools allow retailers to simulate the effect of specific business decisions — for example, examining how a 25% markdown on all clothing items, or an extension of a sale’s duration by two weeks, would affect baseline inventory and revenue projections relative to a no-change scenario <span class="citation" data-cites="amazon_nd">(<a href="references.html#ref-amazon_nd" role="doc-biblioref">Unknown Author, n.d.</a>)</span>.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Found an error or have a suggestion?</strong> Use the <strong>Edit this page</strong> or <strong>Report an issue</strong> links in the right sidebar of any chapter to contribute via GitHub.</p>
+<p><strong>Figure placeholder — KNMI Four-Quadrant Climate Scenario Framework</strong></p>
+<p>Suggested figure: Figure 5.2 in <span class="citation" data-cites="pascoe_nd">Pascoe et al. (<a href="references.html#ref-pascoe_nd" role="doc-biblioref">n.d.</a>)</span>, displaying the KNMI’23 scenarios for climate change in the Netherlands using a four-quadrant graphical framework, with the two axes representing CO2 emission level (low/high) and precipitation change (wetter/drier), and the four resulting scenarios occupying each quadrant.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="pascoe_nd">Pascoe et al. (<a href="references.html#ref-pascoe_nd" role="doc-biblioref">n.d.</a>)</span> or from the KNMI source documentation.</p>
 </div>
 </div>
 </div>
-
-
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — IPCC RCP Scenario Trajectories</strong></p>
+<p>Suggested figure: Figure 2.3 in <span class="citation" data-cites="ipcc2015">Intergovernmental Panel on Climate Change (<a href="references.html#ref-ipcc2015" role="doc-biblioref">2015</a>)</span>, which compares total radiative forcing and carbon emissions in baseline scenarios against the range of Representative Concentration Pathway (RCP) scenario trajectories, illustrating how scenario analysis presents multiple distinct futures without assigning explicit probabilities.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="ipcc2015">Intergovernmental Panel on Climate Change (<a href="references.html#ref-ipcc2015" role="doc-biblioref">2015</a>)</span>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Figure placeholder — Algorithmic What-If Forecast Comparison</strong></p>
+<p>Suggested figure: The “Compare What-If Forecasts” visualisation in <span class="citation" data-cites="amazon_nd">Unknown Author (<a href="references.html#ref-amazon_nd" role="doc-biblioref">n.d.</a>)</span>, a line-graph display from a software console showing how multiple hypothetical business forecasts — generated by varying specific parameters — compare against a baseline statistical projection over a common time horizon.</p>
+<p>Action needed: Reproduce with permission from <span class="citation" data-cites="amazon_nd">Unknown Author (<a href="references.html#ref-amazon_nd" role="doc-biblioref">n.d.</a>)</span> or recreate from a comparable publicly available forecasting tool interface.</p>
+</div>
+</div>
+</div>
 </section>
+<section id="strengths-and-limitations" class="level3" data-number="13.0.2">
+<h3 data-number="13.0.2" class="anchored" data-anchor-id="strengths-and-limitations"><span class="header-section-number">13.0.2</span> Strengths and Limitations</h3>
+<p><strong>Strengths.</strong> Scenario and what-if analysis offer three distinct advantages over probabilistic methods that make them the appropriate tool in specific circumstances.</p>
+<p>The first and most fundamental is the ability to circumvent the problem of unquantifiable probability. Scenario analysis “offers an approach for handling situations of low predictability which avoids the requirement to make such estimates” <span class="citation" data-cites="wright2009">(<a href="references.html#ref-wright2009" role="doc-biblioref">Wright &amp; Goodwin, 2009</a>)</span> — that is, it enables rigorous planning under conditions of deep uncertainty where the assignment of reliable, calibrated probabilities is either impossible or would constitute a misleading pretence of precision. By constructing detailed, coherent possible futures without claiming to know their relative probabilities, scenario analysis is more epistemically honest than probabilistic methods in genuinely uncertain domains.</p>
+<p>The second advantage is the capacity for collective sense-making and risk discovery. By building narrative storylines that trace the causal interactions between different drivers of change, scenario analysis “brings latent issues to the surface, so that it is more difficult to deny the prospect of high- impact events” <span class="citation" data-cites="wright2009">(<a href="references.html#ref-wright2009" role="doc-biblioref">Wright &amp; Goodwin, 2009</a>)</span>. This social function of scenario planning is distinct from its analytical function: the process of constructing and discussing scenarios within a team or stakeholder group forces the explicit articulation of assumptions, surfaces hidden disagreements about how the world works, and makes it harder for high-consequence risks to be dismissed without engagement.</p>
+<p>The third advantage is the promotion of adaptive strategy. By exploring divergent possible futures, scenario analysis encourages decision-makers to test the robustness of their plans across multiple eventualities, generating flexible strategies that remain effective across a range of possible outcomes rather than optimised for a single predicted scenario <span class="citation" data-cites="pascoe_nd">(<a href="references.html#ref-pascoe_nd" role="doc-biblioref">Pascoe et al., n.d.</a>)</span>. This is particularly valuable in long-horizon planning where structural changes in the system — demographic shifts, technological transitions, political realignments — are likely to render any single-point forecast obsolete.</p>
+<p><strong>Limitations.</strong> Against these genuine strengths, the literature documents several characteristic limitations and failure modes.</p>
+<p>The most significant is <em>deterministic misuse</em>: analysts and end-users frequently forget that a scenario represents only one specific, internally consistent combination of variables, with a very low probability of exact occurrence. They instead use a single scenario as a deterministic forecast of what will happen, “without recognising that they have a low probability of occurrence” <span class="citation" data-cites="ipcc2015">(<a href="references.html#ref-ipcc2015" role="doc-biblioref">Intergovernmental Panel on Climate Change, 2015</a>)</span>. This misuse is especially common when organisations select one scenario from a set and build all their planning around it, treating the selection as a prediction rather than as one plausible future among several.</p>
+<p>A second limitation is <em>future myopia</em> — the tendency of scenario builders to generate futures that are variations on themes that participants already find familiar and plausible. Because scenarios are constructed using the existing mental models of the participants, they regularly fail to incorporate “unknown unknowns” or events without obvious, immediate causes <span class="citation" data-cites="wright2009">(<a href="references.html#ref-wright2009" role="doc-biblioref">Wright &amp; Goodwin, 2009</a>)</span>. Participants in scenario workshops “tend to regularly emphasise economic factors” and other domains where they feel competent, systematically underweighting social, cultural, or technological disruptions that fall outside their professional frame.</p>
+<p>A third limitation concerns the <em>simulation heuristic</em> and its paradoxical effects. While scenario planning is broadly designed to break decision-makers out of narrow historical framings, <span class="citation" data-cites="wright2009">Wright &amp; Goodwin (<a href="references.html#ref-wright2009" role="doc-biblioref">2009</a>)</span> identify a paradox: the act of actively constructing detailed causal chains can trigger the simulation heuristic, causing participants to become inappropriately overconfident in the specific scenario they have just built. Rather than opening up the space of possibilities, the construction process may reinforce existing framings and “produce increased, but inappropriate, confidence in one’s ability to anticipate the future” <span class="citation" data-cites="wright2009">(<a href="references.html#ref-wright2009" role="doc-biblioref">Wright &amp; Goodwin, 2009</a>)</span>.</p>
+<p>A fourth limitation applies specifically to algorithmic what-if analysis: when the hypothetical scenario involves conditions entirely outside the historical range of the training data, machine learning-based forecasting models may “not be accurate for novel scenarios where there is no reference available to determine whether a forecast is good” <span class="citation" data-cites="amazon_nd">(<a href="references.html#ref-amazon_nd" role="doc-biblioref">Unknown Author, n.d.</a>)</span>. The model’s ability to generate a number for any scenario should not be mistaken for its ability to generate a reliable number.</p>
+</section>
+<section id="when-to-use-this-method" class="level3" data-number="13.0.3">
+<h3 data-number="13.0.3" class="anchored" data-anchor-id="when-to-use-this-method"><span class="header-section-number">13.0.3</span> When to Use This Method</h3>
+<p>Scenario analysis is most appropriate under conditions of “deep uncertainty,” “ambiguity,” or “ignorance,” where fundamental outcomes are poorly defined, probabilities have a weak or non-existent empirical basis, and future predictability is low <span class="citation" data-cites="pascoe_nd">(<a href="references.html#ref-pascoe_nd" role="doc-biblioref">Pascoe et al., n.d.</a>)</span>. <span class="citation" data-cites="stirling_nd_risk">Stirling (<a href="references.html#ref-stirling_nd_risk" role="doc-biblioref">n.d.</a>)</span> explicitly maps scenario analysis to the domain of ambiguity in his incertitude framework — situations where possible outcomes are contested or framed differently by different stakeholders — making it the most honest available approach when quantitative probabilities cannot be legitimately assigned.</p>
+<p>It should be employed when the forecast horizon is sufficiently long that structural changes in the system — such as economic development trajectories, demographic shifts, or technological transitions — become the dominant drivers of outcomes <span class="citation" data-cites="ipcc2015">(<a href="references.html#ref-ipcc2015" role="doc-biblioref">Intergovernmental Panel on Climate Change, 2015</a>)</span>. In such contexts, the scenario approach explicitly acknowledges what a probabilistic forecast would falsely conceal: that the future depends fundamentally on choices that have not yet been made.</p>
+<p>Scenario analysis is less appropriate when the decision requires a specific probability estimate for risk management purposes, when the audience needs a single actionable threshold, or when the scenarios risk being misused as deterministic predictions.</p>
+</section>
+<section id="good-practice" class="level3" data-number="13.0.4">
+<h3 data-number="13.0.4" class="anchored" data-anchor-id="good-practice"><span class="header-section-number">13.0.4</span> Good Practice</h3>
+<ul>
+<li><strong>Present an even number of scenarios:</strong> To prevent audiences from exhibiting a cognitive bias toward treating the “middle” scenario as the most likely, present an even number of scenarios — typically four — so that there is no natural central option to anchor on <span class="citation" data-cites="pascoe_nd">(<a href="references.html#ref-pascoe_nd" role="doc-biblioref">Pascoe et al., n.d.</a>)</span>.</li>
+<li><strong>Use backward logic to generate scenarios:</strong> To combat future myopia and generate genuinely diverse and challenging possibilities, work backwards from extreme objectives or failure states and deduce the causal drivers required to reach them, rather than extrapolating forward from the present <span class="citation" data-cites="wright2009">(<a href="references.html#ref-wright2009" role="doc-biblioref">Wright &amp; Goodwin, 2009</a>)</span>. This “fault tree” approach is more likely to surface uncomfortable but important possibilities.</li>
+<li><strong>Explicitly state that scenarios are not predictions:</strong> Every scenario communication should include a clear, prominent statement that the scenarios represent possible futures, not forecasts of what will happen, and that they do not have assigned probabilities <span class="citation" data-cites="ipcc2015">(<a href="references.html#ref-ipcc2015" role="doc-biblioref">Intergovernmental Panel on Climate Change, 2015</a>)</span>. This disclaimer should appear in the body of the communication, not merely in a methodological appendix.</li>
+<li><strong>Incorporate historical variability as a reference:</strong> When presenting scenarios to public or informed-level audiences, include graphical representations of historical year-to-year variability alongside the projected scenario range, to give audiences a tangible reference point for the magnitude of projected changes <span class="citation" data-cites="pascoe_nd">(<a href="references.html#ref-pascoe_nd" role="doc-biblioref">Pascoe et al., n.d.</a>)</span>.</li>
+<li><strong>Incorporate stakeholder motivations:</strong> Ensure that the behavioural responses embedded in scenarios are grounded in an understanding of what key stakeholders are likely to do when facing the conditions described in each scenario <span class="citation" data-cites="wright2009">(<a href="references.html#ref-wright2009" role="doc-biblioref">Wright &amp; Goodwin, 2009</a>)</span>. Scenarios that do not account for how institutions and individuals will respond to the changes they describe are incomplete and may generate misleading strategic conclusions.</li>
+<li><strong>Combine with probabilistic methods where possible:</strong> In contexts where some quantitative basis for probability assignment exists, scenario analysis can be combined with probabilistic methods — for example, by assigning indicative probability ranges to each scenario or by using probabilistic models to explore the consequences of each scenario — producing a richer and more actionable uncertainty communication than either approach alone.</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-ipcc2015" class="csl-entry" role="listitem">
+Intergovernmental Panel on Climate Change. (2015). <em>Climate change 2014: Mitigation of climate change</em>. Cambridge University Press.
+</div>
+<div id="ref-komp2020" class="csl-entry" role="listitem">
+Komp-Leukkunen, K. (2020). Scenario-based foresighting in life-course research. In I. Scoones &amp; A. Stirling (Eds.), <em>The politics of uncertainty: Challenges of transformation</em>. Routledge.
+</div>
+<div id="ref-pascoe_nd" class="csl-entry" role="listitem">
+Pascoe, S. et al. (n.d.). <em>Preliminary best practices in climate uncertainty quantification and communication</em>.
+</div>
+<div id="ref-scoones2019" class="csl-entry" role="listitem">
+Scoones, I. (2019). <em>What is uncertainty and why does it matter?</em> (STEPS Working Paper 105). STEPS Centre.
+</div>
+<div id="ref-stirling_nd_risk" class="csl-entry" role="listitem">
+Stirling, A. (n.d.). <em>Risk, precaution and science: Towards a more constructive policy debate</em>.
+</div>
+<div id="ref-amazon_nd" class="csl-entry" role="listitem">
+Unknown Author. (n.d.). <em>What-if forecasting analysis</em>. Amazon.
+</div>
+<div id="ref-wright2009" class="csl-entry" role="listitem">
+Wright, G., &amp; Goodwin, P. (2009). Decision making and planning under low levels of predictability: Enhancing the scenario method. <em>International Journal of Forecasting</em>, <em>25</em>(4), 813–825. <a href="https://doi.org/10.1016/j.ijforecast.2009.05.019">https://doi.org/10.1016/j.ijforecast.2009.05.019</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1056,10 +1059,13 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./06_3_categorical.html" class="pagination-link" aria-label="Categorical Approaches">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Categorical Approaches</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01_introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_5_prediction_intervals.html" class="pagination-link" aria-label="Prediction Intervals and Quantiles">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Prediction Intervals and Quantiles</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1068,5 +1074,5 @@ gtag('config', 'G-7NGEV74PGX', { 'anonymize_ip': true});
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/edit/main/06_4_scenarios.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bahmanrostamitabar/communicate_uncertainty/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
